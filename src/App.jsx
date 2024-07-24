@@ -1,11 +1,9 @@
-import './App.css'
+import './styles/App.css'
 
-function App() {
+export default function App() {
   return (
     <div>
       <h1>Test</h1>
     </div>
   )
 }
-
-export default App
