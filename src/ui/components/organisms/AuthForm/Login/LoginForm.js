@@ -12,7 +12,7 @@ export const useLogin = () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       console.log("User logged in Successfully");
-      window.location.href = "/profile";
+      window.location.href = "/bankdash";
     } catch (error) {
       console.error(error.message);
     }

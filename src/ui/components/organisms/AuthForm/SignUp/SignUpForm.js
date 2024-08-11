@@ -22,7 +22,7 @@ export const useSignUp = () => {
           firstName: firstName,
         });
       }
-      navigate('/profile');
+      navigate('/bankdash');
     } catch (error) {
       console.error(error.message);
     }
