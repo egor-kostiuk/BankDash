@@ -1,5 +1,5 @@
-import {Label} from "ui/components/atoms/Label/Label.jsx";
-import {Input} from "ui/components/atoms/Input/Input.jsx";
+import {Label} from "/src/ui/components/atoms/Label/Label.jsx";
+import {Input} from "/src/ui/components/atoms/Input/Input.jsx";
 
 import "./InputBox.css";
 
