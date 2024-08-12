@@ -7,6 +7,7 @@ import {SignUpPage} from "/src/app/pages/Auth/SignUpPage.jsx";
 import {HomePage} from "/src/app/pages/HomePage.jsx";
 
 import './styles/App.css';
+import {PageLogo} from "./ui/components/atoms/PageLogo/PageLogo.jsx";
 
 export default function App() {
   const [user, setUser] = useState();
@@ -18,6 +19,7 @@ export default function App() {
 
   return (
     <Router>
+      <PageLogo/>
       <Routes>
         <Route exact path={'/'} element={<LoginPage/>} />
         <Route exact path={'/login'} element={<LoginPage/>} />
