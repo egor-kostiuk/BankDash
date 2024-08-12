@@ -1,5 +1,5 @@
 import {useProfile} from "./Profile.js";
-import {AuthButton} from "/src/ui/components/atoms/AuthButton/AuthButton.jsx";
+import {AuthButton} from "/src/ui/components/atoms/Buttons/AuthButton/AuthButton.jsx";
 
 import "./Profile.css";
 
