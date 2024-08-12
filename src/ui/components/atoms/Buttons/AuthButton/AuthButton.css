@@ -1,12 +1,12 @@
-.Button {
+.auth-button {
   margin: 24px;
 }
 
-.Button:focus {
+.auth-button:focus {
   outline: none;
 }
 
-.Button div {
+.auth-button div {
   position: relative;
   display: inline-block;
   padding: 10px 20px;
@@ -20,18 +20,18 @@
   letter-spacing: 3px
 }
 
-.Button div:hover {
+.auth-button div:hover {
   background: #fff;
   color: #272727;
   border-radius: 5px;
 }
 
-.Button div span {
+.auth-button div span {
   position: absolute;
   display: block;
 }
 
-.Button div span:nth-child(1) {
+.auth-button div span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
@@ -50,7 +50,7 @@
   }
 }
 
-.Button div span:nth-child(2) {
+.auth-button div span:nth-child(2) {
   top: -100%;
   right: 0;
   width: 2px;
@@ -70,7 +70,7 @@
   }
 }
 
-.Button div span:nth-child(3) {
+.auth-button div span:nth-child(3) {
   bottom: 0;
   right: -100%;
   width: 100%;
@@ -90,7 +90,7 @@
   }
 }
 
-.Button div span:nth-child(4) {
+.auth-button div span:nth-child(4) {
   bottom: -100%;
   left: 0;
   width: 2px;
@@ -110,17 +110,17 @@
   }
 }
 
-.Button p:last-child {
+.auth-button p:last-child {
   color: #aaa;
   font-size: 14px;
 }
 
-.Button div.a2 {
+.auth-button div.a2 {
   color: #fff;
   text-decoration: none;
 }
 
-.Button div.a2:hover {
+.auth-button div.a2:hover {
   background: transparent;
   color: #aaa;
   border-radius: 5px;
