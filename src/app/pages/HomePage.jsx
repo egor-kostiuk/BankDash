@@ -1,9 +1,11 @@
-import {Profile} from "../../ui/components/molecules/Profile/Profile.jsx";
+import {Main} from "/src/ui/components/templates/Main/Main.jsx";
+import {Header} from "/src/ui/components/templates/Header/Header.jsx";
 
 export const HomePage = () => {
   return (
     <>
-      <Profile/>
+      <Header/>
+      <Main/>
     </>
   )
 }
