@@ -13,6 +13,7 @@ export const Sidebar = () => {
             className='sidebar-list-item'
             img={item.img}
             label={item.label}
+            path={item.path}
           />
         ))}
       </ul>
