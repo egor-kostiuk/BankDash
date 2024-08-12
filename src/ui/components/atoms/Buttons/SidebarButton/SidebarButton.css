@@ -1,0 +1,23 @@
+.sidebar-button {
+  margin: 0;
+  width: 100%;
+  font: inherit;
+  cursor: pointer;
+  padding: 12px 24px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  gap: 25px;
+  border-radius: 8px;
+  color: #B1B1B1;
+}
+
+.sidebar-button span {
+  margin: 4px 0;
+}
+
+.sidebar-button:hover,
+.sidebar-button:focus {
+  transition: 0.35s;
+  background-color: #E7EDFFFF;
+}

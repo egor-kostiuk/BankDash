@@ -1,0 +1,9 @@
+.sidebar-button-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+}
