@@ -1,0 +1,44 @@
+.form-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  margin: 0 auto;
+  transform: translate(-50%, -55%);
+  background: #004BB0FF;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form h3 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.form p {
+  color: #aaa;
+  font-size: 18px;
+}
+
+.form a {
+  color: #fff;
+}
+
+.form p a:hover {
+  background: transparent;
+  color: #aaa;
+  border-radius: 5px;
+}
