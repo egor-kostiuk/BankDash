@@ -1,0 +1,26 @@
+.logo-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 230px;
+  height: 60px;
+  min-height: 100px;
+  padding-left: 36px;
+  padding-right: 36px;
+  border-right: 1px solid #E6EFF5; /* TODO: move border to sidebar */
+}
+
+.logo-wrapper img {
+  width: 36px;
+}
+
+.logo-wrapper span {
+  color: #343C6AFF;
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.5625rem;
+  line-height: 1.2;
+  font-family: Inter, sans-serif;
+}

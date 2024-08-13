@@ -1,0 +1,22 @@
+.sidebar-button-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+}
+
+.sidebar-button-wrapper.active::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(24, 20, 243);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 6px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: background-color 0.5s;
+}

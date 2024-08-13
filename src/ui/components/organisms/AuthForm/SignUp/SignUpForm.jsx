@@ -2,7 +2,7 @@ import {useSignUp} from './SignUpForm.js';
 import {Link} from 'react-router-dom';
 
 import {InputBox} from "/src/ui/components/molecules/InputBox/InputBox.jsx";
-import {AuthButton} from "/src/ui/components/atoms/AuthButton/AuthButton.jsx";
+import {AuthButton} from "/src/ui/components/atoms/Buttons/AuthButton/AuthButton.jsx";
 
 import '../Form.css';
 

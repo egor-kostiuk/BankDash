@@ -1,6 +1,4 @@
 html {
-  --container: 300px;
-  --padding-container: 10px;
   box-sizing: border-box;
   position: relative;
   overflow-x: hidden;
@@ -8,6 +6,12 @@ html {
 
 *, *::before, *::after {
   box-sizing: inherit;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
 }
 
 body {
