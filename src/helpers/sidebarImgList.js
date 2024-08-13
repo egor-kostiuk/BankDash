@@ -1,10 +1,18 @@
 export const sidebarImgList = {
   dashboard: "/src/assets/img/sidebar/dashboard.svg",
+  dashboardActive: "/src/assets/img/sidebar/dash-active.svg",
   transactions: "/src/assets/img/sidebar/transactions.svg",
+  transactionsActive: "/src/assets/img/sidebar/transac-active.svg",
   account: "/src/assets/img/sidebar/account.svg",
+  accountActive: "/src/assets/img/sidebar/acc-active.svg",
   investments: "/src/assets/img/sidebar/investments.svg",
+  investmentsActive: "/src/assets/img/sidebar/invest-active.svg",
   creditCards: "/src/assets/img/sidebar/credit-cards.svg",
+  creditCardsActive: "/src/assets/img/sidebar/cards-active.svg",
   loans: "/src/assets/img/sidebar/loans.svg",
+  loansActive: "/src/assets/img/sidebar/loa-active.svg",
   services: "/src/assets/img/sidebar/services.svg",
+  servicesActive: "/src/assets/img/sidebar/serv-active.svg",
   settings: "/src/assets/img/sidebar/settings.svg",
+  settingsActive: "/src/assets/img/sidebar/sett-active.svg",
 }

@@ -4,8 +4,9 @@ import {SidebarButton} from "/src/ui/components/atoms/Buttons/SidebarButton/Side
 
 import "./SidebarButtonBox.css";
 
-export const SidebarButtonBox = ({img, label, path}) => {
+export const SidebarButtonBox = ({imgActive, img, label, path, isActive}) => {
   const navigate = useNavigate();
+  const activeClass = isActive ? "sidebar-button-active" : "sidebar-button";
 
   const handleClick = () => {
     navigate(path);
@@ -15,8 +16,9 @@ export const SidebarButtonBox = ({img, label, path}) => {
     <div className={'sidebar-button-wrapper'}>
       <SidebarButton
         onClick={handleClick}
-        img={img}
+        img={isActive ? imgActive : img}
         label={label}
+        activeClass={activeClass}
       />
     </div>
   )

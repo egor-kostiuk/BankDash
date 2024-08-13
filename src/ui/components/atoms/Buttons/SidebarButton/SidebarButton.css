@@ -12,6 +12,10 @@
   color: #B1B1B1;
 }
 
+.sidebar-button-active {
+  color: #1814F3FF;
+}
+
 .sidebar-button span {
   margin: 4px 0;
 }
