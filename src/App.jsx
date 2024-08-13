@@ -18,7 +18,7 @@ export default function App() {
   });
 
   return (
-    <Router basename="/app">
+    <Router>
       <Routes>
         <Route exact path={'/'} element={<LoginPage/>} />
         <Route exact path={'/login'} element={<LoginPage/>} />
