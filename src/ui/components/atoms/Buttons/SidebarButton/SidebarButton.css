@@ -16,6 +16,11 @@
   color: #1814F3FF;
 }
 
+.sidebar-button img {
+  width: 20px;
+  height: 20px;
+}
+
 .sidebar-button span {
   margin: 4px 0;
 }
