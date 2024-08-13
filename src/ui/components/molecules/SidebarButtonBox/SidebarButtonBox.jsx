@@ -13,7 +13,7 @@ export const SidebarButtonBox = ({imgActive, img, label, path, isActive}) => {
   };
 
   return (
-    <div className={'sidebar-button-wrapper'}>
+    <div className={`sidebar-button-wrapper ${isActive ? 'active' : ''}`}>
       <SidebarButton
         onClick={handleClick}
         img={isActive ? imgActive : img}
