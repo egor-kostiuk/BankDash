@@ -1,5 +1,8 @@
 {
   "rewrites": [
     { "source": "/app/(.*)", "destination": "/app/index.html" }
+  ],
+  "staticFiles": [
+    { "source": "/app/assets/(.*)", "destination": "/app/assets/$1" }
   ]
 }
