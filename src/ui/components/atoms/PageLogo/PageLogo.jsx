@@ -1,4 +1,4 @@
-import pageLogo from "/src/assets/img/page-logo.png";
+import pageLogo from "/src/assets/img/page-logo.svg";
 
 import "./PageLogo.css";
 
