@@ -1,4 +1,4 @@
-.navbar-input {
+.nav-input {
     color: rgb(139, 163, 203);
     display: flex;
     align-items: center;
@@ -6,6 +6,6 @@
     border: none;
 }
 
-.navbar-input::placeholder {
+.nav-input::placeholder {
     color: rgb(139, 163, 203);
 }

@@ -4,7 +4,7 @@ import profileImg from '/src/assets/img/navbar/profile.svg'
 import settingsImg from '/src/assets/img/navbar/settings.svg'
 
 
-export const navbarImgList = {
+export const navImgList = {
   magnifyingGlass: magnifyingGlassImg,
   notifications: notificationsImg,
   profile: profileImg,

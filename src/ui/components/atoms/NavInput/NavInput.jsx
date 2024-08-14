@@ -1,8 +1,8 @@
-import "./NavbarInput.css";
+import "./NavInput.css";
 
-export const NavbarInput = ({type, onChange}) => {
+export const NavInput = ({type, onChange}) => {
     return (
-        <input className={'navbar-input'}
+        <input className={'nav-input'}
           type={type}
           onChange={onChange}
           placeholder={"Search for something"}
