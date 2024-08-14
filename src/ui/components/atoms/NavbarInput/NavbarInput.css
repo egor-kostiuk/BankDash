@@ -1,0 +1,11 @@
+.navbar-input {
+    color: rgb(139, 163, 203);
+    display: flex;
+    align-items: center;
+    height: 50px;
+    border: none;
+}
+
+.navbar-input::placeholder {
+    color: rgb(139, 163, 203);
+}

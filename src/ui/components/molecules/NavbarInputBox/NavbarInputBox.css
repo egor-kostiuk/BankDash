@@ -1,0 +1,10 @@
+.navbar-input-box {
+    position: absolute;
+    display: flex;
+    background-color: rgb(245, 247, 250);
+    width: 260px;
+    height: 50px;
+    right: 300px;
+    border-radius: 25px;
+    margin-top: -3px;
+}

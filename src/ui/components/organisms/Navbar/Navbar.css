@@ -1,0 +1,15 @@
+.navbar {
+    background: #FFFFFF;
+    width: 100vw;
+    height: 100px;
+}
+
+h1 {
+    color: rgb(52, 60, 106);
+    position: relative;
+    width: 520px;
+    height: 30px;
+    left: 45px;
+    font-size: 1.5625rem;
+    top: 37px;
+}
