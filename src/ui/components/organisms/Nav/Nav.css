@@ -1,0 +1,22 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #FFFFFF;
+    width: 1190px;
+    height: 100px;
+    padding: 20px 36px;
+}
+
+.nav-settings-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav h1 {
+    color: rgb(52, 60, 106);
+    width: 520px;
+    height: 30px;
+    font-size: 1.5625rem;
+}

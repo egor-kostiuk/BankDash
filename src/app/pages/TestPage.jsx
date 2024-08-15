@@ -4,7 +4,7 @@ import {Header} from "/src/ui/components/templates/Header/Header.jsx";
 export const TestPage = () => {
   return (
     <>
-      <Header/>
+      <Header title={'Test'}/>
       <Main/>
     </>
   )

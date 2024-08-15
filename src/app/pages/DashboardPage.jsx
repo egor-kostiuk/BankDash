@@ -4,7 +4,7 @@ import {Header} from "/src/ui/components/templates/Header/Header.jsx";
 export const DashboardPage = () => {
   return (
     <>
-      <Header/>
+      <Header title={'Overview'}/>
       <Main/>
     </>
   )
