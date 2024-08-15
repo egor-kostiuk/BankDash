@@ -7,7 +7,7 @@ export const NavInputBox = ({type, onChange, img}) => {
   return (
     <div className={'nav-input-box'}>
       <NavInputButton img={img}/>
-      <NavInput type={type} onChange={onChange}/>
+      <NavInput type={type} onChange={onChange} placeholder={"Search for something"}/>
     </div>
   )
 }
