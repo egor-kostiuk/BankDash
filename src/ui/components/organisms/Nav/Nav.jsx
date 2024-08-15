@@ -5,13 +5,15 @@ import {navImgList} from "/src/helpers/navImgList.js";
 
 import "./Nav.css";
 
-export const Nav = () => {
+export const Nav = ({title}) => {
   return (
-    <aside className={'nav'}>
-      <h1>Overview</h1>
-      <NavInputBox img={navImgList.magnifyingGlass}/>
-      <NavButtonsBox img={[navImgList.settings, navImgList.notifications]}/>
-      <NavProfileButton img={navImgList.profile}/>
-    </aside>
+    <nav className={'nav'}>
+      <h1>{title}</h1>
+      <div className={'nav-settings-wrapper'}>
+        <NavInputBox img={navImgList.magnifyingGlass}/>
+        <NavButtonsBox img={[navImgList.settings, navImgList.notifications]}/>
+        <NavProfileButton img={navImgList.profile}/>
+      </div>
+    </nav>
   )
 }
