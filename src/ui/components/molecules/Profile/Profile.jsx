@@ -26,7 +26,7 @@ export const Profile = () => {
           <AuthButton label={'Logout'} onClick={handleLogout}/>
 
         </div>
-      ) : (  // TODO: block navigation to pages
+      ) : (
         <p>Loading...</p>
       )}
     </div>
