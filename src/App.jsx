@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import {ProtectedRoute} from "/src/routes/ProtectedRoute.jsx";
 import {auth} from "/src/services/api/firebase.js";
 
 import {LoginPage} from "/src/app/pages/Auth/LoginPage.jsx";
@@ -20,11 +21,30 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path={'/'} element={<LoginPage/>} />
-        <Route exact path={'/login'} element={<LoginPage/>} />
-        <Route exact path={'/sign-up'} element={<SignUpPage/>} />
-        <Route exact path={'/bankdash'} element={<DashboardPage/>} /> {/* TODO: if user signed up */}
-        <Route exact path={'/test'} element={<TestPage/>} /> {/* TODO: implement other pages */}
+        {/* Public routes */}
+        <Route exact path={'/'} element={<LoginPage />} />
+        <Route exact path={'/login'} element={<LoginPage />} />
+        <Route exact path={'/sign-up'} element={<SignUpPage />} />
+
+        {/* Protected routes */}
+        <Route
+          exact
+          path={'/bankdash'}
+          element={
+            <ProtectedRoute user={user}>
+              <DashboardPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          exact
+          path={'/test'}
+          element={
+            <ProtectedRoute user={user}>
+              <TestPage />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </Router>
   )
