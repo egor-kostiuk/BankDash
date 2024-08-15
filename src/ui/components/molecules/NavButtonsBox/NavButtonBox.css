@@ -1,7 +1,4 @@
 .nav-button-wrapper {
-    position: absolute;
     display: flex;
-    right: 145px;
-    top: 25px;
-    gap: 30px;
+    gap: 20px;
 }

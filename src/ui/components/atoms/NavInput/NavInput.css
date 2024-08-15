@@ -1,9 +1,10 @@
 .nav-input {
-    color: rgb(139, 163, 203);
     display: flex;
     align-items: center;
     height: 50px;
     border: none;
+    color: rgb(139, 163, 203);
+    margin-bottom: 0;
 }
 
 .nav-input::placeholder {

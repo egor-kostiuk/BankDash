@@ -1,5 +1,11 @@
 .nav-input-button {
-    padding: 12px;
     width: 40px;
-    height: 48px;
+    height: 40px;
+    padding: 12px;
+    margin-left: 7px; /* TODO: optimize margin left*/
+}
+
+.nav-input-button img {
+    max-width: 16px;
+    max-height: 16px;
 }
