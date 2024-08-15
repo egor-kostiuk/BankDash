@@ -1,0 +1,9 @@
+.nav-settings-button{
+    display: flex;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+    background-color: rgb(245, 247, 250);
+    border-radius: 50%;
+}
