@@ -3,6 +3,9 @@
     height: 70px;
     padding: 5px;
 }
+.dropdown {
+    display: inline-block;
+}
 
 .dropdown-content {
     display: none;
