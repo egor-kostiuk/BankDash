@@ -3,3 +3,12 @@
     height: 70px;
     padding: 5px;
 }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
