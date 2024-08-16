@@ -3,6 +3,7 @@
     height: 70px;
     padding: 5px;
 }
+
 .dropdown {
     display: inline-block;
 }
@@ -10,7 +11,7 @@
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgb(255, 255, 255);
+    background-color: #FFFFFFFF;
     box-shadow: rgba(0, 0, 0, 0.03) 0 -2px 6px 0, rgba(0, 0, 0, 0.01) 1px 10px 10px 0, rgba(0, 0, 0, 0.03) 0 20px 17px 0, rgba(0, 0, 0, 0.07) 4px 38px 47px 0;
     transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
     width: 280px;
@@ -30,7 +31,7 @@ hr {
     margin: 0;
     border-width: 0 0 thin;
     border-style: solid;
-    border-color: rgb(242, 244, 247)
+    border-color: #F2F4F7FF;
 }
 
 h6 {
@@ -43,7 +44,7 @@ h6 {
     font-weight: 600;
     font-size: 0.875rem;
     line-height: 1.2143;
-    color: rgb(52, 60, 106);
+    color: #343C6AFF;
     width: 232px;
     height: 17px;
 }
@@ -81,20 +82,20 @@ h6 {
     font-family: Inter, sans-serif;
     line-height: 1.57;
     font-weight: 600;
-    color: rgb(52, 60, 106);
+    color: #343C6AFF;
 }
 
 .dropdown-occupation {
     width: 51px;
     height: 15px;
     font-size: 0.75rem;
-    color: rgb(139, 163, 203);
+    color: #8BA3CBFF;
 }
 
 .dropdown-mail {
     display: flex;
     align-items: center;
-    color: rgb(139, 163, 203);
+    color: #8BA3CBFF;
     font-weight: 400;
     line-height: 1.57;
     gap: 4px;
@@ -110,7 +111,7 @@ h6 {
     height: 45px;
     padding: 2px 0;
     margin-left: 12px;
-    color: rgb(52, 60, 106);
+    color: #343C6AFF;
 }
 
 .dropdown-my-profile {
@@ -132,7 +133,7 @@ h6 {
     display: flex;
     width: 45px;
     height: 45px;
-    background-color: rgb(231, 237, 255);
+    background-color: #E7EDFFFF;
     align-items: center;
     justify-content: center;
     border-radius: 6px;
@@ -155,7 +156,7 @@ h6 {
     justify-content: center;
     position: relative;
     cursor: pointer;
-    color: rgb(254, 92, 115);
+    color: #FE5C73FF;
     width: 100%;
     font-size: 0.9375rem;
     line-height: 1.6;
@@ -163,7 +164,7 @@ h6 {
     text-decoration: none;
     border-width: 1px;
     border-style: solid;
-    border-color: rgba(254, 92, 115, 0.5);
+    border-color: #FE5C737F;
     border-image: initial;
     border-radius: 50px;
 }
