@@ -11,7 +11,7 @@ export const NavProfileButton = ({img}) => {
   return (
     <div className="dropdown">
       <button className="nav-profile-button" onClick={toggleDropdown}>
-        <img src={img} alt="" />
+        <img src={img} alt=""/>
       </button>
       {isOpen && (
         <nav className="dropdown-content">
