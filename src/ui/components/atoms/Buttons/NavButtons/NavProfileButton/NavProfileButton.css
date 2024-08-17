@@ -22,7 +22,7 @@
     padding: 24px;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown-content {
     display: block;
 }
 
@@ -81,6 +81,7 @@ hr {
 .profile-settings {
     padding: 12px 0;
 }
+
 .profile-box {
     width: 150px;
     padding: 2px 0;
