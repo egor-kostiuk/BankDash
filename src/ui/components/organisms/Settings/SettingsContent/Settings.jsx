@@ -1,6 +1,6 @@
-import {useState} from 'react';
+import {useState} from "react";
 import "./Settings.css";
-import { SettingsContentRender } from '../SettingsContentRender.jsx';  // або '../organisms/SettingsContentRender.jsx'
+import {SettingsContentRender} from "../SettingsContentRender.jsx";
 
 export const SettingsContent = () => {
   const [activeContent, setActiveContent] = useState('profile');
@@ -8,12 +8,27 @@ export const SettingsContent = () => {
   return (
     <div className="settings-container">
       <div className="settings-buttons-box">
-        <button onClick={() => setActiveContent('profile')}>Edit profile</button>
-        <button onClick={() => setActiveContent('preferences')}>Preferences</button>
-        <button onClick={() => setActiveContent('security')}>Security</button>
+        <button
+          className={activeContent === 'profile' ? 'settings-button-active' : ''}
+          onClick={() => setActiveContent('profile')}
+        >
+          Edit profile
+        </button>
+        <button
+          className={activeContent === 'preferences' ? 'settings-button-active' : ''}
+          onClick={() => setActiveContent('preferences')}
+        >
+          Preferences
+        </button>
+        <button
+          className={activeContent === 'security' ? 'settings-button-active' : ''}
+          onClick={() => setActiveContent('security')}
+        >
+          Security
+        </button>
       </div>
       <div className="content">
-        <SettingsContentRender activeContent={activeContent} />
+        <SettingsContentRender activeContent={activeContent}/>
       </div>
     </div>
   );
