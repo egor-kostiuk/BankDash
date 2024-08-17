@@ -1,11 +1,11 @@
-// import
+import {EditProfile} from "/src/ui/components/molecules/Settings/SettingsEditProfile/SettingsEditProfile.jsx";
 // import
 // import
 
 export const SettingsContentRender = ({activeContent}) => {
   switch (activeContent) {
     case 'profile':
-      return <div>Profile content</div>;
+      return <EditProfile/>;
     case 'preferences':
       return <div>Preferences content</div>;
     case 'security':

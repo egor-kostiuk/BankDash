@@ -1,0 +1,20 @@
+.edit-profile-container {
+  display: flex;
+  gap: 53px;
+}
+
+.edit-profile-img img{
+  width: 130px;
+  height: 130px;
+}
+
+.edit-profile-info {
+  display: flex;
+  gap: 29px;
+}
+
+.edit-profile-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
