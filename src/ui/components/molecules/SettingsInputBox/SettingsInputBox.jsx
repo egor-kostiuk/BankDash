@@ -3,11 +3,11 @@ import {SettingsInput} from "/src/ui/components/atoms/SettingsInput/SettingsInpu
 
 import "./SettingsInputBox.css";
 
-export const SettingsInputBox = ({title, type, placeholder}) => {
+export const SettingsInputBox = ({title, type, placeholder, onChange}) => {
   return (
     <div className={'settings-input-box'}>
       <SettingsLabel title={title}/>
-      <SettingsInput title={title} type={type} placeholder={placeholder}/>
+      <SettingsInput title={title} type={type} placeholder={placeholder} onChange={onChange}/>
     </div>
   )
 }
