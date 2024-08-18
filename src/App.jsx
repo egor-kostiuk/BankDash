@@ -30,41 +30,41 @@ export default function App() {
   return (
     <Router>
       <LoadingBarWrapper>
-      <Routes>
-        {/* Public routes */}
-        <Route exact path={'/'} element={<LoginPage />} />
-        <Route exact path={'/login'} element={<LoginPage />} />
-        <Route exact path={'/sign-up'} element={<SignUpPage />} />
+        <Routes>
+          {/* Public routes */}
+          <Route exact path={'/'} element={<LoginPage />} />
+          <Route exact path={'/login'} element={<LoginPage />} />
+          <Route exact path={'/sign-up'} element={<SignUpPage />} />
 
-        {/* Protected routes */}
-        <Route
-          exact
-          path={'/bankdash'}
-          element={
-            <ProtectedRoute user={user}>
-              <DashboardPage />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          exact
-          path={'/test'}
-          element={
-            <ProtectedRoute user={user}>
-              <TestPage />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          exact
-          path={'/settings'}
-          element={
-            <ProtectedRoute user={user}>
-              <SettingsPage />
-            </ProtectedRoute>
-          }
-        />
-      </Routes>
+          {/* Protected routes */}
+          <Route
+            exact
+            path={'/bankdash'}
+            element={
+              <ProtectedRoute user={user}>
+                <DashboardPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            exact
+            path={'/test'}
+            element={
+              <ProtectedRoute user={user}>
+                <TestPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            exact
+            path={'/settings'}
+            element={
+              <ProtectedRoute user={user}>
+                <SettingsPage />
+              </ProtectedRoute>
+            }
+          />
+        </Routes>
       </LoadingBarWrapper>
     </Router>
   )
