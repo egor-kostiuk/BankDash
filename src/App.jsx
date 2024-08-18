@@ -1,12 +1,13 @@
 import {useEffect, useState} from "react";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import {ProtectedRoute} from "/src/routes/ProtectedRoute.jsx";
+import {LoadingBarWrapper} from "/src/utils/LoadingWrapper.jsx";
 import {auth} from "/src/services/api/firebase.js";
 
 import {LoginPage} from "/src/app/pages/Auth/LoginPage.jsx";
 import {SignUpPage} from "/src/app/pages/Auth/SignUpPage.jsx";
 import {DashboardPage} from "/src/app/pages/DashboardPage.jsx";
-import {TestPage} from "./app/pages/TestPage.jsx";
+import {TestPage} from "./app/pages/TestPage.jsx"; // TODO: fix import
 import {SettingsPage} from "/src/app/pages/SettingsPage.jsx";
 import './styles/App.css';
 
@@ -23,11 +24,12 @@ export default function App() {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div style={{ color: 'transparent' }}>Loading...</div>;
   }
 
   return (
     <Router>
+      <LoadingBarWrapper>
       <Routes>
         {/* Public routes */}
         <Route exact path={'/'} element={<LoginPage />} />
@@ -63,6 +65,7 @@ export default function App() {
           }
         />
       </Routes>
+      </LoadingBarWrapper>
     </Router>
   )
 }
