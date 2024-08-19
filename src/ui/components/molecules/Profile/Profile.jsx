@@ -3,12 +3,14 @@ import {AuthButton} from "/src/ui/components/atoms/Buttons/AuthButton/AuthButton
 
 import "./Profile.css";
 
-export const Profile = () => {
+export const Profile = ({children}) => {
   const {userDetails, handleLogout} = useProfile();
 
   return (
     <div>
       {userDetails ? (
+        <>
+        {children}
         <div className={'profile-card'}>
           <div className="user-picture">
             <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
@@ -21,13 +23,15 @@ export const Profile = () => {
           <div>
             <p className={'profile-item'}>Email: {userDetails.email}</p>
             <p className={'profile-item'}>Name: {userDetails.firstName}</p> {/* TODO: optimize className */}
+            <p className={'profile-item'}>Last Name: {userDetails.lastName}</p> {/* TODO: optimize className */}
           </div>
 
           <AuthButton label={'Logout'} onClick={handleLogout}/>
 
         </div>
+        </>
       ) : (
-        <p>Loading...</p>
+        <div></div>
       )}
     </div>
   );

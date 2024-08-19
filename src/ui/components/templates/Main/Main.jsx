@@ -8,8 +8,9 @@ export const Main = ({children}) => {
     <main className={'wrapper'}>
       <Sidebar/>
       <article> {/* TODO: article components */}
-        {children}
-        <Profile/>
+        <Profile>
+          {children}
+        </Profile>
       </article>
     </main>
   )
