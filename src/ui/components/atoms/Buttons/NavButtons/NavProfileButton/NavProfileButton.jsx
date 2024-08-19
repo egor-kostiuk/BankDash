@@ -17,10 +17,7 @@ export const NavProfileButton = ({img}) => {
       <button className="nav-profile-button" onClick={toggleDropdown}>
         <img src={img} alt=""/>
       </button>
-      {isOpen && (
-        <>
-          <div className="dropdown-overlay" onClick={closeDropdown}></div>
-          <nav className="dropdown-content">
+          <nav className={`dropdown-content ${isOpen ? 'open' : ''}`}>
             <h6 className="user-profile-title">User profile</h6>
             <ul>
               <div className="user-profile">
@@ -82,8 +79,7 @@ export const NavProfileButton = ({img}) => {
               </div>
             </ul>
           </nav>
-        </>
-      )}
+      {isOpen && <div className="dropdown-overlay" onClick={closeDropdown}></div>}
     </div>
   );
 };

@@ -23,6 +23,14 @@
     right: 0;
     top: 80px;
     z-index: 100;
+    transform: scale(0);
+    transform-origin: top right;
+    transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-content.open {
+    max-height: 400px;
+    transform: scale(1);
 }
 
 hr {
