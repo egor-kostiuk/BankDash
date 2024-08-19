@@ -1,6 +1,7 @@
 import {useState} from "react";
-import "./Settings.css";
 import {SettingsContentRender} from "../SettingsContentRender.jsx";
+
+import "./Settings.css";
 
 export const SettingsContent = () => {
   const [activeContent, setActiveContent] = useState('profile');
