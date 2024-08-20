@@ -1,9 +1,11 @@
 import {useState} from "react";
+import {useNavigate} from "react-router-dom";
 
 import "./NavProfileButton.css";
 
 export const NavProfileButton = ({img}) => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -11,6 +13,11 @@ export const NavProfileButton = ({img}) => {
 
   const closeDropdown = () => {
     setIsOpen(false);
+  };
+
+  const navigateToProfileSettingPage = () => {
+    navigate("/test");
+    closeDropdown();
   };
 
   return (
@@ -50,8 +57,7 @@ export const NavProfileButton = ({img}) => {
               </div>
               <hr className={'profile-hr'}/>
               <div className="profile-settings">
-                <a href="/bankdash">
-                  <div className="profile-settings-box">
+                  <div className="profile-settings-box" onClick={navigateToProfileSettingPage}>
                     <div className="profile-settings-img">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +79,6 @@ export const NavProfileButton = ({img}) => {
                       <h6 className="dropdown-account-settings">Account Settings</h6>
                     </div>
                   </div>
-                </a>
               </div>
               <div className="logout-button">
                 <button>Logout</button>
