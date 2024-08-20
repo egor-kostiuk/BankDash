@@ -102,6 +102,16 @@
     margin: 1px 0 0;
 }
 
+.notifications-unread:hover {
+    background-color: #DADADA6B;
+    transition: 0.2s;
+}
+
+.notifications-read:hover {
+    background-color: #DADADA6B;
+    transition: 0.2s;
+}
+
 .notifications-img {
     min-width: 56px;
 }
