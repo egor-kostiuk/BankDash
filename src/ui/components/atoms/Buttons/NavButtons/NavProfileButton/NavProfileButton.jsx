@@ -13,11 +13,11 @@ export const NavProfileButton = ({img}) => {
   };
 
   return (
-    <div className="dropdown">
+    <div className="profile-dropdown">
       <button className="nav-profile-button" onClick={toggleDropdown}>
         <img src={img} alt=""/>
       </button>
-          <nav className={`dropdown-content ${isOpen ? 'open' : ''}`}>
+          <nav className={`profile-dropdown-content ${isOpen ? 'open' : ''}`}>
             <h6 className="user-profile-title">User profile</h6>
             <ul>
               <div className="user-profile">
@@ -47,7 +47,7 @@ export const NavProfileButton = ({img}) => {
                   </div>
                 </div>
               </div>
-              <hr/>
+              <hr className={'profile-hr'}/>
               <div className="profile-settings">
                 <a href="/bankdash">
                   <div className="profile-settings-box">

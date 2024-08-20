@@ -4,13 +4,13 @@
     padding: 5px;
 }
 
-.dropdown {
+.profile-dropdown {
     display: inline-block;
     padding: 8px 0;
     position: relative;
 }
 
-.dropdown-content {
+.profile-dropdown-content {
     position: absolute;
     display: block;
     background-color: #FFFFFFFF;
@@ -28,12 +28,12 @@
     transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
 }
 
-.dropdown-content.open {
+.profile-dropdown-content.open {
     max-height: 400px;
     transform: scale(1);
 }
 
-hr {
+.profile-hr {
     border-width: 0 0 thin;
     border-style: solid;
     border-color: #F2F4F7FF;
