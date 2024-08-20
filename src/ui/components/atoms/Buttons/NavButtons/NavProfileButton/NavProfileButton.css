@@ -16,7 +16,7 @@
     background-color: #FFFFFFFF;
     box-shadow: rgba(0, 0, 0, 0.03) 0 -2px 6px 0, rgba(0, 0, 0, 0.01) 1px 10px 10px 0, rgba(0, 0, 0, 0.03) 0 20px 17px 0, rgba(0, 0, 0, 0.07) 4px 38px 47px 0;
     width: 280px;
-    height: 290px;
+    height: auto;
     margin: 8px auto auto;
     border-radius: 12px;
     padding: 24px;
@@ -29,7 +29,7 @@
 }
 
 .profile-dropdown-content.open {
-    max-height: 400px;
+    height: auto;
     transform: scale(1);
 }
 
