@@ -1,13 +1,13 @@
-.nav-profile-button {
-    width: 70px;
-    height: 70px;
-    padding: 5px;
-}
-
 .profile-dropdown {
     display: inline-block;
     padding: 8px 0;
     position: relative;
+}
+
+.nav-profile-button {
+    width: 70px;
+    height: 70px;
+    padding: 5px;
 }
 
 .profile-dropdown-content {
@@ -33,16 +33,17 @@
     transform: scale(1);
 }
 
-.profile-hr {
-    border-width: 0 0 thin;
-    border-style: solid;
-    border-color: #F2F4F7FF;
-}
-
 .user-profile-title {
     font-size: 14px;
     color: #343C6AFF;
     height: 17px;
+}
+
+.user-profile {
+    height: 105px;
+    display: flex;
+    padding: 20px 0 20px;
+    align-items: center;
 }
 
 .user-profile-box {
@@ -54,13 +55,6 @@
 
 .user-info-box {
     margin-left: 12px;
-}
-
-.user-profile {
-    height: 105px;
-    display: flex;
-    padding: 20px 0 20px;
-    align-items: center;
 }
 
 .dropdown-username {
@@ -85,8 +79,29 @@
     gap: 4px;
 }
 
+.profile-hr {
+    border-width: 0 0 thin;
+    border-style: solid;
+    border-color: #F2F4F7FF;
+}
+
 .profile-settings {
     padding: 12px 0;
+}
+
+.profile-settings-box {
+    display: flex;
+    cursor: pointer;
+}
+
+.profile-settings-img {
+    display: flex;
+    width: 45px;
+    height: 45px;
+    background-color: #E7EDFFFF;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
 }
 
 .profile-box {
@@ -104,20 +119,6 @@
 .dropdown-account-settings {
     font-weight: 400;
     font-size: 13px;
-}
-
-.profile-settings-img {
-    display: flex;
-    width: 45px;
-    height: 45px;
-    background-color: #E7EDFFFF;
-    align-items: center;
-    justify-content: center;
-    border-radius: 6px;
-}
-
-.profile-settings-box {
-    display: flex;
 }
 
 .logout-button {
