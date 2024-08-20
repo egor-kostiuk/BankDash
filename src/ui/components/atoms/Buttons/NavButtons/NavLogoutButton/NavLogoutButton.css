@@ -12,6 +12,7 @@
 }
 
 .logout-button:hover {
+  border-color: #FE5C73FF;
   background-color: rgba(254, 92, 115, 0.05);
   transition: 0.2s;
 }
