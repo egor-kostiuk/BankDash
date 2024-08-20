@@ -1,4 +1,5 @@
-import {useState} from 'react';
+import {useState} from "react";
+
 import "./NavProfileButton.css";
 
 export const NavProfileButton = ({img}) => {
