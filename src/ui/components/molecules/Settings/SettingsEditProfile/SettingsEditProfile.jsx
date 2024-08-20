@@ -11,13 +11,13 @@ export const EditProfile = () => {
   const {userDetails, updateLastName} = useProfile();
   const [isLoading, setIsLoading] = useState(true);
 
-  // Логіка для кнопки save
+  // Logic for profile data save button
   const handleSave = async () => { // TODO: put in a separate component
     try {
       await updateLastName(lastName);
-      console.log("LastName успішно оновлено!");
+      console.log("LastName successfully updated!");
     } catch (error) {
-      console.error("Помилка при збереженні lastName:", error);
+      console.error("Error saving lastName:", error);
     }
   };
 
@@ -28,7 +28,7 @@ export const EditProfile = () => {
   }, [userDetails]);
 
   if (isLoading) {
-    return <div></div>; // Можете замінити на індикатор завантаження
+    return <div></div>;
   }
 
   return (

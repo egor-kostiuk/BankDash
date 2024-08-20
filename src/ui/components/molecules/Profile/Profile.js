@@ -19,12 +19,12 @@ export const useProfile = () => {
     }
   };
 
-  // Функція для оновлення user data
+  // Function for updating user data
   useEffect(() => {
     fetchUserData();
   }, []);
 
-  // Функція для оновлення lastName TODO: translate documentation
+  // Function for updating lastName
   const updateLastName = async (lastName) => {
     try {
       const user = auth.currentUser;
@@ -41,7 +41,7 @@ export const useProfile = () => {
     }
   };
 
-  // Функція для виходу з аккаунта TODO: translate documentation
+  // Function to Log out from the account
   async function handleLogout() {
     try {
       await auth.signOut();
