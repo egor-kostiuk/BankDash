@@ -1,29 +1,47 @@
 import {useEffect, useState} from "react";
 
 import {auth, db} from "/src/services/api/firebase.js";
-import {doc, getDoc} from "firebase/firestore";
+import {doc, getDoc, updateDoc} from "firebase/firestore";
 
 export const useProfile = () => {
   const [userDetails, setUserDetails] = useState(null);
 
   const fetchUserData = async () => {
-    auth.onAuthStateChanged(async (user) => {
-      console.log(user);
-
+    const user = auth.currentUser;
+    if (user) {
       const docRef = doc(db, "Users", user.uid);
       const docSnap = await getDoc(docRef);
       if (docSnap.exists()) {
         setUserDetails(docSnap.data());
-        console.log(docSnap.data());
       } else {
         console.log("User is not logged in");
       }
-    });
+    }
   };
+
+  // Функція для оновлення user data
   useEffect(() => {
     fetchUserData();
   }, []);
 
+  // Функція для оновлення lastName TODO: translate documentation
+  const updateLastName = async (lastName) => {
+    try {
+      const user = auth.currentUser;
+      if (user) {
+        const docRef = doc(db, "Users", user.uid);
+        await updateDoc(docRef, {
+          lastName: lastName,
+        });
+        console.log("LastName успішно оновлено!");
+        await fetchUserData();
+      }
+    } catch (error) {
+      console.error("Помилка при оновленні lastName:", error.message);
+    }
+  };
+
+  // Функція для виходу з аккаунта TODO: translate documentation
   async function handleLogout() {
     try {
       await auth.signOut();
@@ -34,5 +52,5 @@ export const useProfile = () => {
     }
   }
 
-  return {userDetails, handleLogout}
+  return {userDetails, updateLastName, handleLogout}
 }
