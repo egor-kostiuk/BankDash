@@ -3,10 +3,12 @@
     align-items: center;
     height: 50px;
     border: none;
-    color: rgb(139, 163, 203);
+    color: #8BA3CBFF;
     margin-bottom: 0;
+    outline: none;
+    background: transparent;
 }
 
 .nav-input::placeholder {
-    color: rgb(139, 163, 203);
+    color: #8BA3CBFF;
 }
