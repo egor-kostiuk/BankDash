@@ -5,7 +5,7 @@
 }
 
 .edit-profile-info-container {
-  height: 488px;
+  height: auto;
   display: flex;
   gap: 53px;
   margin-bottom: 30px;

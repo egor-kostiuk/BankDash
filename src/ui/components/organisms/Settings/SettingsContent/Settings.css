@@ -1,7 +1,4 @@
 .settings-container {
-  max-width: 100%; /* TODO: fix containers width */
-  width: 100%;
-  height: auto;
   padding: 27px 30px 30px 30px;
   margin-bottom: 200px;
   background-color: #FFF;
