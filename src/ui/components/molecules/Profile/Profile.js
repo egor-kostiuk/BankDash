@@ -33,11 +33,11 @@ export const useProfile = () => {
         await updateDoc(docRef, {
           lastName: lastName,
         });
-        console.log("LastName успішно оновлено!");
+        console.log("LastName successfully updated!");
         await fetchUserData();
       }
     } catch (error) {
-      console.error("Помилка при оновленні lastName:", error.message);
+      console.error("Error saving lastName:", error.message);
     }
   };
 
