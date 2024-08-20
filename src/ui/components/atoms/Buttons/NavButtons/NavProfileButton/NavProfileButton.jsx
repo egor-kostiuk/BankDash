@@ -25,16 +25,16 @@ export const NavProfileButton = ({img}) => {
       <button className="nav-profile-button" onClick={toggleDropdown}>
         <img src={img} alt=""/>
       </button>
-          <nav className={`profile-dropdown-content ${isOpen ? 'open' : ''}`}>
-            <h6 className="user-profile-title">User profile</h6>
-            <ul>
-              <div className="user-profile">
-                <div className="user-profile-box">
-                  <img src={img} alt=""/>
-                  <div className="user-info-box">
-                    <h6 className="dropdown-username">Charlene Reed</h6>
-                    <h6 className="dropdown-activity">Designer</h6>
-                    <h6 className="dropdown-mail">
+      <nav className={`profile-dropdown-content ${isOpen ? 'open' : ''}`}>
+        <h6 className="user-profile-title">User profile</h6>
+        <ul>
+          <div className="user-profile">
+            <div className="user-profile-box">
+              <img src={img} alt=""/>
+              <div className="user-info-box">
+                <h6 className="dropdown-username">Charlene Reed</h6>
+                <h6 className="dropdown-activity">Designer</h6>
+                <h6 className="dropdown-mail">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         aria-hidden="true"
@@ -52,13 +52,13 @@ export const NavProfileButton = ({img}) => {
                       </svg>
                       info@dashbank.com
                     </h6>
-                  </div>
-                </div>
               </div>
-              <hr className={'profile-hr'}/>
-              <div className="profile-settings">
-                  <div className="profile-settings-box" onClick={navigateToProfileSettingPage}>
-                    <div className="profile-settings-img">
+            </div>
+          </div>
+          <hr className={'profile-hr'}/>
+          <div className="profile-settings">
+            <div className="profile-settings-box" onClick={navigateToProfileSettingPage}>
+              <div className="profile-settings-img">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         aria-hidden="true"
@@ -74,17 +74,17 @@ export const NavProfileButton = ({img}) => {
                         ></path>
                       </svg>
                     </div>
-                    <div className="profile-box">
-                      <h6 className="dropdown-my-profile">My profile</h6>
-                      <h6 className="dropdown-account-settings">Account Settings</h6>
-                    </div>
-                  </div>
+              <div className="profile-box">
+                <h6 className="dropdown-my-profile">My profile</h6>
+                <h6 className="dropdown-account-settings">Account Settings</h6>
               </div>
-              <div className="logout-button">
-                <button>Logout</button>
-              </div>
-            </ul>
-          </nav>
+            </div>
+          </div>
+          <div className="logout-button">
+            <button>Logout</button>
+          </div>
+        </ul>
+      </nav>
       {isOpen && <div className="dropdown-overlay" onClick={closeDropdown}></div>}
     </div>
   );
