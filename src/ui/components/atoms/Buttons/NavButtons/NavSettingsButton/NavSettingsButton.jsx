@@ -49,7 +49,7 @@ export const NavSettingsButton = ({img}) => {
           </div>
           <div className={'notifications-unread'}>
             <div className={'notifications-img'}>img</div>
-            <div>
+            <div className={'notifications-box'}>
               <span className={'notification-title'}>Low Balance Alert</span>
               <span className={'notification-info'}>
                 <svg xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +67,7 @@ export const NavSettingsButton = ({img}) => {
           </div>
           <div className={'notifications-read'}>
             <div className={'notifications-img'}>img</div>
-            <div>
+            <div className={'notifications-box'}>
               <span className={'notification-title'}>New Loan Offer</span>
               <span className={'notification-info'}>
                 <svg xmlns="http://www.w3.org/2000/svg"
