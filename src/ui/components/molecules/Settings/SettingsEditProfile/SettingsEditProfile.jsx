@@ -3,6 +3,7 @@ import {useProfile} from "../../Profile/Profile.js";
 
 import {SettingsInputBox} from "/src/ui/components/molecules/SettingsInputBox/SettingsInputBox.jsx";
 import {SettingsSaveButton} from "/src/ui/components/atoms/Buttons/SettingsSaveButton/SettingsSaveButton.jsx";
+import {EditProfileImgButton} from "/src/ui/components/atoms/Buttons/EditProfileImgButton/EditProfileImgButton.jsx";
 
 import "./SettingsEditProfile.css";
 
@@ -34,26 +35,26 @@ export const EditProfile = () => {
   return (
     <div className={'edit-profile-container'}>
       <div className={'edit-profile-info-container'}>
-        <div className={'edit-profile-img'}>
-          <img src="/src/assets/img/navbar/profile.svg" alt="Profile Avatar"/>
+        <div className={'edit-profile-img-box'}>
+          <EditProfileImgButton/>
         </div>
         <div className={'edit-profile-info'}>
           <ul className={'edit-profile-list'}>
             <SettingsInputBox
               title={'Your Name'}
               type={'text'}
-              placeholder={'your name'}
+              placeholder={userDetails.firstName}
             />
             <SettingsInputBox
               title={'Last Name'}
               type={'text'}
-              placeholder={userDetails?.lastName || 'enter your last name'}
+              placeholder={userDetails?.lastName || 'enter your last name'} /* TODO: fix save user data logic */
               onChange={(e) => setLastName(e.target.value)}
             />
             <SettingsInputBox
               title={'Your Email'}
               type={'email'}
-              placeholder={'your email'}
+              placeholder={userDetails.email}
             />
             <SettingsInputBox
               title={'Password'}
