@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {navImgList} from "/src/helpers/navImgList.js";
 
 import "./NavSettingsButton.css";
 
@@ -30,9 +31,11 @@ export const NavSettingsButton = ({img}) => {
 
         <div className={'notifications'}>
           <div className={'notifications-unread'}>
-            <div className={'notifications-img'}>img</div>
+            <div className={'notifications-img'}>
+              <img src={navImgList.transactionMoney} alt="icon"/>
+            </div>
             <div className={'notifications-box'}>
-              <span className={'notification-title'}>Transaction Successful</span>
+            <span className={'notification-title'}>Transaction Successful</span>
               <span className={'notification-info'}>
                 <svg xmlns="http://www.w3.org/2000/svg"
                      aria-hidden="true"
@@ -48,7 +51,15 @@ export const NavSettingsButton = ({img}) => {
             </div>
           </div>
           <div className={'notifications-unread'}>
-            <div className={'notifications-img'}>img</div>
+            <div className={'notifications-img'}>
+                <svg className="low-balance-alert-img"
+                 focusable="false"
+                 aria-hidden="true"
+                 viewBox="0 0 24 24"
+                 data-testid="PersonIcon">
+                 <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+                </svg>
+            </div>
             <div className={'notifications-box'}>
               <span className={'notification-title'}>Low Balance Alert</span>
               <span className={'notification-info'}>
@@ -66,9 +77,11 @@ export const NavSettingsButton = ({img}) => {
             </div>
           </div>
           <div className={'notifications-read'}>
-            <div className={'notifications-img'}>img</div>
+            <div className={'notifications-img'}>
+              <img src={navImgList.newLoanOffer} alt="icon"/>
+            </div>
             <div className={'notifications-box'}>
-              <span className={'notification-title'}>New Loan Offer</span>
+            <span className={'notification-title'}>New Loan Offer</span>
               <span className={'notification-info'}>
                 <svg xmlns="http://www.w3.org/2000/svg"
                      aria-hidden="true"
