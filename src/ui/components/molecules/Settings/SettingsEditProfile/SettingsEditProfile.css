@@ -11,13 +11,22 @@
   margin-bottom: 30px;
 }
 
-.edit-profile-img {
+.edit-profile-img-box {
+  position: relative;
   width: 130px;
   height: 130px;
 }
 
-.edit-profile-img img {
-  width: 100%;
+.edit-profile-img-box img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+}
+
+.edit-profile-img-box svg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .edit-profile-info {
