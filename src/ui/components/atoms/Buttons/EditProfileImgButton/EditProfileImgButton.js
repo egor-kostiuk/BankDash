@@ -1,7 +1,9 @@
 import {useState} from "react";
 
+import defaultProfileImg from "/src/assets/img/default-profile-img.jpg"
+
 export const useEditProfileImg = () => {
-  const [profileImg, setProfileImg] = useState("/src/assets/img/default-profile-img.jpg");
+  const [profileImg, setProfileImg] = useState(defaultProfileImg);
 
   const handleButtonClick = () => {
     // console.log("Button clicked");
