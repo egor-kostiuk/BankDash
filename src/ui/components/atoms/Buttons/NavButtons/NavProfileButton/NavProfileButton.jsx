@@ -9,7 +9,7 @@ import "./NavProfileButton.css";
 export const NavProfileButton = ({img}) => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
-  const {handleLogout} = useProfile();
+  const {userDetails, handleLogout} = useProfile();
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -20,7 +20,7 @@ export const NavProfileButton = ({img}) => {
   };
 
   const navigateToProfileSettingPage = () => {
-    navigate("/test");
+    navigate("/settings");
     closeDropdown();
   };
 
@@ -36,7 +36,7 @@ export const NavProfileButton = ({img}) => {
             <div className="user-profile-box">
               <img src={img} alt=""/>
               <div className="user-info-box">
-                <h6 className="dropdown-username">Charlene Reed</h6>
+                <h6 className="dropdown-username">{userDetails?.firstName} {userDetails?.lastName}</h6>
                 <h6 className="dropdown-activity">Designer</h6>
                 <h6 className="dropdown-mail">
                   <svg
@@ -54,7 +54,7 @@ export const NavProfileButton = ({img}) => {
                       d="m7 9l3.75 3a2 2 0 0 0 2.5 0L17 9m4 8V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2"
                     ></path>
                   </svg>
-                  info@dashbank.com
+                  {userDetails?.email}
                 </h6>
               </div>
             </div>
