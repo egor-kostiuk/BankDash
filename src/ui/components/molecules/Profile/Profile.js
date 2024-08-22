@@ -41,8 +41,7 @@ export const useProfile = () => {
     }
   };
 
-  // Function to Log out from the account
-  async function handleLogout() {
+  const handleLogout = async () => {
     try {
       await auth.signOut();
       window.location.href = "/login";
@@ -52,5 +51,5 @@ export const useProfile = () => {
     }
   }
 
-  return {userDetails, updateLastName, handleLogout}
+  return {userDetails, updateLastName, handleLogout};
 }
