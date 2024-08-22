@@ -1,7 +1,7 @@
 import {useSignUp} from './SignUpForm.js';
 import {Link} from 'react-router-dom';
 
-import {InputBox} from "/src/ui/components/molecules/InputBox/InputBox.jsx";
+import {AuthInputBox} from "/src/ui/components/molecules/AuthInputBox/AuthInputBox.jsx";
 import {AuthButton} from "/src/ui/components/atoms/Buttons/AuthButton/AuthButton.jsx";
 
 import '../Form.css';
@@ -14,17 +14,17 @@ export const SignUpForm = () => {
       <form className={'form'}>
         <h3>Sign Up</h3>
 
-        <InputBox
+        <AuthInputBox
           type={'Name'}
           onChange={(e) => setFirstName(e.target.value)}
         />
 
-        <InputBox
+        <AuthInputBox
           type={'Email address'}
           onChange={(e) => setEmail(e.target.value)}
         />
 
-        <InputBox
+        <AuthInputBox
           type={'Password'}
           onChange={(e) => setPassword(e.target.value)}
         />
