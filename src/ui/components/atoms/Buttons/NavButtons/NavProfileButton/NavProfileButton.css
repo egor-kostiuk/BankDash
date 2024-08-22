@@ -40,10 +40,10 @@
 }
 
 .user-profile {
-    height: 105px;
     display: flex;
-    padding: 20px 0 20px;
     align-items: center;
+    height: 105px;
+    padding: 20px 0;
 }
 
 .user-profile-box {
@@ -51,10 +51,12 @@
     align-items: center;
     font-size: 20px;
     line-height: 1;
+    gap: 12px;
 }
 
-.user-info-box {
-    margin-left: 12px;
+.user-profile-box img {
+    width: 65px;
+    height: 65px;
 }
 
 .dropdown-username {

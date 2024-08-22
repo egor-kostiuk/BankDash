@@ -1,0 +1,9 @@
+.setting-save-button {
+  width: 190px;
+  height: 50px;
+  border-radius: 16px;
+  font-size: 16px;
+  background-color: #1814F3;
+  color: #FFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.72);
+}

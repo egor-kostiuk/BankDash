@@ -1,0 +1,43 @@
+.edit-profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.edit-profile-info-container {
+  height: auto;
+  display: flex;
+  gap: 53px;
+  margin-bottom: 30px;
+}
+
+.edit-profile-img-box {
+  position: relative;
+  width: 130px;
+  height: 130px;
+}
+
+.edit-profile-img-box img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+}
+
+.edit-profile-img-box svg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.edit-profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+  flex: 1;
+}
+
+.edit-profile-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
