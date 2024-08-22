@@ -1,0 +1,7 @@
+.settings-input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  width: 418px;
+  height: 80px;
+}

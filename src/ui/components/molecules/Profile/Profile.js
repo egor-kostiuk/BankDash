@@ -1,30 +1,47 @@
 import {useEffect, useState} from "react";
 
 import {auth, db} from "/src/services/api/firebase.js";
-import {doc, getDoc} from "firebase/firestore";
+import {doc, getDoc, updateDoc} from "firebase/firestore";
 
 export const useProfile = () => {
   const [userDetails, setUserDetails] = useState(null);
 
   const fetchUserData = async () => {
-    auth.onAuthStateChanged(async (user) => {
-      console.log(user);
-
+    const user = auth.currentUser;
+    if (user) {
       const docRef = doc(db, "Users", user.uid);
       const docSnap = await getDoc(docRef);
       if (docSnap.exists()) {
         setUserDetails(docSnap.data());
-        console.log(docSnap.data());
       } else {
         console.log("User is not logged in");
       }
-    });
+    }
   };
+
+  // Function for updating user data
   useEffect(() => {
     fetchUserData();
   }, []);
 
-  async function handleLogout() {
+  // Function for updating lastName
+  const updateLastName = async (lastName) => {
+    try {
+      const user = auth.currentUser;
+      if (user) {
+        const docRef = doc(db, "Users", user.uid);
+        await updateDoc(docRef, {
+          lastName: lastName,
+        });
+        console.log("LastName successfully updated!");
+        await fetchUserData();
+      }
+    } catch (error) {
+      console.error("Error saving lastName:", error.message);
+    }
+  };
+
+  const handleLogout = async () => {
     try {
       await auth.signOut();
       window.location.href = "/login";
@@ -34,5 +51,5 @@ export const useProfile = () => {
     }
   }
 
-  return {userDetails, handleLogout}
+  return {userDetails, updateLastName, handleLogout};
 }
