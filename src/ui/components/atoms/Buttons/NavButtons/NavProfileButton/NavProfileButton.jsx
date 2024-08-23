@@ -1,18 +1,23 @@
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {useProfile} from "/src/ui/components/molecules/Profile/Profile.js";
-
 import {NavLogoutButton} from "../NavLogoutButton/NavLogoutButton.jsx";
 
 import "./NavProfileButton.css";
 
 export const NavProfileButton = ({img}) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isFilling, setIsFilling] = useState(false);
   const navigate = useNavigate();
   const {handleLogout} = useProfile();
 
   const toggleDropdown = () => {
-    setIsOpen(!isOpen);
+    setIsFilling(true);
+    setIsOpen(prev => !prev);
+
+    setTimeout(() => {
+      setIsFilling(false);
+    }, 500);
   };
 
   const closeDropdown = () => {
@@ -26,8 +31,12 @@ export const NavProfileButton = ({img}) => {
 
   return (
     <div className="profile-dropdown">
-      <button className="nav-profile-button" onClick={toggleDropdown}>
+      <button
+        className={`nav-profile-button ${isFilling ? 'filling' : ''}`}
+        onClick={toggleDropdown}
+      >
         <img src={img} alt=""/>
+        {isFilling && <div className="fill-overlay"></div>}
       </button>
       <nav className={`profile-dropdown-content ${isOpen ? 'open' : ''}`}>
         <h6 className="user-profile-title">User profile</h6>

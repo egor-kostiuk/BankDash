@@ -5,9 +5,16 @@ import "./NavSettingsButton.css";
 
 export const NavSettingsButton = ({img}) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isFilling, setIsFilling] = useState(false);
 
   const toggleDropdown = () => {
-    setIsOpen(!isOpen);
+    setIsFilling(true);
+
+    setIsOpen(prev => !prev);
+
+    setTimeout(() => {
+      setIsFilling(false);
+    }, 500);
   };
 
   const closeDropdown = () => {
@@ -16,8 +23,12 @@ export const NavSettingsButton = ({img}) => {
 
   return (
     <div className={'notifications-dropdown'}>
-      <button className={'nav-settings-button'} onClick={toggleDropdown}>
+      <button
+        className={`nav-settings-button ${isFilling ? 'filling' : ''}`}
+        onClick={toggleDropdown}
+      >
         <img src={img} alt={''}/>
+        {isFilling && <div className="fill-overlay"></div>}
       </button>
       <nav className={`notifications-dropdown-content ${isOpen ? 'open' : ''}`}>
         <div className={'all-notifications'}>
@@ -36,7 +47,7 @@ export const NavSettingsButton = ({img}) => {
             </div>
             <div className={'notifications-box'}>
             <span className={'notification-title'}>Transaction Successful</span>
-              <span className={'notification-info'}>
+            <span className={'notification-info'}>
                 <svg xmlns="http://www.w3.org/2000/svg"
                      aria-hidden="true"
                      role="img"
@@ -82,7 +93,7 @@ export const NavSettingsButton = ({img}) => {
             </div>
             <div className={'notifications-box'}>
             <span className={'notification-title'}>New Loan Offer</span>
-              <span className={'notification-info'}>
+            <span className={'notification-info'}>
                 <svg xmlns="http://www.w3.org/2000/svg"
                      aria-hidden="true"
                      role="img"

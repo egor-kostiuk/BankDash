@@ -1,4 +1,4 @@
-.nav-settings-button{
+.nav-settings-button {
     display: flex;
     align-items: center;
     width: 44px;
@@ -6,6 +6,39 @@
     padding: 12px;
     background-color: #F5F7FAFF;
     border-radius: 50%;
+    position: relative;
+    transition: opacity 0.3s ease;
+}
+
+.nav-settings-button.filling .fill-overlay {
+    opacity: 1;
+}
+
+.fill-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000019;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+@keyframes fillAnimation {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.nav-settings-button.filling .fill-overlay {
+    animation: fillAnimation 0.5s forwards;
 }
 
 .notifications-dropdown {
