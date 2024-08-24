@@ -1,10 +1,10 @@
-import {useSignUp} from './SignUpForm.js';
+import {useSignUp} from '/src/hooks/useSignUp.js';
 import {Link} from 'react-router-dom';
 
 import {InputBox} from "/src/ui/components/molecules/InputBox/InputBox.jsx";
 import {AuthButton} from "/src/ui/components/atoms/Buttons/AuthButton/AuthButton.jsx";
 
-import '../Form.css';
+import './Form.css';
 
 export const SignUpForm = () => {
   const {setEmail, setPassword, setFirstName, handleRegister} = useSignUp();

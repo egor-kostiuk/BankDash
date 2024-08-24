@@ -20,7 +20,6 @@ export const useSignUp = () => {
         await setDoc(doc(db, "Users", user.uid), {
           email: user.email,
           firstName: firstName,
-          lastName: null,
         });
       }
       navigate('/bankdash');
