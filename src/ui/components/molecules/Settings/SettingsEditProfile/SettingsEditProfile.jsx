@@ -1,32 +1,23 @@
-import {useState, useEffect} from "react";
-import {useProfile} from "../../Profile/Profile.js";
+import { useEditProfile } from "/src/hooks/useEditProfile.js";
 
-import {SettingsInputBox} from "/src/ui/components/molecules/SettingsInputBox/SettingsInputBox.jsx";
-import {SettingsSaveButton} from "/src/ui/components/atoms/Buttons/SettingsSaveButton/SettingsSaveButton.jsx";
-import {EditProfileImgButton} from "/src/ui/components/atoms/Buttons/EditProfileImgButton/EditProfileImgButton.jsx";
+import { SettingsInputBox } from "/src/ui/components/molecules/SettingsInputBox/SettingsInputBox.jsx";
+import { SettingsSaveButton } from "/src/ui/components/atoms/Buttons/SettingsSaveButton/SettingsSaveButton.jsx";
+import { EditProfileImgButton } from "/src/ui/components/atoms/Buttons/EditProfileImgButton/EditProfileImgButton.jsx";
 
 import "./SettingsEditProfile.css";
 
 export const EditProfile = () => {
-  const [lastName, setLastName] = useState("");
-  const {userDetails, updateLastName} = useProfile();
-  const [isLoading, setIsLoading] = useState(true);
-
-  // Logic for profile data save button
-  const handleSave = async () => { // TODO: put in a separate component
-    try {
-      await updateLastName(lastName);
-      console.log("LastName successfully updated!");
-    } catch (error) {
-      console.error("Error saving lastName:", error);
-    }
-  };
-
-  useEffect(() => {
-    if (userDetails) {
-      setIsLoading(false);
-    }
-  }, [userDetails]);
+  const {
+    userDetails,
+    setLastName,
+    setProfession,
+    setCity,
+    setBirthDate,
+    setCountry,
+    setPostalCode,
+    handleSave,
+    isLoading
+  } = useEditProfile();
 
   if (isLoading) {
     return <div></div>;
@@ -43,53 +34,50 @@ export const EditProfile = () => {
             <SettingsInputBox
               title={'Your Name'}
               type={'text'}
-              placeholder={userDetails.firstName}
+              placeholder={userDetails?.firstName}
+              readOnly={true}
             />
             <SettingsInputBox
               title={'Last Name'}
               type={'text'}
-              placeholder={userDetails?.lastName || 'enter your last name'} /* TODO: fix save user data logic */
+              placeholder={userDetails?.lastName || 'enter your last name'}
               onChange={(e) => setLastName(e.target.value)}
             />
             <SettingsInputBox
               title={'Your Email'}
               type={'email'}
-              placeholder={userDetails.email}
+              placeholder={userDetails?.email}
+              readOnly={true}
             />
             <SettingsInputBox
-              title={'Password'}
-              type={'password'}
-              placeholder={'your password'}
-            />
-            <SettingsInputBox
-              title={'Date of Birth'}
+              title={'Profession'}
               type={'text'}
-              placeholder={'your birthday'}
-            />
-            <SettingsInputBox
-              title={'Present address'}
-              type={'text'}
-              placeholder={'your address'}
-            />
-            <SettingsInputBox
-              title={'Permanent Address'}
-              type={'text'}
-              placeholder={'your address'}
+              placeholder={userDetails?.profession || 'enter your profession'}
+              onChange={(e) => setProfession(e.target.value)}
             />
             <SettingsInputBox
               title={'City'}
               type={'text'}
-              placeholder={'your city'}
+              placeholder={userDetails?.city || 'choose your city'}
+              onChange={(e) => setCity(e.target.value)}
             />
             <SettingsInputBox
-              title={'Postal Code'}
-              type={'text'}
-              placeholder={'your code'}
+              title={'Date of Birth'}
+              type={'date'}
+              placeholder={userDetails?.birthDate || 'choose your birthday'}
+              onChange={(e) => setBirthDate(e.target.value)}
             />
             <SettingsInputBox
               title={'Country'}
               type={'text'}
-              placeholder={'your country'}
+              placeholder={userDetails?.country || 'choose your country'}
+              onChange={(e) => setCountry(e.target.value)}
+            />
+            <SettingsInputBox
+              title={'Postal Code'}
+              type={'number'}
+              placeholder={userDetails?.postalCode || 'enter your postal code'}
+              onChange={(e) => setPostalCode(e.target.value)}
             />
           </ul>
         </div>
