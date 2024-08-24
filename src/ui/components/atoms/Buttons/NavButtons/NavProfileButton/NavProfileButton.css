@@ -58,6 +58,7 @@
     transform: scale(0);
     transform-origin: top right;
     transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+    cursor: default;
 }
 
 .profile-dropdown-content.open {
