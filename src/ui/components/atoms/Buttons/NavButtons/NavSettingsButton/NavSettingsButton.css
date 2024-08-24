@@ -67,6 +67,7 @@
 .all-notifications {
     align-items: center;
     padding: 16px 20px;
+    cursor: default;
 }
 
 .all-notifications-box {
