@@ -1,5 +1,5 @@
-import {useEditProfileImg} from "./EditProfileImgButton.js";
-import {ReactSVG} from "react-svg";
+import { useEditProfileImg } from "./EditProfileImgButton.js";
+import { ReactSVG } from "react-svg";
 
 import editProfileImgButtonIcon from '/src/assets/img/edit-profile-img-button.svg';
 

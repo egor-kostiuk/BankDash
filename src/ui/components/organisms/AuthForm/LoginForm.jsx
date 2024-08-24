@@ -1,13 +1,13 @@
-import {useLogin} from "/src/hooks/useLogin.js";
-import {Link} from "react-router-dom";
+import { useLogin } from "/src/hooks/useLogin.js";
+import { Link } from "react-router-dom";
 
-import {InputBox} from "/src/ui/components/molecules/InputBox/InputBox.jsx";
-import {AuthButton} from "/src/ui/components/atoms/Buttons/AuthButton/AuthButton.jsx";
+import { InputBox } from "/src/ui/components/molecules/InputBox/InputBox.jsx";
+import { AuthButton } from "/src/ui/components/atoms/Buttons/AuthButton/AuthButton.jsx";
 
 import "./Form.css";
 
 export const LoginForm = () => {
-  const {setEmail, setPassword, handleSubmit} = useLogin();
+  const { setEmail, setPassword, handleSubmit } = useLogin();
 
   return (
     <div className={'form-wrapper'}>

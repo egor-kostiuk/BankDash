@@ -1,7 +1,7 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 
-import {auth, db} from "/src/services/api/firebase.js";
-import {doc, getDoc, updateDoc} from "firebase/firestore";
+import { auth, db } from "/src/services/api/firebase.js";
+import { doc, getDoc, updateDoc } from "firebase/firestore";
 
 export const useProfile = () => {
   const [userDetails, setUserDetails] = useState(null);

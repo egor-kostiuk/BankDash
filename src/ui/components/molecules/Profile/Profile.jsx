@@ -2,7 +2,7 @@ import { useProfile } from "/src/hooks/useProfile.js";
 
 import "./Profile.css";
 
-export const Profile = ({children}) => {
+export const Profile = ({ children }) => {
   const {userDetails} = useProfile();
 
   return (

@@ -1,8 +1,8 @@
-import {useState} from "react";
-import {useNavigate} from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-import {signInWithEmailAndPassword} from "firebase/auth";
-import {auth} from "/src/services/api/firebase.js";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "/src/services/api/firebase.js";
 
 export const useLogin = () => {
   const navigate = useNavigate();

@@ -1,5 +1,5 @@
-import {useState} from "react";
-import {SettingsContentRender} from "../SettingsContentRender.jsx";
+import { useState } from "react";
+import { SettingsContentRender } from "../SettingsContentRender.jsx";
 
 import "./Settings.css";
 

@@ -1,6 +1,6 @@
 import "./SettingsInput.css";
 
-export const SettingsInput = ({title, type, placeholder, onChange, readOnly}) => {
+export const SettingsInput = ({ title, type, placeholder, onChange, readOnly }) => {
   return (
     <input className={'settings-input'}
       title={title}
