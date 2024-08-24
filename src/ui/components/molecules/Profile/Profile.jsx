@@ -1,4 +1,4 @@
-import {useProfile} from "./Profile.js";
+import { useProfile } from "/src/hooks/useProfile.js";
 
 import "./Profile.css";
 
