@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-export const useEditProfileImg = () => { // TODO: move to hooks
+export const useEditProfileImg = () => {
   const [profileImg, setProfileImg] = useState("/src/assets/img/default-profile-img.jpg");
 
   const handleButtonClick = () => {

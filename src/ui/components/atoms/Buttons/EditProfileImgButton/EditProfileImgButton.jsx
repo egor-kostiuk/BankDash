@@ -1,4 +1,4 @@
-import { useEditProfileImg } from "./EditProfileImgButton.js";
+import { useEditProfileImg } from "/src/hooks/useEditProfileImg.js";
 import { ReactSVG } from "react-svg";
 
 import editProfileImgButtonIcon from '/src/assets/img/edit-profile-img-button.svg';
