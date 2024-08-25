@@ -30,6 +30,7 @@ export const SettingsChoseInputBox = ({ title, placeholder, setCountry }) => {
   const handleCountrySelect = (country) => {
     setSelectedCountry(country.label);
     setCountry(country.label);
+    setSearchTerm('');
     setDropdownVisible(false);
   };
 
