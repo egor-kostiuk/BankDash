@@ -35,6 +35,7 @@
 }
 
 .dropdown-content-input-box input::placeholder {
+  font-size: 14px;
   color: rgba(113, 142, 191, 0.57);
 }
 
