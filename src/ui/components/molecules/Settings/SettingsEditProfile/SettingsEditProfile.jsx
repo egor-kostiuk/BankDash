@@ -37,6 +37,7 @@ export const EditProfile = () => {
               type={'text'}
               placeholder={userDetails?.firstName}
               readOnly={true}
+              style={{cursor: 'default'}}
             />
             <SettingsInputBox
               title={'Last Name'}
@@ -49,6 +50,7 @@ export const EditProfile = () => {
               type={'email'}
               placeholder={userDetails?.email}
               readOnly={true}
+              style={{cursor: 'default'}}
             />
             <SettingsInputBox
               title={'Profession'}
