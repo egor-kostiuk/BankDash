@@ -39,7 +39,7 @@ export const NavProfileButton = () => {
               <img src={profileImg} alt=""/>
               <div className="user-info-box">
                 <h6 className="dropdown-username">{userDetails?.firstName} {userDetails?.lastName}</h6>
-                <h6 className="dropdown-activity">{userDetails?.profession}</h6>
+                <h6 className="dropdown-activity">{userDetails?.profession || 'profession'}</h6>
                 <h6 className="dropdown-mail">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
