@@ -1,4 +1,4 @@
-import { useSignUp } from '/src/hooks/SignUpForm.js';
+import { useSignUp } from '/src/hooks/useSignUp.js';
 import { Link } from 'react-router-dom';
 
 import { InputBox } from "/src/ui/components/molecules/InputBox/InputBox.jsx";
