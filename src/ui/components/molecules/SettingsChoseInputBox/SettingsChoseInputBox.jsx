@@ -10,22 +10,16 @@ export const SettingsChoseInputBox = ({ title, placeholder, setCountry }) => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
   const [selectedCountry, setSelectedCountry] = useState(placeholder);
   const [searchTerm, setSearchTerm] = useState('');
-  const [filteredCountries, setFilteredCountries] = useState(countryOptions);
+  
+  const filteredCountries = countryOptions.filter(country =>
+    country.label.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   useEffect(() => {
     setSelectedCountry(placeholder);
   }, [placeholder]);
 
-  useEffect(() => {
-    const filtered = countryOptions.filter(country =>
-      country.label.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    setFilteredCountries(filtered);
-  }, [searchTerm]);
-
-  const toggleDropdown = () => {
-    setDropdownVisible(!isDropdownVisible);
-  };
+  const toggleDropdown = () => setDropdownVisible(!isDropdownVisible);
 
   const handleCountrySelect = (country) => {
     setSelectedCountry(country.label);
@@ -38,19 +32,16 @@ export const SettingsChoseInputBox = ({ title, placeholder, setCountry }) => {
     <div className={'settings-chose-input-box'}>
       <SettingsLabel title={title}/>
       <button onClick={toggleDropdown}>
-        <SettingsChoseInput
-          readOnly={true}
-          placeholder={selectedCountry}
-        />
+        <SettingsChoseInput readOnly={true} placeholder={selectedCountry} />
       </button>
-
-      <div className={'dropdown'}>
-        {isDropdownVisible && (
+      {isDropdownVisible && (
+        <div className={'dropdown'}>
           <div className={'dropdown-content'}>
             <div className={'dropdown-content-input-box'}>
               <input
-                type="text"
+                type={'text'}
                 placeholder={'Enter country'}
+                value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
               <span></span>
@@ -63,12 +54,12 @@ export const SettingsChoseInputBox = ({ title, placeholder, setCountry }) => {
                   </li>
                 ))
               ) : (
-                <li>There are no matching countries</li>
+                <li>No matching countries</li>
               )}
             </ul>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   )
 }
