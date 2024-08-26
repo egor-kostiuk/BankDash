@@ -1,10 +1,9 @@
-import {useState} from "react";
-import {useNavigate} from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-import {createUserWithEmailAndPassword} from "firebase/auth";
-import {auth, db} from "/src/services/api/firebase.js";
-import {setDoc, doc} from "firebase/firestore";
-import {toast} from "react-toastify";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth, db } from "/src/services/api/firebase.js";
+import { setDoc, doc } from "firebase/firestore";
 
 export const useSignUp = () => {
   const navigate = useNavigate();
@@ -21,26 +20,10 @@ export const useSignUp = () => {
         await setDoc(doc(db, "Users", user.uid), {
           email: user.email,
           firstName: firstName,
-          lastName: null,
         });
       }
       navigate('/bankdash');
     } catch (error) {
-
-      // Toast errors
-      switch (error.code) {
-        case 'auth/invalid-email':
-          toast.error('Incorrect email. Please try again.')
-          break;
-
-        case 'auth/missing-password':
-          toast.error('Missing password.')
-          break;
-
-        case 'auth/weak-password':
-          toast.error('Password should be at least 6 characters.')
-          break;
-      }
       console.error(error.message);
     }
   };

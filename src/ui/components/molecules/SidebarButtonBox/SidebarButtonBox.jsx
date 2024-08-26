@@ -1,10 +1,10 @@
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-import {SidebarButton} from "/src/ui/components/atoms/Buttons/SidebarButton/SidebarButton.jsx";
+import { SidebarButton } from "/src/ui/components/atoms/Buttons/SidebarButton/SidebarButton.jsx";
 
 import "./SidebarButtonBox.css";
 
-export const SidebarButtonBox = ({imgActive, img, label, path, isActive}) => {
+export const SidebarButtonBox = ({ imgActive, img, label, path, isActive }) => {
   const navigate = useNavigate();
   const activeClass = isActive ? "sidebar-button-active" : "sidebar-button";
 
