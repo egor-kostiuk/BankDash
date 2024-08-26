@@ -10,6 +10,10 @@
     padding: 5px;
 }
 
+.nav-profile-button img {
+    border-radius: 50%;
+}
+
 .profile-dropdown-content {
     position: absolute;
     display: block;
@@ -57,6 +61,7 @@
 .user-profile-box img {
     width: 65px;
     height: 65px;
+    border-radius: 50%;
 }
 
 .dropdown-username {
