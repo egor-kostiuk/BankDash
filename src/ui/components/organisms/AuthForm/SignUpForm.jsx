@@ -1,4 +1,4 @@
-import { signUpForm } from '/src/hooks/SignUpForm.js';
+import { useSignUp } from '/src/hooks/SignUpForm.js';
 import { Link } from 'react-router-dom';
 
 import { InputBox } from "/src/ui/components/molecules/InputBox/InputBox.jsx";
@@ -7,7 +7,7 @@ import { AuthButton } from "/src/ui/components/atoms/Buttons/AuthButton/AuthButt
 import './Form.css';
 
 export const SignUpForm = () => {
-  const { setEmail, setPassword, setFirstName, handleRegister } = signUpForm();
+  const { setEmail, setPassword, setFirstName, handleRegister } = useSignUp();
 
   return (
     <div className={'form-wrapper'}>

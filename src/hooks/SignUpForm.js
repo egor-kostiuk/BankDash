@@ -5,7 +5,7 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from "/src/services/api/firebase.js";
 import { setDoc, doc } from "firebase/firestore";
 
-export const signUpForm = () => {
+export const useSignUp = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
