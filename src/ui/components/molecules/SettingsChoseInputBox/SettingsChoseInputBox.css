@@ -13,7 +13,7 @@
 }
 
 .dropdown-content {
-  height: 280px;
+  height: 285px;
   background-color: #ffffff;
   border: 1px solid #aebcc7;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -22,8 +22,8 @@
 
 .dropdown-content-input-box {
   width: 418px;
-  height: 40px;
-  padding: 14px 20px 10px 20px;
+  height: 45px;
+  padding: 16px 20px 8px 20px;
   margin-bottom: 8px;
   position: relative;
 }
