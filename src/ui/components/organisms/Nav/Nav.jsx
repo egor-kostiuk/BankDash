@@ -5,7 +5,7 @@ import { navImgList } from "/src/helpers/navImgList.js";
 
 import "./Nav.css";
 
-export const Nav = ({title}) => {
+export const Nav = ({ title }) => {
   return (
     <nav className={'nav'}>
       <h1>{title}</h1>

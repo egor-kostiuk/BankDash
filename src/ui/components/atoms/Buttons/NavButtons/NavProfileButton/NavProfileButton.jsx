@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useProfile } from "/src/hooks/useProfile.js";
-import  { useEditProfileImg } from "/src/hooks/useEditProfileImg.js";
+import { useEditProfileImg } from "/src/hooks/useEditProfileImg.js";
 
 import { NavLogoutButton } from "../NavLogoutButton/NavLogoutButton.jsx";
 
 import "./NavProfileButton.css";
 
-export const NavProfileButton = ({img}) => {
+export const NavProfileButton = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   const { userDetails, handleLogout } = useProfile();
