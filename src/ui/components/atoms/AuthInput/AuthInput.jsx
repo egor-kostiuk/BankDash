@@ -1,6 +1,6 @@
-import "./Input.css";
+import "./AuthInput.css";
 
-export const Input = ({ type, onChange }) => {
+export const AuthInput = ({ type, onChange }) => {
   return (
     <input className={'auth-input'}
       type={type}
