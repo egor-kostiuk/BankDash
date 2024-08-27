@@ -7,6 +7,12 @@
   transition: opacity 0.3s ease;
 }
 
+.nav-profile-button img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
 .nav-profile-dropdown {
   position: absolute;
   display: block;

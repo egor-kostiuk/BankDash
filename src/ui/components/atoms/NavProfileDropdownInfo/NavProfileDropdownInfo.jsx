@@ -5,7 +5,7 @@ export const NavProfileDropdownInfo = ({ img, title, subtitle, email }) => (
     <div className={'user-profile-box'}>
       <img src={img} alt="" />
       <div className={'user-info-box'}>
-        <h6 className={'dropdown-username'}>{title}</h6>
+        <h6 className={'dropdown-username'}>{title[0]} {title[1]}</h6>
         <h6 className={'dropdown-activity'}>{subtitle}</h6>
         <h6 className={'dropdown-mail'}>
           <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24">
