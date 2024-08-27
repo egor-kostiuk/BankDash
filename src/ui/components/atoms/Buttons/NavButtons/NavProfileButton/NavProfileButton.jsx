@@ -5,7 +5,7 @@ import { NavProfileDropdown } from "../../../NavProfileDropdown/NavProfileDropdo
 
 import "./NavProfileButon.css";
 
-export const NavProfileButton = ({ img }) => {
+export const NavProfileButton = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { profileImg } = useEditProfileImg();
 
