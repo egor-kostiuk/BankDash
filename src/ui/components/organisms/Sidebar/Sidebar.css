@@ -1,8 +1,8 @@
 .sidebar {
-  width: 250px;
+  min-width: 250px;
   height: 100vh;
+  background-color: #FFF;
   border-right: 1px solid #E6EFF5;;
-  background-color: white;
 }
 
 .sidebar-list {
@@ -10,16 +10,3 @@
   flex-direction: column;
   padding: 8px 0;
 }
-
-/*.sidebar-list-item::before {*/
-/*  content: "";*/
-/*  position: absolute;*/
-/*  background-color: rgb(24, 20, 243);*/
-/*  top: 0;*/
-/*  bottom: 0;*/
-/*  left: 0;*/
-/*  width: 6px;*/
-/*  border-top-right-radius: 10px;*/
-/*  border-bottom-right-radius: 10px;*/
-/*  transition: background-color 0.5s;*/
-/*}*/

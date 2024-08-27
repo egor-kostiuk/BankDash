@@ -1,5 +1,5 @@
 .auth-button {
-  margin: 24px;
+  margin: 24px auto;
 }
 
 .auth-button:focus {

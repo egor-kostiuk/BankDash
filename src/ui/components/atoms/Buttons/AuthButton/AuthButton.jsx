@@ -1,6 +1,6 @@
 import "./AuthButton.css";
 
-export const AuthButton = ({onClick, label}) => {
+export const AuthButton = ({ onClick, label }) => {
   return (
     <button className={'auth-button'} onClick={onClick}>
       <div>

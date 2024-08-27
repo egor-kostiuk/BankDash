@@ -1,0 +1,87 @@
+.settings-chose-input-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 418px;
+  height: 80px;
+  gap: 11px;
+}
+
+.settings-chose-input-box button {
+  width: 418px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  height: 285px;
+  background-color: #ffffff;
+  border: 1px solid #aebcc7;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+}
+
+.dropdown-content-input-box {
+  width: 418px;
+  height: 45px;
+  padding: 16px 20px 8px 20px;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.dropdown-content-input-box input {
+  outline: none;
+  color: #718EBF;
+  font-size: 16px;
+}
+
+.dropdown-content-input-box input::placeholder {
+  font-size: 14px;
+  color: rgba(113, 142, 191, 0.57);
+}
+
+.dropdown-content-input-box span {
+  position: absolute;
+  content: '';
+  width: 378px;
+  bottom: 0;
+  left: 20px;
+  border-bottom: 1px solid #aebcc7;
+}
+
+.dropdown-countries-list{
+  position: absolute;
+  width: 418px;
+  max-height: 220px;
+  margin: 0;
+  overflow-y: auto;
+  list-style-type: none;
+  z-index: 1000;
+}
+
+/* Hide the scrollbar for Webkit browsers */
+.dropdown-countries-list::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Hide the scrollbar for Firefox */
+.dropdown-countries-list {
+  scrollbar-width: none;
+}
+
+/* Hide the scrollbar for Internet Explorer & Edge */
+.dropdown-countries-list {
+  -ms-overflow-style: none;
+}
+
+.dropdown-countries-list li {
+  width: 416px;
+  padding: 10px 20px;
+  color: #718EBF;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.dropdown-countries-list li:hover {
+  background-color: #f7f7f7;
+}

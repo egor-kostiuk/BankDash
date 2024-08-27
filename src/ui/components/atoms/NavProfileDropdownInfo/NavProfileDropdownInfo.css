@@ -12,6 +12,12 @@
   line-height: 1;
 }
 
+.user-profile-box img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
 .user-info-box {
   margin-left: 12px;
 }
