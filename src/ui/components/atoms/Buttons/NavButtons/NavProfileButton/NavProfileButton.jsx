@@ -21,6 +21,7 @@ export const NavProfileButton = ({ img }) => {
       <div className={`nav-profile-dropdown ${isOpen ? 'open' : ''}`}>
         <NavProfileDropdown img={img} closeDropdown={() => setIsOpen(false)} />
       </div>
+      {isOpen && <div className="dropdown-overlay" onClick={() => setIsOpen(false)} ></div>}
     </div>
   );
 };
