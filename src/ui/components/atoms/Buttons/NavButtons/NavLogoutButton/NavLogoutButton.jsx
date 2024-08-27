@@ -1,4 +1,5 @@
 import { useState, useCallback, useRef } from 'react';
+
 import './NavLogoutButton.css';
 
 export const NavLogoutButton = ({ label, onClick }) => {
@@ -26,7 +27,7 @@ export const NavLogoutButton = ({ label, onClick }) => {
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUpOrLeave}
       onMouseLeave={handleMouseUpOrLeave}
-      style={{ '--x': clickPosition.x, '--y': clickPosition.y }} /*TODO fix not assignable to type CSSProperties | undefined*/
+      style={{ '--x': clickPosition.x, '--y': clickPosition.y }} /* TODO: fix not assignable to type CSSProperties | undefined */
     >
       {label}
     </button>
