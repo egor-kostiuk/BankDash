@@ -9,7 +9,7 @@ import "./NavProfileDropdown.css";
 
 export const NavProfileDropdown = ({ img, closeDropdown }) => {
   const navigate = useNavigate();
-  const { userDetails } = useProfile();
+  const { userDetails, handleLogout } = useProfile();
 
   const navigateToProfileSettingPage = () => {
     navigate("/settings");
@@ -29,7 +29,7 @@ export const NavProfileDropdown = ({ img, closeDropdown }) => {
         <hr className={'profile-hr'}/>
         <NavProfileDropdownSettings onClick={navigateToProfileSettingPage}/>
         <div className={'logout-button-box'}>
-          <NavLogoutButton label={'Logout'}/>
+          <NavLogoutButton label={'Logout'} onClick={handleLogout}/>
         </div>
       </ul>
     </>
