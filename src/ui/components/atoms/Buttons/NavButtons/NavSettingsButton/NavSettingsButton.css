@@ -17,6 +17,7 @@
 }
 
 .nav-settings-button.filling .fill-overlay {
+    background-color: #718EBF;
     opacity: 1;
     animation: fillAnimation 0.5s forwards;
 }

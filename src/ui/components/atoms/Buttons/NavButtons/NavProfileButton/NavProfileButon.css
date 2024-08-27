@@ -8,7 +8,9 @@
 }
 
 .nav-profile-button.filling .fill-overlay {
+  background-color: rgba(0, 1, 2, 0.37);
   opacity: 1;
+  animation: fillAnimation 0.5s forwards;
 }
 
 .fill-overlay {
@@ -32,10 +34,6 @@
     transform: scale(1);
     opacity: 0;
   }
-}
-
-.nav-profile-button.filling .fill-overlay {
-  animation: fillAnimation 0.5s forwards;
 }
 
 .nav-profile-button img {
