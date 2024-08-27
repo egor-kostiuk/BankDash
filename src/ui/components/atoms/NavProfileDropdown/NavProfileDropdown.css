@@ -1,0 +1,15 @@
+.user-profile-title {
+  font-size: 14px;
+  color: #343C6AFF;
+  height: 17px;
+}
+
+.profile-hr {
+  border-width: 0 0 thin;
+  border-style: solid;
+  border-color: #F2F4F7FF;
+}
+
+.logout-button-box {
+  margin-top: 10px;
+}
