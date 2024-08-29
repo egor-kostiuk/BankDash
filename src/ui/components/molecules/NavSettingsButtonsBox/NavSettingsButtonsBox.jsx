@@ -1,8 +1,8 @@
 import { NavSettingsButton } from "/src/ui/components/atoms/Buttons/NavButtons/NavSettingsButton/NavSettingsButton.jsx";
 
-import "./NavButtonBox.css";
+import "./NavSettingsButtonsBox.css";
 
-export const NavButtonsBox = ({ onClick, img }) => {
+export const NavSettingsButtonsBox = ({ onClick, img }) => {
   return (
     <div className={'nav-button-wrapper'}>
       <NavSettingsButton

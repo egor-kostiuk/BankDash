@@ -1,9 +1,9 @@
-import {useState} from "react";
+import { useState } from "react";
+import { NavSettingsDropdown } from "../../../NavSettingsDropdown/NavSettingsDropdown.jsx";
 
 import "./NavSettingsButton.css";
-import {NavSettingsDropdown} from "../../../NavSettingsDropdown/NavSettingsDropdown.jsx";
 
-export const NavSettingsButton = ({img}) => {
+export const NavSettingsButton = ({ img }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isFilling, setIsFilling] = useState(false);
 
