@@ -1,0 +1,35 @@
+.all-notifications {
+  align-items: center;
+  cursor: default;
+}
+
+.all-notifications-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 20px;
+}
+
+.h6-notifications {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2143;
+}
+
+.unread-messages {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.2;
+  color: #8BA3CBFF;
+}
+
+.notifications-hr {
+  border-width: 0 0 thin;
+  border-color: #F2F4F7FF;
+  border-style: dashed;
+}
+
+.notifications {
+  max-height: 350px;
+  overflow-y: auto;
+}
