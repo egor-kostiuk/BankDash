@@ -1,8 +1,8 @@
 import { NavSettingsDropdownContent } from "../NavSettingsDropdownContent/NavSettingsDropdownContent.jsx";
 import {navImgList} from "/src/helpers/navImgList.js";
+import {navImgSvgList} from "../../../../helpers/navImgSvgList.js";
 
 import  "./NavSettingsDropdown.css"
-import {navImgSvgList} from "../../../../helpers/navImgSvgList.js";
 
 
 export const NavSettingsDropdown = () => {
