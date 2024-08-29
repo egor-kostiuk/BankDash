@@ -12,7 +12,7 @@
   line-height: 1;
 }
 
-.user-profile-box img {
+.profile-img {
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -40,6 +40,7 @@
   align-items: center;
   color: #8BA3CBFF;
   font-weight: 400;
+  font-size: 13px;
   line-height: 1.57;
   gap: 4px;
 }
