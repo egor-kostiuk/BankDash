@@ -59,11 +59,11 @@
     transform: scale(1);
 }
 
-.notifications-button-box {
+.nav-notifications-dropdown-button-box {
     padding: 8px;
 }
 
-.notifications-button-box button {
+.nav-notifications-dropdown-button-box button {
     display: inline-flex;
     align-items: center;
     justify-content: center;

@@ -32,7 +32,7 @@ export const NavSettingsButton = ({ img }) => {
       </button>
       <div className={`nav-notifications-dropdown ${isOpen ? 'open' : ''}`}>
         <NavSettingsDropdown/>
-        <div className={'notifications-view-all-button'}>
+        <div className={'nav-notifications-dropdown-button-box'}>
           <button>View All</button>
         </div>
       </div>
