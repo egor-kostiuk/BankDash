@@ -1,16 +1,12 @@
-.all-notifications {
-  align-items: center;
-  cursor: default;
-}
-
-.all-notifications-box {
+.nav-dropdown-notifications-title {
   display: flex;
   flex-direction: column;
   gap: 8px;
   padding: 16px 20px;
+  cursor: default;
 }
 
-.h6-notifications {
+.nav-dropdown-notifications-title h6 {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2143;
@@ -29,7 +25,7 @@
   border-style: dashed;
 }
 
-.notifications {
+.nav-dropdown-notifications-list {
   max-height: 350px;
   overflow-y: auto;
 }

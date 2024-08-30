@@ -22,7 +22,7 @@ export const NavSettingsButton = ({ img }) => {
   };
 
   return (
-    <div className={'notifications-dropdown'}>
+    <div style={{position: 'relative'}}>
       <button
         className={`nav-settings-button ${isFilling ? 'filling' : ''}`}
         onClick={toggleDropdown}
@@ -30,10 +30,8 @@ export const NavSettingsButton = ({ img }) => {
         <img src={img} alt={''}/>
         {isFilling && <div className="fill-overlay"></div>}
       </button>
-      <div className={`notifications-dropdown-content ${isOpen ? 'open' : ''}`}>
-
+      <div className={`nav-notifications-dropdown ${isOpen ? 'open' : ''}`}>
         <NavSettingsDropdown/>
-
         <div className={'notifications-view-all-button'}>
           <button>View All</button>
         </div>
