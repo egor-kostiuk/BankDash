@@ -65,11 +65,11 @@
     transform: scale(1);
 }
 
-.notifications-view-all-button {
+.notifications-button-box {
     padding: 8px;
 }
 
-.notifications-view-all-button button {
+.notifications-button-box button {
     display: inline-flex;
     align-items: center;
     justify-content: center;

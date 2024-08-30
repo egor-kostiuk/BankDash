@@ -34,7 +34,7 @@ export const NavSettingsButton = ({ img }) => {
 
         <NavSettingsDropdown/>
 
-        <div className={'notifications-view-all-button'}>
+        <div className={'notifications-button-box'}>
           <button>View All</button>
         </div>
       </div>
