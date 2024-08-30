@@ -58,19 +58,3 @@
     height: auto;
     transform: scale(1);
 }
-
-.nav-notifications-dropdown-button-box {
-    padding: 8px;
-}
-
-.nav-notifications-dropdown-button-box button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    color: #1814F3FF;
-    width: 100%;
-    font-size: 15px;
-    line-height: 1.6;
-    padding: 7px 14px;
-}

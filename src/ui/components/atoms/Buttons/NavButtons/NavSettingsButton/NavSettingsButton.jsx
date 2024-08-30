@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { NavSettingsDropdown } from "../../../NavSettingsDropdown/NavSettingsDropdown.jsx";
 
 import "./NavSettingsButton.css";
 
-export const NavSettingsButton = ({ img }) => {
+export const NavSettingsButton = ({ img, children }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isFilling, setIsFilling] = useState(false);
 
@@ -31,10 +30,7 @@ export const NavSettingsButton = ({ img }) => {
         {isFilling && <div className="fill-overlay"></div>}
       </button>
       <div className={`nav-notifications-dropdown ${isOpen ? 'open' : ''}`}>
-        <NavSettingsDropdown/>
-        <div className={'nav-notifications-dropdown-button-box'}>
-          <button>View All</button>
-        </div>
+        {children}
       </div>
       {isOpen && <div className="dropdown-overlay" onClick={closeDropdown}></div>}
     </div>
