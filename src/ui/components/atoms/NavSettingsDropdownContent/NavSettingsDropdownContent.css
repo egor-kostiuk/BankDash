@@ -1,0 +1,34 @@
+.notifications-img {
+  display: flex;
+  align-items: center;
+  width: 35px;
+  min-width: 56px;
+  height: 35px;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.notifications-box {
+  margin: 4px 0;
+}
+
+.notification-title {
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.notification-info {
+  margin: 4px 0 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.25;
+  color: #8BA3CBFF;
+  display: flex;
+  align-items: center;
+}
+
+.notification-info-img {
+  margin-right: 4px;
+  width: 16px;
+  height: 16px;
+}

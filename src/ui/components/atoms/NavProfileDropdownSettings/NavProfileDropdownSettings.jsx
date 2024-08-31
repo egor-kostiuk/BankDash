@@ -19,10 +19,10 @@ export const NavProfileDropdownSettings = ({ onClick }) => {
             ></path>
           </svg>
         </div>
-        <div className={'profile-settings-text-box'}>
-          <h6>My profile</h6>
-          <h6>Account Settings</h6>
-        </div>
+      <div className={'profile-settings-text-box'}>
+        <h6>My profile</h6>
+        <h6>Account Settings</h6>
+      </div>
     </div>
   )
 }
