@@ -1,10 +1,9 @@
-import {useEditProfileImg} from "./EditProfileImgButton.js";
-import {ReactSVG} from "react-svg";
-
+import { useEditProfileImg } from "/src/hooks/useEditProfileImg.js";
+import { ReactSVG } from "react-svg";
 import editProfileImgButtonIcon from '/src/assets/img/edit-profile-img-button.svg';
 
 export const EditProfileImgButton = () => {
-  const { profileImg, handleButtonClick, handleImageChange } = useEditProfileImg();
+  const { profileImg, handleButtonClick, handleImageChange, loading } = useEditProfileImg();
 
   return (
     <>
@@ -16,8 +15,8 @@ export const EditProfileImgButton = () => {
         style={{ display: "none" }}
         id="fileInput"
       />
-      <button onClick={handleButtonClick}>
-        <ReactSVG src={editProfileImgButtonIcon} />
+      <button onClick={handleButtonClick} disabled={loading}>
+        {loading ? "Saving..." : <ReactSVG src={editProfileImgButtonIcon} />}
       </button>
     </>
   );

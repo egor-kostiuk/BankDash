@@ -1,4 +1,4 @@
-import {sidebarImgList} from "./sidebarImgList.js";
+import { sidebarImgList } from "./sidebarImgList.js";
 
 export const sidebarItemsList = [
   { img: sidebarImgList.dashboard, imgActive: sidebarImgList.dashboardActive, label: 'Dashboard', path: '/bankdash' },

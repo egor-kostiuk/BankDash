@@ -1,6 +1,6 @@
-import {useEffect, useRef, useState} from "react";
+import { useEffect, useRef, useState } from "react";
 import LoadingBar from "react-top-loading-bar";
-import {useLocation} from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export const LoadingBarWrapper = ({ children }) => {
   const loadingBarRef = useRef(null);

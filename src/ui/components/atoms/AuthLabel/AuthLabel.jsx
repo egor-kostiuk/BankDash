@@ -1,6 +1,6 @@
 import "./AuthLabel.css";
 
-export const AuthLabel = ({type}) => {
+export const AuthLabel = ({ type }) => {
   return (
     <label className={'auth-label'}>
       {type}

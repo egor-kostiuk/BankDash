@@ -1,6 +1,6 @@
-import {useLocation} from "react-router-dom";
-import {SidebarButtonBox} from "/src/ui/components/molecules/SidebarButtonBox/SidebarButtonBox.jsx";
-import {sidebarItemsList} from "/src/helpers/sidebarItemsList.js";
+import { useLocation } from "react-router-dom";
+import { SidebarButtonBox } from "/src/ui/components/molecules/SidebarButtonBox/SidebarButtonBox.jsx";
+import { sidebarItemsList } from "/src/helpers/sidebarItemsList.js";
 
 import "./Sidebar.css";
 

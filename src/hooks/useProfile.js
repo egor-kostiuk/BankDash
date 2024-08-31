@@ -1,7 +1,7 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 
-import {auth, db} from "/src/services/api/firebase.js";
-import {doc, getDoc, updateDoc} from "firebase/firestore";
+import { auth, db } from "/src/services/api/firebase.js";
+import { doc, getDoc, updateDoc } from "firebase/firestore";
 
 export const useProfile = () => {
   const [userDetails, setUserDetails] = useState(null);
@@ -24,20 +24,18 @@ export const useProfile = () => {
     fetchUserData();
   }, []);
 
-  // Function for updating lastName
-  const updateLastName = async (lastName) => {
+  // Function for updating profile data
+  const updateProfileData = async (updatedData) => {
     try {
       const user = auth.currentUser;
       if (user) {
         const docRef = doc(db, "Users", user.uid);
-        await updateDoc(docRef, {
-          lastName: lastName,
-        });
-        console.log("LastName successfully updated!");
+        await updateDoc(docRef, updatedData);
+        console.log("Profile data successfully updated!");
         await fetchUserData();
       }
     } catch (error) {
-      console.error("Error saving lastName:", error.message);
+      console.error("Error saving profile data:", error.message);
     }
   };
 
@@ -51,5 +49,5 @@ export const useProfile = () => {
     }
   }
 
-  return {userDetails, updateLastName, handleLogout};
+  return {userDetails, updateProfileData, handleLogout};
 }
