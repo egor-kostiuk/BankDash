@@ -9,7 +9,7 @@ export const NavSettingsDropdown = () => {
     <>
       <div className={'nav-dropdown-notifications-title'}>
         <h6>All Notifications</h6>
-        <p className={'unread-messages'}>You have 2 unread messages</p>
+        <p>You have 2 unread messages</p>
       </div>
       <hr className={'notifications-hr'}/>
       <ul className={'nav-dropdown-notifications-list'}>
