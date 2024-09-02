@@ -9,6 +9,10 @@
   cursor: pointer;
 }
 
+.settings-chose-input:hover {
+  background-color: #f7f7f7;
+}
+
 .settings-chose-input::placeholder {
   color: #718EBF;
   font-size: 14px;
