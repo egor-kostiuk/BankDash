@@ -1,8 +1,8 @@
-import { useState } from "react"
+import { useState } from "react";
 import { SettingsLabel } from "/src/ui/components/atoms/SettingsLabel/SettingsLabel.jsx";
 import { SettingsDateInput } from "/src/ui/components/atoms/SettingsDateInput/SettingsDateInput.jsx";
 
-import "./SettingsDateInputBox.css"
+import "./SettingsDateInputBox.css";
 
 export const SettingsDateInputBox = ({ title, placeholder, onChange }) => {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -18,7 +18,7 @@ export const SettingsDateInputBox = ({ title, placeholder, onChange }) => {
       <SettingsDateInput
         selectedDate={selectedDate}
         onChange={handleDateChange}
-        placeholder={placeholder}
+        placeholder={selectedDate || placeholder}
         dateFormat={'yyyy/MM/dd'}
       />
     </div>

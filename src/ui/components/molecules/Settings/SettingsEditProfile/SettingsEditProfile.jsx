@@ -4,6 +4,7 @@ import { SettingsInputBox } from "/src/ui/components/molecules/SettingsInputBox/
 import { SettingsSaveButton } from "/src/ui/components/atoms/Buttons/SettingsSaveButton/SettingsSaveButton.jsx";
 import { EditProfileImgButton } from "/src/ui/components/atoms/Buttons/EditProfileImgButton/EditProfileImgButton.jsx";
 import { SettingsChoseInputBox } from "/src/ui/components/molecules/SettingsChoseInputBox/SettingsChoseInputBox.jsx";
+import { SettingsDateInputBox } from "/src/ui/components/molecules/SettingsDateInputBox/SettingsDateInputBox.jsx";
 
 import "./SettingsEditProfile.css";
 
@@ -23,6 +24,17 @@ export const EditProfile = () => {
   if (isLoading) {
     return <div></div>;
   }
+
+  // Converting Timestamp to date series in 'yyyy-MM-dd' format TODO: create hook
+  const formatTimestampToDate = (timestamp) => {
+    if (timestamp && timestamp.seconds) {
+      const date = new Date(timestamp.seconds * 1000);
+      return date.toISOString().split('T')[0];
+    }
+    return null;
+  };
+
+  const formattedBirthDate = formatTimestampToDate(userDetails?.birthDate);
 
   return (
     <div className={'edit-profile-container'}>
@@ -69,11 +81,11 @@ export const EditProfile = () => {
               placeholder={userDetails?.country || 'Choose Country'}
               setCountry={setCountry}
             />
-            <SettingsInputBox
+            <SettingsDateInputBox
               title={'Date of Birth'}
               type={'date'}
-              placeholder={userDetails?.birthDate || 'choose your birthday'}
-              onChange={(e) => setBirthDate(e.target.value)}
+              placeholder={formattedBirthDate || 'choose your birthday'}
+              onChange={setBirthDate}
             />
             <SettingsInputBox
               title={'Postal Code'}
