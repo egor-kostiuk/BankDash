@@ -16,13 +16,13 @@
 }
 
 .settings-date-input::placeholder {
-  color: rgba(113, 142, 191, 0.57);
+  color: #718EBF;
   font-size: 14px;
 }
 
 .react-datepicker {
   font-family: Arial, sans-serif;
-  border: 1px solid #aebcc7; /* test color #aebcc7 */
+  border: 1px solid #aebcc7;
   border-radius: 16px;
   background-color: #ffffff;
   padding: 10px;
