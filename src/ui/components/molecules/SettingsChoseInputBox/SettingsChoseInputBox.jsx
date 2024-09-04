@@ -60,6 +60,7 @@ export const SettingsChoseInputBox = ({ title, placeholder, setCountry }) => {
           </div>
         </div>
       )}
+      {isDropdownVisible && <div className={'dropdown-overlay'} onClick={() => setDropdownVisible(false)} ></div>}
     </div>
   )
 }
