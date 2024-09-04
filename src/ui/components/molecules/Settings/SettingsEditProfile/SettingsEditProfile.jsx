@@ -45,7 +45,7 @@ export const EditProfile = () => {
             <SettingsInputBox
               title={'Last Name'}
               type={'text'}
-              placeholder={userDetails?.lastName || 'enter your last name'}
+              placeholder={userDetails?.lastName || 'Enter your last name'}
               onChange={(e) => setLastName(e.target.value)}
             />
             <SettingsInputBox
@@ -58,13 +58,13 @@ export const EditProfile = () => {
             <SettingsInputBox
               title={'Profession'}
               type={'text'}
-              placeholder={userDetails?.profession || 'enter your profession'}
+              placeholder={userDetails?.profession || 'Enter your profession'}
               onChange={(e) => setProfession(e.target.value)}
             />
             <SettingsInputBox
               title={'City'}
               type={'text'}
-              placeholder={userDetails?.city || 'choose your city'}
+              placeholder={userDetails?.city || 'Choose your city'}
               onChange={(e) => setCity(e.target.value)}
             />
             <SettingsChoseInputBox
@@ -75,13 +75,13 @@ export const EditProfile = () => {
             <SettingsDateInputBox
               title={'Date of Birth'}
               type={'date'}
-              placeholder={formattedBirthDate || 'choose your birthday'}
+              placeholder={formattedBirthDate || 'Choose your birthday'}
               onChange={setBirthDate}
             />
             <SettingsInputBox
               title={'Postal Code'}
               type={'number'}
-              placeholder={userDetails?.postalCode || 'enter your postal code'}
+              placeholder={userDetails?.postalCode || 'Enter your postal code'}
               onChange={(e) => setPostalCode(e.target.value)}
             />
           </ul>
