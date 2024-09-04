@@ -3,7 +3,7 @@
   height: 50px;
   border-radius: 16px;
   font-size: 16px;
-  background-color: #1814F3;
-  color: #FFF;
+  background-color: var(--blue);
+  color: var(--white);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.72);
 }
