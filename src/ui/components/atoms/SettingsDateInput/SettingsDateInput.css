@@ -9,6 +9,7 @@
   font-size: 14px;
   outline: none;
   cursor: pointer;
+  caret-color: transparent;
 }
 
 .settings-date-input:hover {
@@ -20,6 +21,7 @@
   font-size: 14px;
 }
 
+/* Calendar dropdown  */
 .react-datepicker {
   font-family: Arial, sans-serif;
   border: 1px solid #aebcc7;
@@ -43,16 +45,19 @@
   -ms-overflow-style: none;
 }
 
+/* Previous month arrow  */
 .react-datepicker__navigation--previous {
   top: 15px;
   left: 8px;
 }
 
+/* Next month arrow */
 .react-datepicker__navigation--next {
   top: 15px;
   right: 8px;
 }
 
+/* Selected date */
 .react-datepicker__day--selected,
 .react-datepicker__day--keyboard-selected {
   background-color: #1814F3;
@@ -66,6 +71,7 @@
   border-radius: 50%;
 }
 
+/* Years dropdown list */
 .react-datepicker__year-dropdown {
   font-family: Arial, sans-serif;
   max-height: 200px;
