@@ -1,4 +1,5 @@
 import { useEditProfile } from "/src/hooks/useEditProfile.js";
+import { useDateFormat } from "/src/hooks/useDateFormat.js";
 
 import { SettingsInputBox } from "/src/ui/components/molecules/SettingsInputBox/SettingsInputBox.jsx";
 import { SettingsSaveButton } from "/src/ui/components/atoms/Buttons/SettingsSaveButton/SettingsSaveButton.jsx";
@@ -20,21 +21,11 @@ export const EditProfile = () => {
     handleSave,
     isLoading
   } = useEditProfile();
+  const formattedBirthDate = useDateFormat(userDetails?.birthDate);
 
   if (isLoading) {
     return <div></div>;
   }
-
-  // Converting Timestamp to date series in 'yyyy-MM-dd' format TODO: create hook
-  const formatTimestampToDate = (timestamp) => {
-    if (timestamp && timestamp.seconds) {
-      const date = new Date(timestamp.seconds * 1000);
-      return date.toISOString().split('T')[0];
-    }
-    return null;
-  };
-
-  const formattedBirthDate = formatTimestampToDate(userDetails?.birthDate);
 
   return (
     <div className={'edit-profile-container'}>
