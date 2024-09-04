@@ -19,6 +19,7 @@ export const SettingsDateInput = ({ selectedDate, onChange, placeholder, dateFor
       showYearDropdown
       yearDropdownItemNumber={100}
       scrollableYearDropdown
+      onKeyDown={(e) => e.preventDefault()}
     />
   )
 }
