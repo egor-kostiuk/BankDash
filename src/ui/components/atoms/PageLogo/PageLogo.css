@@ -4,11 +4,11 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  min-width: 250px;
+  min-width: 240px;
   height: 60px;
   min-height: 100px;
-  padding-left: 36px;
-  padding-right: 36px;
+  padding-left: 31px;
+  padding-right: 31px;
   background-color: var(--white);
   border-right: 1px solid #E6EFF5; /* TODO: move border to sidebar */
 }
