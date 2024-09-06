@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useProfile } from "/src/hooks/useProfile.js";
+import { toast } from "react-toastify";
 
 export const useEditProfile = () => {
   const { userDetails, updateProfileData } = useProfile();
@@ -36,10 +37,16 @@ export const useEditProfile = () => {
 
       if (Object.keys(updatedData).length > 0) {
         await updateProfileData(updatedData);
-        console.log("Profile successfully updated!");
+        console.log('Profile successfully updated');
+        toast.success('Profile successfully updated')
+      }
+      if (Object.keys(updatedData).length === 0) {
+        console.log('No data to update');
+        toast.warning('Enter data to save');
       }
     } catch (error) {
-      console.error("Error saving profile data:", error);
+      console.error('Error saving profile data:', error);
+      toast.error('Error saving data');
     }
   };
 
