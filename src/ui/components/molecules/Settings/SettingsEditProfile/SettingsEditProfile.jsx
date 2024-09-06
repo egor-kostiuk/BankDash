@@ -1,5 +1,6 @@
 import { useEditProfile } from "/src/hooks/useEditProfile.js";
 import { useDateFormat } from "/src/hooks/useDateFormat.js";
+import { ToastContainer } from "react-toastify";
 
 import { SettingsInputBox } from "/src/ui/components/molecules/SettingsInputBox/SettingsInputBox.jsx";
 import { SettingsSaveButton } from "/src/ui/components/atoms/Buttons/SettingsSaveButton/SettingsSaveButton.jsx";
@@ -8,6 +9,7 @@ import { SettingsChoseInputBox } from "/src/ui/components/molecules/SettingsChos
 import { SettingsDateInputBox } from "/src/ui/components/molecules/SettingsDateInputBox/SettingsDateInputBox.jsx";
 
 import "./SettingsEditProfile.css";
+import "react-toastify/dist/ReactToastify.css";
 
 export const EditProfile = () => {
   const {
@@ -88,6 +90,12 @@ export const EditProfile = () => {
         </div>
       </div>
       <SettingsSaveButton label={'Save'} onClick={handleSave}/>
+      <ToastContainer
+        style={{top: '50px'}}
+        position={"top-center"}
+        autoClose={1500}
+        pauseOnHover={false}
+      />
     </div>
   )
 }
