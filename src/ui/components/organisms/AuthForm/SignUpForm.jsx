@@ -1,10 +1,12 @@
 import { useSignUp } from '/src/hooks/useSignUp.js';
 import { Link } from 'react-router-dom';
+import { ToastContainer } from "react-toastify";
 
 import { AuthInputBox } from "/src/ui/components/molecules/AuthInputBox/AuthInputBox.jsx";
 import { AuthButton } from "/src/ui/components/atoms/Buttons/AuthButton/AuthButton.jsx";
 
 import './Form.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const SignUpForm = () => {
   const { setEmail, setPassword, setFirstName, handleRegister } = useSignUp();
@@ -35,6 +37,12 @@ export const SignUpForm = () => {
           Already have an account ? <Link to="/login">Login</Link>
         </p>
       </form>
+      <ToastContainer
+        style={{top: '-100px'}}
+        position={"top-center"}
+        autoClose={2000}
+        pauseOnHover={false}
+      />
     </div>
   );
 }
