@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { auth, upload } from "/src/services/api/firebase.js";
+import { toast } from "react-toastify";
 
 export const useEditProfileImg = () => {
   const [profileImg, setProfileImg] = useState("/src/assets/img/default-profile-img.jpg");
@@ -30,6 +31,9 @@ export const useEditProfileImg = () => {
         const newPhotoURL = await upload(file, user, setLoading);
         if (newPhotoURL) {
           setProfileImg(newPhotoURL);
+
+          // Toast success
+          toast.success('Photo successfully updated')
         }
       }
     }

@@ -4,12 +4,12 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  min-width: 250px;
+  min-width: 240px;
   height: 60px;
   min-height: 100px;
-  padding-left: 36px;
-  padding-right: 36px;
-  background-color: white;
+  padding-left: 31px;
+  padding-right: 31px;
+  background-color: var(--white);
   border-right: 1px solid #E6EFF5; /* TODO: move border to sidebar */
 }
 
@@ -18,7 +18,7 @@
 }
 
 .logo-wrapper span {
-  color: #343C6AFF;
+  color: var(--dark-blue);
   margin: 0;
   font-weight: 600;
   font-size: 1.5625rem;

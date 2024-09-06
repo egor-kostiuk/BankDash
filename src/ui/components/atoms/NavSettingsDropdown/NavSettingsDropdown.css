@@ -16,7 +16,7 @@
   font-weight: 400;
   font-size: 15px;
   line-height: 1.2;
-  color: #8BA3CBFF;
+  color: var(--muted-blue);
 }
 
 .notifications-hr {
@@ -66,7 +66,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: #1814F3FF;
+  color: var(--blue);
   width: 100%;
   font-size: 15px;
   line-height: 1.6;

@@ -11,7 +11,7 @@
 .sidebar-button-wrapper.active::before {
   content: "";
   position: absolute;
-  background-color: rgb(24, 20, 243);
+  background-color: var(--blue);
   top: 0;
   bottom: 0;
   left: 0;
