@@ -1,6 +1,6 @@
 .settings-container {
   padding: 27px 30px 30px 30px;
-  background-color: #FFF;
+  background-color: var(--white);
   border-radius: 25px;
   box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.48);
 }
@@ -19,7 +19,7 @@
   max-width: 100px;
   height: 40px;
   border-radius: 10px;
-  color: #718EBF;
+  color: var(--muted-blue);
   background: none;
   border: none;
   cursor: pointer;
@@ -34,13 +34,13 @@
 }
 
 .settings-button-active {
-  color: #1814F3 !important;
+  color: var(--blue) !important;
 }
 
 .settings-button-active::before {
   content: "";
   position: absolute;
-  background-color: #1814F3;
+  background-color: var(--blue);
   bottom: -0.1px;
   left: 0;
   right: 0;

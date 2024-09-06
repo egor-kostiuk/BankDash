@@ -3,12 +3,12 @@
     align-items: center;
     height: 50px;
     border: none;
-    color: #8BA3CBFF;
+    color: var(--muted-blue);
     margin-bottom: 0;
     outline: none;
     background: transparent;
 }
 
 .nav-input::placeholder {
-    color: #8BA3CBFF;
+    color: var(--muted-blue);
 }
