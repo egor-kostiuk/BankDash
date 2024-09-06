@@ -21,7 +21,7 @@
 .form h3 {
   margin: 0 0 30px;
   padding: 0;
-  color: #fff;
+  color: var(--white);
   text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
@@ -34,7 +34,7 @@
 }
 
 .form a {
-  color: #fff;
+  color: var(--white);
 }
 
 .form p a:hover {

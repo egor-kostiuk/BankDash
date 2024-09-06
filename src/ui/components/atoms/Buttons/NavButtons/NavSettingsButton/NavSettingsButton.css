@@ -11,7 +11,7 @@
 }
 
 .nav-settings-button.filling .fill-overlay {
-    background-color: #718EBF;
+    background-color: var(--muted-blue);
     opacity: 1;
     animation: fillAnimation 0.5s forwards;
 }
@@ -42,7 +42,7 @@
 .nav-notifications-dropdown {
     position: absolute;
     display: block;
-    background-color: #FFFFFFFF;
+    background-color: var(--white);
     box-shadow: rgba(0, 0, 0, 0.03) 0 -2px 6px 0, rgba(0, 0, 0, 0.01) 2px 10px 10px 0, rgba(0, 0, 0, 0.02) 1px 20px 65px 0, rgba(0, 0, 0, 0.11) 16px 39px 67px 0;
     width: 300px;
     right: 0;

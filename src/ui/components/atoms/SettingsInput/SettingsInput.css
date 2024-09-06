@@ -1,13 +1,13 @@
 .settings-input {
   height: 50px;
   border-radius: 16px;
-  color: #718EBF;
+  color: var(--muted-blue);
   border: 1px solid #DFEAF2;
   padding: 16px 20px;
   outline: none;
 }
 
 .settings-input::placeholder {
-  color: #718EBF;
+  color: var(--muted-blue);
   font-size: 14px;
 }

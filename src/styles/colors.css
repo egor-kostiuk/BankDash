@@ -1,0 +1,11 @@
+:root {
+  --black: #000;
+  --white: #FFF;
+  --blue: #1814f3;
+  --muted-blue: #718EBF;
+  --dark-blue: #343C6AFF;
+  /*--muted-blue-2var: #8BA3CBFF;*/
+  --light-muted-blue: rgba(113, 142, 191, 0.57);
+  --gray: #B1B1B1;
+  --light-red: #FE5C73FF;
+}
