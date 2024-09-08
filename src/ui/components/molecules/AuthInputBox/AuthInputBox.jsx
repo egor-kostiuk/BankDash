@@ -8,8 +8,8 @@ export const AuthInputBox = ({ type, onChange, value }) => {
 
   return (
     <div className={`input-box ${hasValue ? 'has-value' : ''}`}>
-      <AuthLabel type={type}/>
       <AuthInput type={type} onChange={onChange} value={value}/>
+      <AuthLabel type={type}/>
     </div>
   )
 }
