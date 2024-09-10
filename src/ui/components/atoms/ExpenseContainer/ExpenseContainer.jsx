@@ -1,20 +1,22 @@
-import test from '/src/assets/img/test.svg';
+import { useCalcSize } from '/src/hooks/useCalcSize.js';
+import { banksList } from '/src/helpers/banksList.js';
+import { banksUsingStatsList } from '/src/helpers/banksUsingStatsList.js';
 
 import './ExpenseContainer.css';
 
-const bankData = [ // TODO: colors.css
-  { name: 'DBL Bank', color: '#4C78FF' },
-  { name: 'ABM Bank', color: '#16DBCC' },
-  { name: 'BRC Bank', color: '#FF82AC' },
-  { name: 'MCP Bank', color: '#FFBB38' },
-];
-
 export const ExpenseContainer = () => {
   return (
-    <div className={'expense-container container'}> {/* TODO: Delete img */}
-      <img src={test} alt={'test'} style={{ width: '188px' }}/>
+    <div className={'expense-container container'}>
+      <div className={'expense-stats-circle'}>
+        <div className='section section-1' style={useCalcSize(banksUsingStatsList.DBL)}></div>
+        <div className='section section-2' style={useCalcSize(banksUsingStatsList.AMB)}></div>
+        <div className='circle'></div>
+        <div className='section section-3' style={useCalcSize(banksUsingStatsList.BRC)}></div>
+        <div className='section section-4' style={useCalcSize(banksUsingStatsList.MCP)}></div>
+      </div>
+
       <div className={'expense-container-banks'}>
-        {bankData.map((bank, index) => (
+        {banksList.map((bank, index) => (
           <span key={index}>
             <div className={'bank-circle'} style={{ backgroundColor: bank.color }}></div>
             {bank.name}
