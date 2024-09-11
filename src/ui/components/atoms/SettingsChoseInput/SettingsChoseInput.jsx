@@ -1,23 +1,26 @@
 import { useState, useMemo } from 'react';
 import Select from 'react-select';
-import countryList from 'react-select-country-list'
+import countryList from 'react-select-country-list';
 
 import './SettingsChoseInput.css';
 
-export const SettingsChoseInput = ({ placeholder }) => {
-  const [value, setValue] = useState('')
-  const options = useMemo(() => countryList().getData(), [])
+export const SettingsChoseInput = ({ placeholder, onChange }) => {
+  const [value, setValue] = useState('');
+  const options = useMemo(() => countryList().getData(), []);
 
-  const changeHandler = value => {
-    setValue(value)
-  }
+  const changeHandler = (selectedOption) => {
+    setValue(selectedOption);
+    onChange(selectedOption);
+  };
 
-  return <Select
-    classNamePrefix={'country-select'}
-    options={options}
-    value={value}
-    placeholder={placeholder}
-    onChange={changeHandler}
-    unstyled
-  />
+  return (
+    <Select
+      classNamePrefix={'country-select'}
+      options={options}
+      value={value}
+      placeholder={placeholder}
+      onChange={changeHandler}
+      unstyled
+    />
+  )
 }
