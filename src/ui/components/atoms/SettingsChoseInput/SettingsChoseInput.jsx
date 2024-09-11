@@ -1,12 +1,19 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import Select from 'react-select';
 import countryList from 'react-select-country-list';
 
 import './SettingsChoseInput.css';
 
-export const SettingsChoseInput = ({ placeholder, onChange }) => {
-  const [value, setValue] = useState('');
+export const SettingsChoseInput = ({ placeholder, onChange, selectedValue }) => {
+  const [value, setValue] = useState(null);
   const options = useMemo(() => countryList().getData(), []);
+
+  useEffect(() => {
+    if (selectedValue) {
+      const selectedOption = options.find(option => option.label === selectedValue);
+      setValue(selectedOption);
+    }
+  }, [selectedValue, options]);
 
   const changeHandler = (selectedOption) => {
     setValue(selectedOption);
@@ -22,5 +29,5 @@ export const SettingsChoseInput = ({ placeholder, onChange }) => {
       onChange={changeHandler}
       unstyled
     />
-  )
-}
+  );
+};
