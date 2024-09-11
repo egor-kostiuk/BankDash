@@ -21,7 +21,7 @@ body {
   background-color: #F9F9F9;
   color: #000000;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 img, svg {
