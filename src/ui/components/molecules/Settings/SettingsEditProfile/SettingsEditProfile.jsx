@@ -71,7 +71,7 @@ export const EditProfile = () => {
             />
             <SettingsChoseInputBox
               title={'Country'}
-              placeholder={userDetails?.country || 'Choose Country'}
+              placeholder={userDetails?.country || 'Choose your country'}
               setCountry={setCountry}
             />
             <SettingsDateInputBox
