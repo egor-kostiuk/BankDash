@@ -1,7 +1,7 @@
-import { SettingsLabel } from "/src/ui/components/atoms/SettingsLabel/SettingsLabel.jsx";
-import { SettingsChoseInput } from "/src/ui/components/atoms/SettingsChoseInput/SettingsChoseInput.jsx";
+import { SettingsLabel } from '/src/ui/components/atoms/SettingsLabel/SettingsLabel.jsx';
+import { SettingsChoseInput } from '/src/ui/components/atoms/SettingsChoseInput/SettingsChoseInput.jsx';
 
-import "./SettingsChoseInputBox.css";
+import './SettingsChoseInputBox.css';
 
 export const SettingsChoseInputBox = ({ title, placeholder, onChange, selectedValue }) => {
 
