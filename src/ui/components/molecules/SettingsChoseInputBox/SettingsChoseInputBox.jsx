@@ -3,18 +3,16 @@ import { SettingsChoseInput } from "/src/ui/components/atoms/SettingsChoseInput/
 
 import "./SettingsChoseInputBox.css";
 
-export const SettingsChoseInputBox = ({ title, placeholder, setCountry, selectedCountry }) => {
-  const handleCountryChange = (selectedOption) => {
-    setCountry(selectedOption ? selectedOption.label : '');
-  };
+export const SettingsChoseInputBox = ({ title, placeholder, onChange, selectedValue }) => {
+
 
   return (
     <div className={'settings-chose-input-box'}>
       <SettingsLabel title={title}/>
       <SettingsChoseInput
         placeholder={placeholder}
-        onChange={handleCountryChange}
-        selectedValue={selectedCountry}
+        onChange={onChange}
+        selectedValue={selectedValue}
       />
     </div>
   )
