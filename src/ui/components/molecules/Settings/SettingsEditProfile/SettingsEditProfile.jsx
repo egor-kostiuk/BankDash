@@ -8,6 +8,8 @@ import { EditProfileImgButton } from "/src/ui/components/atoms/Buttons/EditProfi
 import { SettingsSelectInputBox } from "/src/ui/components/molecules/SettingsSelectInputBox/SettingsSelectInputBox.jsx";
 import { SettingsDateInputBox } from "/src/ui/components/molecules/SettingsDateInputBox/SettingsDateInputBox.jsx";
 
+import countryList from 'react-select-country-list';
+
 import "./SettingsEditProfile.css";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -24,6 +26,7 @@ export const EditProfile = () => {
     isLoading
   } = useEditProfile();
   const formattedBirthDate = useDateFormat(userDetails?.birthDate);
+  const countries = countryList().getData(); // TODO: optimize
 
   if (isLoading) {
     return <div></div>;
@@ -71,6 +74,7 @@ export const EditProfile = () => {
             />
             <SettingsSelectInputBox
               title={'Country'}
+              list={countries}
               placeholder={userDetails?.country || 'Select your country'}
               onChange={(selectedOption) => setCountry(selectedOption ? selectedOption.label : '')}
             />

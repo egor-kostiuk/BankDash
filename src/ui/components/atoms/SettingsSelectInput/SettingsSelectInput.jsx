@@ -1,12 +1,11 @@
 import { useState, useMemo, useEffect } from 'react';
 import Select from 'react-select';
-import countryList from 'react-select-country-list';
 
 import './SettingsSelectInput.css';
 
-export const SettingsSelectInput = ({ placeholder, onChange, selectedValue }) => {
+export const SettingsSelectInput = ({ placeholder, onChange, selectedValue, list }) => {
   const [value, setValue] = useState(null);
-  const options = useMemo(() => countryList().getData(), []);
+  const options = useMemo(() => list, []);
 
   useEffect(() => {
     if (selectedValue) {
