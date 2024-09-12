@@ -1,15 +1,15 @@
 import { SettingsLabel } from '/src/ui/components/atoms/SettingsLabel/SettingsLabel.jsx';
-import { SettingsChoseInput } from '/src/ui/components/atoms/SettingsChoseInput/SettingsChoseInput.jsx';
+import { SettingsSelectInput } from '/src/ui/components/atoms/SettingsSelectInput/SettingsSelectInput.jsx';
 
-import './SettingsChoseInputBox.css';
+import './SettingsSelectInputBox.css';
 
-export const SettingsChoseInputBox = ({ title, placeholder, onChange, selectedValue }) => {
+export const SettingsSelectInputBox = ({ title, placeholder, onChange, selectedValue }) => {
 
 
   return (
     <div className={'settings-chose-input-box'}>
       <SettingsLabel title={title}/>
-      <SettingsChoseInput
+      <SettingsSelectInput
         placeholder={placeholder}
         onChange={onChange}
         selectedValue={selectedValue}

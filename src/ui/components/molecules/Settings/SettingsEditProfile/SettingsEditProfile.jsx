@@ -5,7 +5,7 @@ import { ToastContainer } from "react-toastify";
 import { SettingsInputBox } from "/src/ui/components/molecules/SettingsInputBox/SettingsInputBox.jsx";
 import { SettingsSaveButton } from "/src/ui/components/atoms/Buttons/SettingsSaveButton/SettingsSaveButton.jsx";
 import { EditProfileImgButton } from "/src/ui/components/atoms/Buttons/EditProfileImgButton/EditProfileImgButton.jsx";
-import { SettingsChoseInputBox } from "/src/ui/components/molecules/SettingsChoseInputBox/SettingsChoseInputBox.jsx";
+import { SettingsSelectInputBox } from "/src/ui/components/molecules/SettingsSelectInputBox/SettingsSelectInputBox.jsx";
 import { SettingsDateInputBox } from "/src/ui/components/molecules/SettingsDateInputBox/SettingsDateInputBox.jsx";
 
 import "./SettingsEditProfile.css";
@@ -69,12 +69,12 @@ export const EditProfile = () => {
               placeholder={formattedBirthDate || 'Select your birthday'}
               onChange={setBirthDate}
             />
-            <SettingsChoseInputBox
+            <SettingsSelectInputBox
               title={'Country'}
               placeholder={userDetails?.country || 'Select your country'}
               onChange={(selectedOption) => setCountry(selectedOption ? selectedOption.label : '')}
             />
-            <SettingsInputBox
+            <SettingsSelectInputBox
               title={'Currency'}
               type={'text'}
               placeholder={userDetails?.city || 'Select a currency'}
