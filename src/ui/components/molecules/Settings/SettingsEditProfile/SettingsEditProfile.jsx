@@ -63,22 +63,22 @@ export const EditProfile = () => {
               placeholder={userDetails?.profession || 'Enter your profession'}
               onChange={(e) => setProfession(e.target.value)}
             />
-            <SettingsInputBox
-              title={'City'}
-              type={'text'}
-              placeholder={userDetails?.city || 'Choose your city'}
-              onChange={(e) => setCity(e.target.value)}
+            <SettingsDateInputBox
+              title={'Date of Birth'}
+              type={'date'}
+              placeholder={formattedBirthDate || 'Choose your birthday'}
+              onChange={setBirthDate}
             />
             <SettingsChoseInputBox
               title={'Country'}
               placeholder={userDetails?.country || 'Choose your country'}
               onChange={(selectedOption) => setCountry(selectedOption ? selectedOption.label : '')}
             />
-            <SettingsDateInputBox
-              title={'Date of Birth'}
-              type={'date'}
-              placeholder={formattedBirthDate || 'Choose your birthday'}
-              onChange={setBirthDate}
+            <SettingsInputBox
+              title={'City'}
+              type={'text'}
+              placeholder={userDetails?.city || 'Choose your city'}
+              onChange={(e) => setCity(e.target.value)}
             />
             <SettingsInputBox
               title={'Postal Code'}
