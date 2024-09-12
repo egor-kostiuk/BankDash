@@ -29,5 +29,5 @@ export const SettingsChoseInput = ({ placeholder, onChange, selectedValue }) => 
       onChange={changeHandler}
       unstyled
     />
-  );
-};
+  )
+}
