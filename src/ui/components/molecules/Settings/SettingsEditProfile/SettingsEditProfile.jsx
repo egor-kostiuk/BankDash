@@ -9,6 +9,7 @@ import { SettingsSelectInputBox } from "/src/ui/components/molecules/SettingsSel
 import { SettingsDateInputBox } from "/src/ui/components/molecules/SettingsDateInputBox/SettingsDateInputBox.jsx";
 
 import countryList from 'react-select-country-list';
+import currenciesList  from '/src/hooks/useCurrenciesList.js';
 
 import "./SettingsEditProfile.css";
 import "react-toastify/dist/ReactToastify.css";
@@ -27,6 +28,7 @@ export const EditProfile = () => {
   } = useEditProfile();
   const formattedBirthDate = useDateFormat(userDetails?.birthDate);
   const countries = countryList().getData(); // TODO: optimize
+  const currencies = currenciesList().getData();
 
   if (isLoading) {
     return <div></div>;
@@ -80,9 +82,9 @@ export const EditProfile = () => {
             />
             <SettingsSelectInputBox
               title={'Currency'}
-              type={'text'}
+              list={currencies}
               placeholder={userDetails?.city || 'Select a currency'}
-              onChange={(e) => setCity(e.target.value)}
+              onChange={(selectedOption) => setCity(selectedOption ? selectedOption.label : '')}
             />
             <SettingsInputBox
               title={'Postal Code'}
