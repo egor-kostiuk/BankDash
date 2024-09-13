@@ -29,14 +29,24 @@
   padding: 10px 0;
 }
 
+.country-select__menu-list {
+  display: flex;
+  flex-direction: column;
+  width: 415px;
+  margin: 0 auto;
+}
+
 .country-select__option {
   width: 418px !important;
   padding: 10px 20px;
   color: var(--muted-blue);
+  border-radius: 2px;
   cursor: pointer !important;
 }
 
 .country-select__menu-notice {
+  padding: 10px;
+  cursor: default;
   color: var(--muted-blue);
 }
 
