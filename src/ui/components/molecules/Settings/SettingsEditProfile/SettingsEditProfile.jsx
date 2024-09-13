@@ -19,7 +19,7 @@ export const EditProfile = () => {
     userDetails,
     setLastName,
     setProfession,
-    setCity,
+    setCurrency,
     setBirthDate,
     setCountry,
     setPostalCode,
@@ -83,8 +83,8 @@ export const EditProfile = () => {
             <SettingsSelectInputBox
               title={'Currency'}
               list={currencies}
-              placeholder={userDetails?.city || 'Select a currency'}
-              onChange={(selectedOption) => setCity(selectedOption ? selectedOption.label : '')}
+              placeholder={userDetails?.currency || 'Select a currency'}
+              onChange={(selectedOption) => setCurrency(selectedOption ? selectedOption.label : '')}
             />
             <SettingsInputBox
               title={'Postal Code'}
