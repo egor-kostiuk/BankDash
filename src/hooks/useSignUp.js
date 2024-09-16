@@ -44,5 +44,5 @@ export const useSignUp = () => {
     }
   };
 
-  return {setEmail, setPassword, setFirstName, handleRegister};
+  return { email, setEmail, password, setPassword, firstName, setFirstName, handleRegister};
 };

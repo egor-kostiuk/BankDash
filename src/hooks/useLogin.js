@@ -36,5 +36,5 @@ export const useLogin = () => {
     }
   };
 
-  return {email, setEmail, password, setPassword, handleSubmit};
+  return { email, setEmail, password, setPassword, handleSubmit };
 }

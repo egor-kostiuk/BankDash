@@ -9,7 +9,7 @@ import './Form.css';
 import 'react-toastify/dist/ReactToastify.css';
 
 export const SignUpForm = () => {
-  const { setEmail, setPassword, setFirstName, handleRegister } = useSignUp();
+  const { email, setEmail, password,  setPassword, firstName, setFirstName, handleRegister } = useSignUp();
 
   return (
     <div className={'form-wrapper'}>
@@ -19,16 +19,19 @@ export const SignUpForm = () => {
         <AuthInputBox
           type={'Name'}
           onChange={(e) => setFirstName(e.target.value)}
+          value={firstName}
         />
 
         <AuthInputBox
           type={'Email address'}
           onChange={(e) => setEmail(e.target.value)}
+          value={email}
         />
 
         <AuthInputBox
           type={'Password'}
           onChange={(e) => setPassword(e.target.value)}
+          value={password}
         />
 
         <AuthButton label={'Sign Up'} onClick={handleRegister}/>

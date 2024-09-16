@@ -21,7 +21,7 @@ body {
   background-color: #F9F9F9;
   color: #000000;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 img, svg {
@@ -43,7 +43,7 @@ a {
   color: inherit;
 }
 
-ul{
+ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -74,4 +74,11 @@ input[type=number]::-webkit-outer-spin-button {
 /* Hide arrows in Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+.container {
+  background-color: var(--white);
+  border-radius: 25px;
+  padding: 30px;
+  height: auto;
 }
