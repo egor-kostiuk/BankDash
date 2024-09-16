@@ -6,7 +6,7 @@ export const useEditProfile = () => {
   const { userDetails, updateProfileData } = useProfile();
   const [lastName, setLastName] = useState("");
   const [profession, setProfession] = useState("");
-  const [city, setCity] = useState("");
+  const [currency, setCurrency] = useState("");
   const [birthDate, setBirthDate] = useState("");
   const [country, setCountry] = useState("");
   const [postalCode, setPostalCode] = useState("");
@@ -22,8 +22,8 @@ export const useEditProfile = () => {
       if (profession && profession !== userDetails?.profession) {
         updatedData.profession = profession;
       }
-      if (city && city !== userDetails?.city) {
-        updatedData.city = city;
+      if (currency && currency !== userDetails?.currency) {
+        updatedData.currency = currency;
       }
       if (birthDate && birthDate !== userDetails?.birthDate) {
         updatedData.birthDate = birthDate;
@@ -54,7 +54,7 @@ export const useEditProfile = () => {
     if (userDetails) {
       setLastName(userDetails.lastName || '');
       setProfession(userDetails.profession || '');
-      setCity(userDetails.city || '');
+      setCurrency(userDetails.currency || '');
       setBirthDate(userDetails.birthDate || '');
       setCountry(userDetails.country || '');
       setPostalCode(userDetails.postalCode || '');
@@ -66,7 +66,7 @@ export const useEditProfile = () => {
     userDetails,
     setLastName,
     setProfession,
-    setCity,
+    setCurrency,
     setBirthDate,
     setCountry,
     setPostalCode,
