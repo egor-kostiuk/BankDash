@@ -5,11 +5,7 @@ import { LoadingBarWrapper } from "/src/utils/LoadingWrapper.jsx";
 import { auth } from "/src/services/api/firebase.js";
 
 // Pages imports
-import { LoginPage } from "/src/app/pages/Auth/LoginPage.jsx";
-import { SignUpPage } from "/src/app/pages/Auth/SignUpPage.jsx";
-import { DashboardPage } from "/src/app/pages/DashboardPage.jsx";
-import { TestPage } from "./app/pages/TestPage.jsx"; // TODO: fix import
-import { SettingsPage } from "/src/app/pages/SettingsPage.jsx";
+import { LoginPage, SignUpPage, DashboardPage, TestPage, CardsPage, SettingsPage } from "./app/pages/pages.js";
 
 import './styles/App.css';
 
@@ -54,6 +50,15 @@ export default function App() {
             element={
               <ProtectedRoute user={user}>
                 <TestPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            exact
+            path={'/credit-cards'}
+            element={
+              <ProtectedRoute user={user}>
+                <CardsPage />
               </ProtectedRoute>
             }
           />
