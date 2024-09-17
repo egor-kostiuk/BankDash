@@ -1,10 +1,9 @@
-import { Main } from "/src/ui/components/templates/Main/Main.jsx";
-import { Header } from "/src/ui/components/templates/Header/Header.jsx";
+import { Main } from '/src/ui/components/templates/Main/Main.jsx';
+import { Header } from '/src/ui/components/templates/Header/Header.jsx';
 
 import { useEditProfile } from '/src/hooks/useEditProfile.js';
 import { CurrencyWrapper } from '/src/utils/CurrencyProvider/CurrencyWrapper.jsx';
 import { CurrencyProvider } from '/src/utils/CurrencyProvider/CurrencyContext.jsx';
-
 import { CurrencyText } from '/src/utils/CurrencyText.jsx'; // Test component
 
 
