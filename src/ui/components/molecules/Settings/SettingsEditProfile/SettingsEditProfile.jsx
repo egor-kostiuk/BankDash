@@ -9,10 +9,10 @@ import { SettingsSelectInputBox } from "/src/ui/components/molecules/SettingsSel
 import { SettingsDateInputBox } from "/src/ui/components/molecules/SettingsDateInputBox/SettingsDateInputBox.jsx";
 
 import countryList from 'react-select-country-list';
-import currenciesList  from '/src/hooks/useCurrenciesList.js';
+import currenciesList  from '/src/hooks/useCurrencies.js';
 
-import "./SettingsEditProfile.css";
-import "react-toastify/dist/ReactToastify.css";
+import './SettingsEditProfile.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const EditProfile = () => {
   const {
