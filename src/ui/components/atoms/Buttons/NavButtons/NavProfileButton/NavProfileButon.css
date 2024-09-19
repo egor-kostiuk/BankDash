@@ -51,6 +51,7 @@
   height: auto;
   margin: 8px auto auto;
   border-radius: 12px;
+  border: 1px solid var(--nav-dropdown-border);
   padding: 24px;
   right: 0;
   z-index: 100;
