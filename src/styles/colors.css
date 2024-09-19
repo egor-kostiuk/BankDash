@@ -1,6 +1,10 @@
-:root {
+/* default light theme */
+:root,
+[data-theme="light"] {
   --black: #000;
   --white: #FFF;
+  --body-bg: #F9F9F9;
+  --nav-bg: #F5F7FAFF;
   --blue: #1814f3;
   --muted-blue: #718EBF;
   --dark-blue: #343C6AFF;
@@ -8,6 +12,8 @@
   --light-muted-blue: rgba(113, 142, 191, 0.57);
   --gray: #B1B1B1;
   --light-red: #FE5C73FF;
+  
+  /* credit-cards colors */
   --green: #16DBCC;
   --dark-green: #1EC6B8;
   --second-blue: #4C78FF;
@@ -16,5 +22,32 @@
   --dark-yellow: #FFB11F;
   --second-red: #FF82AC;
   --dark-second-red: #FF6195;
+}
 
+/* dark theme */
+[data-theme="dark"] {
+  --black: #B0B0B0;
+  --body-bg: #3A3A3A;
+  --nav-bg: #3A3A3A;
+  --white: #4B4B4B;
+  --blue: #3498DB;
+  --muted-blue: #AAB7B8;
+  --dark-blue: #83bbf3;
+  --light-muted-blue: rgba(70, 90, 110, 0.5);
+  --gray: #7F8C8D;
+  --light-red: #FF6F6F;
+}
+
+/* ocean theme */
+[data-theme="ocean"] {
+  --black: #D0D0D0;
+  --body-bg: #2F3C4C;
+  --nav-bg: #2F3C4C;
+  --white: #4A5F6C;
+  --blue: #1F77E1;
+  --muted-blue: #9AB0C1;
+  --dark-blue: #6c98d9;
+  --light-muted-blue: rgba(90, 110, 130, 0.55);
+  --gray: #9B9B9B;
+  --light-red: #D9534F;
 }

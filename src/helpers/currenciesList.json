@@ -4,11 +4,15 @@
     "label": "USD $"
   },
   {
-    "value": "2",
+    "value": "0.90",
     "label": "EUR €"
   },
   {
-    "value": "3",
+    "value": "41.38",
     "label": "UA ₴"
+  },
+  {
+    "value": "17.37",
+    "label": "MDL L"
   }
 ]
