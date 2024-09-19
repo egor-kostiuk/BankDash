@@ -1,6 +1,6 @@
-import "./NavSettingsDropdownContent.css"
+import './NavNotificationDropdownCard.css';
 
-export const NavSettingsDropdownContent = ({img, title, time, className}) => {
+export const NavNotificationDropdownCard = ({ img, title, time, className }) => {
   return (
     <>
       <div className={`${className}`}>
