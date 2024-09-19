@@ -1,5 +1,6 @@
 import { NavSettingsButton } from '/src/ui/components/atoms/Buttons/NavButtons/NavSettingsButton/NavSettingsButton.jsx';
 import { NavSetAndNotDropdown } from '/src/ui/components/atoms/NavSetAndNotDropdown/NavSetAndNotDropdown.jsx';
+import { SwitchTheme } from '/src/ui/components/atoms/SwitchTheme/SwitchTheme.jsx';
 import { NavNotificationDropdownCard } from '/src/ui/components/atoms/NavNotificationDropdownCard/NavNotificationDropdownCard.jsx';
 import { notificationList } from '/src/helpers/notificationList.js';
 
@@ -14,7 +15,7 @@ export const NavSettingsButtonsBox = ({ onClick, img }) => {
         img={img[0]}>
         <NavSetAndNotDropdown
           title={'Settings'}>
-          box
+          <SwitchTheme/>
         </NavSetAndNotDropdown>
       </NavSettingsButton>
 
