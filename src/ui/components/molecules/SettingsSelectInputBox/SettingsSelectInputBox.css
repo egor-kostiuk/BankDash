@@ -1,0 +1,8 @@
+.settings-chose-input-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 418px;
+  height: 80px;
+  gap: 11px;
+}

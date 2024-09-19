@@ -35,7 +35,7 @@
   display: flex;
   align-items: center;
   padding: 12px 20px;
-  background-color: #F5F7FAFF;
+  background-color: var(--nav-bg);
   margin: 1px 0 0;
 }
 

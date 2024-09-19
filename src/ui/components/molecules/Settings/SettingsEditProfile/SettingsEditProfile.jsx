@@ -5,18 +5,21 @@ import { ToastContainer } from "react-toastify";
 import { SettingsInputBox } from "/src/ui/components/molecules/SettingsInputBox/SettingsInputBox.jsx";
 import { SettingsSaveButton } from "/src/ui/components/atoms/Buttons/SettingsSaveButton/SettingsSaveButton.jsx";
 import { EditProfileImgButton } from "/src/ui/components/atoms/Buttons/EditProfileImgButton/EditProfileImgButton.jsx";
-import { SettingsChoseInputBox } from "/src/ui/components/molecules/SettingsChoseInputBox/SettingsChoseInputBox.jsx";
+import { SettingsSelectInputBox } from "/src/ui/components/molecules/SettingsSelectInputBox/SettingsSelectInputBox.jsx";
 import { SettingsDateInputBox } from "/src/ui/components/molecules/SettingsDateInputBox/SettingsDateInputBox.jsx";
 
-import "./SettingsEditProfile.css";
-import "react-toastify/dist/ReactToastify.css";
+import countryList from 'react-select-country-list';
+import currenciesList  from '/src/hooks/useCurrencies.js';
+
+import './SettingsEditProfile.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const EditProfile = () => {
   const {
     userDetails,
     setLastName,
     setProfession,
-    setCity,
+    setCurrency,
     setBirthDate,
     setCountry,
     setPostalCode,
@@ -24,6 +27,8 @@ export const EditProfile = () => {
     isLoading
   } = useEditProfile();
   const formattedBirthDate = useDateFormat(userDetails?.birthDate);
+  const countries = countryList().getData(); // TODO: optimize
+  const currencies = currenciesList().getData();
 
   if (isLoading) {
     return <div></div>;
@@ -63,22 +68,23 @@ export const EditProfile = () => {
               placeholder={userDetails?.profession || 'Enter your profession'}
               onChange={(e) => setProfession(e.target.value)}
             />
-            <SettingsInputBox
-              title={'City'}
-              type={'text'}
-              placeholder={userDetails?.city || 'Choose your city'}
-              onChange={(e) => setCity(e.target.value)}
-            />
-            <SettingsChoseInputBox
-              title={'Country'}
-              placeholder={userDetails?.country || 'Choose Country'}
-              setCountry={setCountry}
-            />
             <SettingsDateInputBox
               title={'Date of Birth'}
               type={'date'}
-              placeholder={formattedBirthDate || 'Choose your birthday'}
+              placeholder={formattedBirthDate || 'Select your birthday'}
               onChange={setBirthDate}
+            />
+            <SettingsSelectInputBox
+              title={'Country'}
+              list={countries}
+              placeholder={userDetails?.country || 'Select your country'}
+              onChange={(selectedOption) => setCountry(selectedOption ? selectedOption.label : '')}
+            />
+            <SettingsSelectInputBox
+              title={'Currency'}
+              list={currencies}
+              placeholder={userDetails?.currency || 'Select a currency'}
+              onChange={(selectedOption) => setCurrency(selectedOption ? selectedOption.label : '')}
             />
             <SettingsInputBox
               title={'Postal Code'}
