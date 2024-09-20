@@ -1,11 +1,11 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "/src/services/api/firebase.js";
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '/src/services/api/firebase.js';
 
-export const useLogin = () => {
+export const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
