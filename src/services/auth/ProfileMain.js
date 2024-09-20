@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-import { auth, db } from "/src/services/api/firebase.js";
-import { doc, getDoc, updateDoc } from "firebase/firestore";
+import { auth, db } from '/src/services/api/firebase.js';
+import { doc, getDoc, updateDoc } from 'firebase/firestore';
 
-export const useProfile = () => {
+export const ProfileMain = () => {
   const [userDetails, setUserDetails] = useState(null);
 
   const fetchUserData = async () => {

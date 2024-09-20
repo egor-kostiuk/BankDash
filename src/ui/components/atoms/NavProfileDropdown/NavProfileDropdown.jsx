@@ -1,15 +1,15 @@
-import { useNavigate } from "react-router-dom";
-import { useProfile } from "/src/hooks/useProfile.js";
+import { useNavigate } from 'react-router-dom';
+import { ProfileMain } from '/src/services/auth/ProfileMain.js';
 
-import { NavProfileDropdownInfo } from "../NavProfileDropdownInfo/NavProfileDropdownInfo.jsx";
-import { NavProfileDropdownSettings } from "../NavProfileDropdownSettings/NavProfileDropdownSettings.jsx";
-import { NavLogoutButton } from "../Buttons/NavButtons/NavLogoutButton/NavLogoutButton.jsx";
+import { NavProfileDropdownInfo } from '../NavProfileDropdownInfo/NavProfileDropdownInfo.jsx';
+import { NavProfileDropdownSettings } from '../NavProfileDropdownSettings/NavProfileDropdownSettings.jsx';
+import { NavLogoutButton } from '../Buttons/NavButtons/NavLogoutButton/NavLogoutButton.jsx';
 
-import "./NavProfileDropdown.css";
+import './NavProfileDropdown.css';
 
 export const NavProfileDropdown = ({ img, closeDropdown }) => {
   const navigate = useNavigate();
-  const { userDetails, handleLogout } = useProfile();
+  const { userDetails, handleLogout } = ProfileMain();
 
   const navigateToProfileSettingPage = () => {
     navigate("/settings");

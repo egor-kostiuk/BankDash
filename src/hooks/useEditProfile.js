@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import { useProfile } from "/src/hooks/useProfile.js";
-import { toast } from "react-toastify";
+import { ProfileMain } from '/src/services/auth/ProfileMain.js';
+import { toast } from 'react-toastify';
 
 export const useEditProfile = () => {
-  const { userDetails, updateProfileData } = useProfile();
+  const { userDetails, updateProfileData } = ProfileMain();
   const [lastName, setLastName] = useState("");
   const [profession, setProfession] = useState("");
   const [currency, setCurrency] = useState("");

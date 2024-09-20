@@ -1,7 +1,7 @@
-import { useProfile } from '/src/hooks/useProfile.js';
+import { ProfileMain } from '/src/services/auth/ProfileMain.js';
 
 export const ProfileLayout = ({ children }) => {
-  const { userDetails } = useProfile();
+  const { userDetails } = ProfileMain();
 
   return (
     <>
