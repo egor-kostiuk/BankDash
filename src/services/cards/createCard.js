@@ -1,13 +1,14 @@
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from '/src/services/api/firebase.js';
 
-export const createCard = async (userId, initialBalance = 0) => { // TODO: update card creating
+export const createCard = async (userId, initialBalance = 0, initialType = 'classic', initialNumber) => {
   try {
     const cardData = {
       userId,
       balance: initialBalance,
+      cardType: initialType,
       createdAt: new Date(),
-      cardNumber: Math.floor(Math.random() * 10000000000),
+      cardNumber: initialNumber
     };
     const docRef = await addDoc(collection(db, 'cards'), cardData);
     return docRef.id;
