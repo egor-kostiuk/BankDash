@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { auth } from '/src/services/api/firebase.js';
 import { createCard } from '/src/services/cards/createCard.js';
+import { toast } from 'react-toastify';
 
 import { ContainerTitle } from '/src/ui/components/atoms/ContainerTitle/ContainerTitle.jsx';
 import { SettingsSelectInputBox } from '../SettingsSelectInputBox/SettingsSelectInputBox.jsx';
@@ -20,7 +21,7 @@ export const NewCardBox = () => {
 
   const handleCreateCard = async () => { // TODO: create separate function
     if (!cardType) {
-      alert('Select card type'); // TODO: toast
+      toast.warning('Select card type');
       return;
     }
 
@@ -40,20 +41,22 @@ export const NewCardBox = () => {
     }
 
     if (!cardName) {
-      alert('Enter your name'); // TODO: toast
+      toast.warning('Enter your name');
       return;
     }
 
     if (cardNumber.length !== 16) {
-      alert('Card number must be exactly 16 digits.'); // TODO: toast
+      toast.warning('Card number must have 16 digits')
       return;
     }
 
     try {
       const cardId = await createCard(user.uid, balance, cardType, cardNumber, cardName);
-      console.log(cardId); // TODO: toast
+      toast.success('Card successfully added');
+      console.log(cardId);
     } catch (error) {
-      console.error('Error creating card:', error);
+      toast.error('Error adding card');
+      console.error('Error adding card:', error);
     }
   };
 
