@@ -1,14 +1,15 @@
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from '/src/services/api/firebase.js';
 
-export const createCard = async (userId, initialBalance = 0, initialType = 'classic', initialNumber) => {
+export const createCard = async (userId, initialBalance = 0, initialType , initialNumber, initialName) => {
   try {
     const cardData = {
       userId,
       balance: initialBalance,
       cardType: initialType,
       createdAt: new Date(),
-      cardNumber: initialNumber
+      cardNumber: initialNumber,
+      cardName: initialName,
     };
     const docRef = await addDoc(collection(db, 'cards'), cardData);
     return docRef.id;
