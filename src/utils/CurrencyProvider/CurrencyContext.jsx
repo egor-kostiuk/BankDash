@@ -1,7 +1,7 @@
 import { createContext, useContext } from 'react';
 
-import { useEditProfile } from "/src/hooks/useEditProfile.js";
-import currencyData from '/src/helpers/currenciesList.json';
+import { useEditProfile } from '/src/hooks/useEditProfile.js';
+import currencyData from '/src/helpers/currencies.json';
 
 const CurrencyContext = createContext();
 
