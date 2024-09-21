@@ -3,10 +3,10 @@ import { SettingsSelectInput } from '/src/ui/components/atoms/SettingsSelectInpu
 
 import './SettingsSelectInputBox.css';
 
-export const SettingsSelectInputBox = ({ title, placeholder, onChange, selectedValue, list }) => {
+export const SettingsSelectInputBox = ({ style, title, placeholder, onChange, selectedValue, list }) => {
 
   return (
-    <div className={'settings-chose-input-box'}>
+    <div className={'settings-chose-input-box'} style={style}> {/* TODO: rename chose to select*/}
       <SettingsLabel title={title}/>
       <SettingsSelectInput
         list={list}
