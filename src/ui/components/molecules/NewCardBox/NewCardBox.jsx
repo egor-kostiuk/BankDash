@@ -15,9 +15,10 @@ export const NewCardBox = () => {
   const types = typesData().getData();
   const [cardNumber, setCardNumber] = useState('');
   const [cardType, setCardType] = useState('');
+  const [cardName, setCardName] = useState('');
   let balance = 0;
 
-  const handleCreateCard = async () => {
+  const handleCreateCard = async () => { // TODO: create separate function
     if (!cardType) {
       alert('Select card type'); // TODO: toast
       return;
@@ -38,13 +39,18 @@ export const NewCardBox = () => {
         break;
     }
 
+    if (!cardName) {
+      alert('Enter your name'); // TODO: toast
+      return;
+    }
+
     if (cardNumber.length !== 16) {
       alert('Card number must be exactly 16 digits.'); // TODO: toast
       return;
     }
 
     try {
-      const cardId = await createCard(user.uid, balance, cardType, cardNumber);
+      const cardId = await createCard(user.uid, balance, cardType, cardNumber, cardName);
       console.log(cardId); // TODO: toast
     } catch (error) {
       console.error('Error creating card:', error);
@@ -62,8 +68,18 @@ export const NewCardBox = () => {
           goods and services on credit or obtain cash advances.
         </p>
         <div className={'inputs-container'}>
-          <SettingsSelectInputBox style={{width: 320}} list={types} title={'Card Type'} placeholder={'Select Card Type'} onChange={(e) => setCardType(e ? e.label : '')}/>
-          <SettingsInputBox style={{width: 320}} title={'Name On Card'} placeholder={'Your name'} maxLength={18}/>
+          <SettingsSelectInputBox
+            style={{width: 320}}
+            list={types}
+            title={'Card Type'}
+            placeholder={'Select Card Type'}
+            onChange={(e) => setCardType(e ? e.label : '')}/>
+          <SettingsInputBox
+            style={{width: 320}}
+            title={'Name On Card'}
+            placeholder={'Your name'}
+            onChange={(e) => setCardName(e.target.value)}
+            maxLength={18}/>
           <SettingsInputBox
             style={{width: 320}}
             title={'Card Number'}

@@ -2,7 +2,7 @@ import { CurrencyText } from '/src/utils/CurrencyText.jsx';
 
 import './Card.css';
 
-export const Card = ({ number, balance , color }) => {
+export const Card = ({ number, balance , color, name }) => {
   return (
     <div className={'card-wrapper'}>
       <div className={'card-content-title'}>
@@ -15,7 +15,7 @@ export const Card = ({ number, balance , color }) => {
       <div className={'card-content-main'}>
         <div className={'card-content-main-data'}>
           <span>CARD HOLDER</span>
-          <span>Sasha Islyamov</span>
+          <span>{name}</span>
         </div>
         <div className={'card-content-main-data'}>
           <span>VALID THRU</span>
