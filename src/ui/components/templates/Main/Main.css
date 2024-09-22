@@ -5,4 +5,6 @@
 .wrapper article {
   padding: 30px 40px;
   max-width: calc(100vw - 240px);
+  width: 100%;
+  flex-grow: 1;
 }
