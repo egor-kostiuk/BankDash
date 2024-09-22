@@ -7,16 +7,20 @@ import { ContainerTitle } from '/src/ui/components/atoms/ContainerTitle/Containe
 import { SettingsSelectInputBox } from '../SettingsSelectInputBox/SettingsSelectInputBox.jsx';
 import { SettingsInputBox } from '../SettingsInputBox/SettingsInputBox.jsx';
 import { SettingsSaveButton } from '../../atoms/Buttons/SettingsSaveButton/SettingsSaveButton.jsx';
+
 import { typesData } from '/src/hooks/JsonDataHelper.js';
+import { banksData } from '/src/hooks/JsonDataHelper.js';
 
 import './NewCardBox.css';
 
 export const NewCardBox = () => {
   const user = auth.currentUser;
   const types = typesData().getData();
+  const banks = banksData().getData();
   const [cardNumber, setCardNumber] = useState('');
   const [cardType, setCardType] = useState('');
   const [cardName, setCardName] = useState('');
+  const [cardBank, setCardBank] = useState('');
   let balance = 0;
 
   const handleCreateCard = async () => { // TODO: create separate function
@@ -40,18 +44,23 @@ export const NewCardBox = () => {
         break;
     }
 
+    if (!cardBank) {
+      toast.warning('Select bank');
+      return;
+    }
+
     if (!cardName) {
       toast.warning('Enter your name');
       return;
     }
 
-    if (cardNumber.length !== 16) {
+    if (!/^\d{16}$/.test(cardNumber)) {
       toast.warning('Card number must have 16 digits')
       return;
     }
 
     try {
-      const cardId = await createCard(user.uid, balance, cardType, cardNumber, cardName);
+      const cardId = await createCard(user.uid, balance, cardType, cardNumber, cardName, cardBank);
       toast.success('Card successfully added');
       console.log(cardId);
     } catch (error) {
@@ -77,6 +86,12 @@ export const NewCardBox = () => {
             title={'Card Type'}
             placeholder={'Select Card Type'}
             onChange={(e) => setCardType(e ? e.label : '')}/>
+          <SettingsSelectInputBox
+            style={{width: 320}}
+            list={banks}
+            title={'Bank'}
+            placeholder={'Select Bank'}
+            onChange={(e) => setCardBank(e ? e.label : '')}/>
           <SettingsInputBox
             style={{width: 320}}
             title={'Name On Card'}
@@ -90,7 +105,6 @@ export const NewCardBox = () => {
             onChange={(e) => setCardNumber(e.target.value)}
             maxLength={16}
           />
-          <SettingsInputBox style={{width: 320}} title={'Expiration Date'} placeholder={'00/00'}/>
         </div>
         <SettingsSaveButton label={'Add Card'} onClick={handleCreateCard}/> {/* TODO: rename or create new button */}
       </div>
