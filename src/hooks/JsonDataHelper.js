@@ -1,5 +1,6 @@
 import currencies from '/src/helpers/currencies.json'
 import cardTypes from '/src/helpers/cardTypes.json';
+import banks from '/src/helpers/banks.json';
 
 class JsonDataHelper {
   constructor(data) {
@@ -22,5 +23,6 @@ class JsonDataHelper {
 
 const currenciesData = () => new JsonDataHelper(currencies);
 const typesData = () => new JsonDataHelper(cardTypes);
+const banksData = () => new JsonDataHelper(banks);
 
-export { currenciesData, typesData }
+export { currenciesData, typesData, banksData }
