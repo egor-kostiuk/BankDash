@@ -14,12 +14,21 @@ export const CardsListBox = () => {
   return (
     <div className={'cards-list-box'}>
       <ContainerTitle title={'My Cards'}/>
-      <ul className={'cards-list'}>
-        {cards.map(card => (
-          <Card key={card.id} number={card.cardNumber} balance={card.balance} name={card.cardName} color={'white'}>
-          </Card>
-        ))}
-      </ul>
+      <div className={'scrollbar-box'}>
+        <ul className={'cards-list'}>
+          {cards.map(card => (
+            <Card
+              key={card.id}
+              type={card.cardType}
+              number={card.cardNumber}
+              balance={card.balance}
+              name={card.cardName}
+              bank={card.cardBank}
+              term={card.cardTerm}>
+            </Card>
+          ))}
+        </ul>
+      </div>
       <ToastContainer
         position={"top-center"}
         autoClose={2000}

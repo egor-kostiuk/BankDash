@@ -1,4 +1,15 @@
+.scrollbar-box {
+  overflow-x: auto;
+  max-width: 100%;
+  scrollbar-width: none;
+}
+
+.cards-list-box::-webkit-scrollbar {
+  display: none;
+}
+
 .cards-list {
   display: flex;
   gap: 30px;
+  min-width: max-content;
 }
