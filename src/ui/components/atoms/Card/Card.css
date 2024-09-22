@@ -3,7 +3,20 @@
   height: 225px;
   padding: 25px 25px 20px;
   border-radius: 25px;
-  background: linear-gradient(100deg, #4C49ED, #0A06F4);
+}
+
+/* Cards gradient */
+.Classic {
+  background: linear-gradient(100deg, #16DBCC, #1a867d);
+}
+.Credit {
+  background: linear-gradient(100deg, #3464F3, #16DBCC);
+}
+.Gold {
+  background: linear-gradient(100deg, #af7812, #ffcc6f);
+}
+.Platinum {
+  background: linear-gradient(100deg, #d9d9d9, #808080);
 }
 
 .card-content-title {
@@ -25,7 +38,7 @@
 
 .card-content-main {
   display: flex;
-  gap: 67px;
+  gap: 50px;
   margin-bottom: 50px;
 }
 
