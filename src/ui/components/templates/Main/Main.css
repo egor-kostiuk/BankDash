@@ -3,6 +3,6 @@
 }
 
 .wrapper article {
-  width: 100%;
   padding: 30px 40px;
+  max-width: calc(100vw - 240px);
 }
