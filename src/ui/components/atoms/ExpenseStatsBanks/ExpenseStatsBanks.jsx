@@ -6,10 +6,10 @@ export const ExpenseStatsBanks = () => {
   return (
     <div className={'expense-stats-banks'}>
       {banksList.map((bank, index) => (
-        <span key={index}>
-          <div className={'expense-stats-banks-circle'} style={{backgroundColor: bank.color}}></div>
+        <div key={index}>
+          <div className={`expense-stats-banks-circle ${bank.name}`}><span></span></div>
           {bank.name}
-        </span>
+        </div>
       ))}
     </div>
   )
