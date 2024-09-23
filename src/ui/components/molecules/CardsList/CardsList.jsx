@@ -19,13 +19,12 @@ export const CardsListBox = () => {
           {cards.map(card => (
             <Card
               key={card.id}
-              type={card.cardType}
-              number={card.cardNumber}
-              balance={card.balance}
-              name={card.cardName}
-              bank={card.cardBank}
-              term={card.cardTerm}>
-            </Card>
+              cardType={card.cardType}
+              cardBalance={card.cardBalance}
+              cardName={card.cardName}
+              cardTerm={card.cardTerm}
+              cardNumber={card.cardNumber}
+              cardBank={card.cardBank}/>
           ))}
         </ul>
       </div>

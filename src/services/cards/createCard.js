@@ -8,7 +8,7 @@ export const createCard = async (userId, initialBalance = 0, initialType , initi
   try {
     const cardData = {
       userId,
-      balance: initialBalance,
+      cardBalance: initialBalance,
       cardType: initialType,
       createdAt: new Date(),
       cardNumber: initialNumber,

@@ -21,7 +21,7 @@ export const NewCardBox = () => {
   const [cardType, setCardType] = useState('');
   const [cardName, setCardName] = useState('');
   const [cardBank, setCardBank] = useState('');
-  let balance = 0;
+  let cardBalance = 0;
 
   const handleCreateCard = async () => { // TODO: create separate function
     if (!cardType) {
@@ -31,16 +31,16 @@ export const NewCardBox = () => {
 
     switch (cardType) {
       case 'Classic':
-        balance = 10;
+        cardBalance = 10;
         break;
       case 'Credit':
-        balance = 0;
+        cardBalance = 0;
         break;
       case 'Gold':
-        balance = 1000;
+        cardBalance = 1000;
         break;
       case 'Platinum':
-        balance = 10000;
+        cardBalance = 10000;
         break;
     }
 
@@ -60,7 +60,7 @@ export const NewCardBox = () => {
     }
 
     try {
-      const cardId = await createCard(user.uid, balance, cardType, cardNumber, cardName, cardBank);
+      const cardId = await createCard(user.uid, cardBalance, cardType, cardNumber, cardName, cardBank);
       toast.success('Card successfully added');
       console.log(cardId);
     } catch (error) {
