@@ -97,7 +97,7 @@ export const NewCardBox = () => {
             title={'Name On Card'}
             placeholder={'Your name'}
             onChange={(e) => setCardName(e.target.value)}
-            maxLength={18}/>
+            maxLength={14}/>
           <SettingsInputBox
             style={{width: 320}}
             title={'Card Number'}
