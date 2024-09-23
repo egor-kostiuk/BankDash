@@ -10,20 +10,57 @@
   --blue: #1814f3;
   --muted-blue: #718EBF;
   --dark-blue: #343C6AFF;
-  /*--muted-blue-2var: #8BA3CBFF;*/
   --light-muted-blue: rgba(113, 142, 191, 0.57);
   --gray: #B1B1B1;
   --light-red: #FE5C73FF;
-  
-  /* credit-cards colors */
-  --green: #16DBCC;
-  --dark-green: #1EC6B8;
-  --second-blue: #4C78FF;
-  --dark-second-blue: #3464F3;
-  --yellow: #FFBB38;
-  --dark-yellow: #FFB11F;
-  --second-red: #FF82AC;
-  --dark-second-red: #FF6195;
+
+
+
+  /* Banks colors const */
+  --bank-blue: #4C78FF;
+  --bank-dark-blue: #3464F3;
+  --bank-green: #16DBCC;
+  --bank-dark-green: #1EC6B8;
+  --bank-yellow: #FFBB38;
+  --bank-dark-yellow: #FFB11F;
+  --bank-red: #FF82AC;
+  --bank-dark-red: #FF6195;
+
+  /* Banks colors */
+  .DBL {
+    color: var(--bank-blue) !important;
+    background-color: #E7EDFF;
+    fill: var(--bank-blue);
+  }
+  .ABM {
+    color: var(--bank-green) !important;
+    background-color: #DCFAF8;
+    fill: var(--bank-green);
+  }
+  .MCP {
+    color: var(--bank-yellow) !important;
+    background-color: #FFF5D9;
+    fill: #FFBB38;
+  }
+  .BRC {
+    color: var(--bank-red) !important;
+    background-color: #FFE0EB;
+    fill: var(--bank-red);
+  }
+
+  /* Cards gradient */
+  .Classic {
+    background: linear-gradient(100deg, #16DBCC, #1a867d);
+  }
+  .Credit {
+    background: linear-gradient(100deg, #3464F3, #16DBCC);
+  }
+  .Gold {
+    background: linear-gradient(100deg, #af7812, #ffcc6f);
+  }
+  .Platinum {
+    background: linear-gradient(100deg, #d9d9d9, #808080);
+  }
 }
 
 /* dark theme */
