@@ -20,7 +20,8 @@ export const CardsSettingsList = () => {
             cardType={card.cardType}
             cardBank={card.cardBank}
             cardName={card.cardName}
-            cardNumber={card.cardNumber}/>
+            cardNumber={card.cardNumber}
+            cardStatus={card.cardStatus}/>
         ))}
       </ul>
     </div>
