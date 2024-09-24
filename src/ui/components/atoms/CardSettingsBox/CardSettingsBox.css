@@ -1,7 +1,7 @@
 .card-setting-box {
   display: flex;
-  padding: 15px;
-  gap: 35px;
+  padding: 15px 30px 15px 15px;
+  gap: 27px;
   border-radius: 20px;
   background-color: var(--white);
   align-items: center;
@@ -22,6 +22,13 @@
   gap: 5px;
 }
 
+.card-name {
+  width: 82px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
 .card-settings-content span:first-child {
   color: var(--black);
   font-size: 16px;
@@ -36,8 +43,9 @@
 .button {
   display: flex;
   align-items: center;
+  margin-left: auto;
 }
 
 .button button {
-  color: blue;
+  color: var(--blue);
 }
