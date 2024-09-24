@@ -1,4 +1,4 @@
-.card-setting-box {
+.card-info-box {
   display: flex;
   padding: 15px 30px 15px 15px;
   gap: 27px;
@@ -7,7 +7,7 @@
   align-items: center;
 }
 
-.img-box {
+.card-info-img {
   display: flex;
   align-items: center;
   height: 60px;
@@ -16,7 +16,7 @@
   border-radius: 20px;
 }
 
-.card-settings-content {
+.card-info-content {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -29,23 +29,23 @@
   white-space: normal;
 }
 
-.card-settings-content span:first-child {
+.card-info-content span:first-child {
   color: var(--black);
   font-size: 16px;
 }
 
-.card-settings-content span:last-child {
+.card-info-content span:last-child {
   color: gray;
   font-size: 16px;
   font-weight: 300;
 }
 
-.button {
+.card-info-button-box {
   display: flex;
   align-items: center;
   margin-left: auto;
 }
 
-.button button {
+.card-info-button-box button {
   color: var(--blue);
 }
