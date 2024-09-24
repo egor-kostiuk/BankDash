@@ -7,7 +7,7 @@ export const ExpenseStatsBanks = () => {
     <div className={'expense-stats-banks'}>
       {banksList.map((bank, index) => (
         <div key={index}>
-          <div className={`expense-stats-banks-circle ${bank.name}`}><span></span></div>
+          <div style={{backgroundColor: 'transparent'}} className={`expense-stats-banks-circle ${bank.name}`}><span></span></div>
           {bank.name}
         </div>
       ))}
