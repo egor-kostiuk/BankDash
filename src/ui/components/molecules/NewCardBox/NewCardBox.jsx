@@ -55,7 +55,7 @@ export const NewCardBox = () => {
     }
 
     if (!/^\d{16}$/.test(cardNumber)) {
-      toast.warning('Card number must have 16 digits')
+      toast.warning('Card number must have 16 digits');
       return;
     }
 
@@ -97,7 +97,7 @@ export const NewCardBox = () => {
             title={'Name On Card'}
             placeholder={'Your name'}
             onChange={(e) => setCardName(e.target.value)}
-            maxLength={14}/>
+            maxLength={12}/>
           <SettingsInputBox
             style={{width: 320}}
             title={'Card Number'}
