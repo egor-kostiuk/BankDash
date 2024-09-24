@@ -2,20 +2,20 @@ import { auth } from '/src/services/api/firebase.js';
 import { useCards } from '/src/services/cards/hooks/useCards.js';
 
 import { ContainerTitle } from '/src/ui/components/atoms/ContainerTitle/ContainerTitle.jsx';
-import { CardSettingsBox } from '/src/ui/components/atoms/CardSettingsBox/CardSettingsBox.jsx';
+import { CardInfoBox } from '/src/ui/components/atoms/CardInfoBox/CardInfoBox.jsx';
 
-import './CardsSettingsList.css';
+import './CardsInfoList.css';
 
-export const CardsSettingsList = () => {
+export const CardsInfoList = () => {
   const user = auth.currentUser;
   const cards = useCards(user?.uid);
 
   return (
     <div style={{flexGrow: 1}}>
       <ContainerTitle title={'Card List'}/>
-      <ul className={'cards-settings-list'}>
+      <ul className={'cards-info-list'}>
         {cards.map(card => (
-          <CardSettingsBox
+          <CardInfoBox
             key={card.id}
             cardType={card.cardType}
             cardBank={card.cardBank}

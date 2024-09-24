@@ -1,4 +1,4 @@
-.cards-settings-list {
+.cards-info-list {
   height: 326px;
   display: flex;
   flex-direction: column;
@@ -7,6 +7,6 @@
   scrollbar-width: none;
 }
 
-.cards-settings-list::-webkit-scrollbar {
+.cards-info-list::-webkit-scrollbar {
   display: none;
 }
