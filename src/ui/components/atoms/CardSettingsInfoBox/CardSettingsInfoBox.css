@@ -1,0 +1,30 @@
+.card-settings-info-box {
+  display: flex;
+  gap: 20px;
+  text-align: left;
+}
+
+.card-settings-img {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  padding: 18px;
+  border-radius: 20px;
+}
+
+.card-settings-content {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 3px;
+}
+
+.card-settings-content span:first-child {
+  color: var(--black);
+}
+
+.card-settings-content span:last-child {
+  font-weight: 300;
+  color: var(--gray);
+}
