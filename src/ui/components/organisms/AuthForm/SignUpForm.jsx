@@ -20,6 +20,7 @@ export const SignUpForm = () => {
           type={'Name'}
           onChange={(e) => setFirstName(e.target.value)}
           value={firstName}
+          maxLength={12}
         />
 
         <AuthInputBox
