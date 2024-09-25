@@ -31,7 +31,7 @@ export const EditProfile = () => {
   const currencies = currenciesData().getData();
 
   if (isLoading) {
-    return <div></div>;
+    return <></>;
   }
 
   return (
