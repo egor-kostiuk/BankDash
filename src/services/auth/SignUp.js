@@ -38,6 +38,10 @@ export const SignUp = () => {
           toast.error('Incorrect email. Please try again.')
           break;
 
+        case 'auth/missing-email':
+          toast.error('Please enter your email');
+          break;
+
         case 'auth/missing-password':
           toast.error('Missing password.')
           break;
