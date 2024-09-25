@@ -14,6 +14,12 @@ export const SignUp = () => {
 
   const handleRegister = async (e) => {
     e.preventDefault();
+
+    if (!firstName) {
+      toast.error('Please enter your name');
+      return;
+    }
+
     try {
       await createUserWithEmailAndPassword(auth, email, password);
       const user = auth.currentUser;
@@ -45,4 +51,4 @@ export const SignUp = () => {
   };
 
   return { email, setEmail, password, setPassword, firstName, setFirstName, handleRegister};
-};
+}
