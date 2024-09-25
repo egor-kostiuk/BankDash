@@ -10,7 +10,7 @@ export const ProfileLayout = ({ children }) => {
         {children}
         </>
       ) : (
-        <div></div>
+        <></>
       )}
     </>
   )
