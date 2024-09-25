@@ -1,0 +1,10 @@
+.card-settings-container {
+  width: 350px;
+  padding: 30px;
+}
+
+.card-settings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
