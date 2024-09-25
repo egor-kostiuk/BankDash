@@ -57,6 +57,23 @@
   fill: var(--bank-red);
 }
 
+/* CARD SETTINGS COLORS */  /* TODO: optimize */
+.Block {
+  background-color: var(--bank-bg-red);
+}
+.Activate {
+  background-color: var(--bank-bg-green);
+}
+.Add {
+  background-color: var(--bank-bg-yellow);
+}
+.Change {
+  background-color: var(--bank-bg-blue);
+}
+.Card {
+  background-color: var(--bank-bg-green);
+}
+
 /* CARDS COLORS */
 .Classic {
   background: var(--classic-card-gradient);
