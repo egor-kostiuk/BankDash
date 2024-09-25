@@ -29,7 +29,7 @@ export const CardInfoBox = ({ cardType, cardBank, cardName, cardNumber, cardStat
         <span style={{color: `${cardStatus === 'Active' ? '#00c700' : 'red'}`}}>{cardStatus}</span>
       </div>
       <div className={'card-info-button-box'}>
-        <button>View Details</button>
+        <button>Delete card</button>
       </div>
     </div>
   )
