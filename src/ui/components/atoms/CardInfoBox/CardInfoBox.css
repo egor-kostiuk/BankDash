@@ -49,3 +49,33 @@
 .card-info-button-box button {
   color: var(--blue);
 }
+
+/* SWAL MESSAGE */
+.swal2-backdrop-show {
+  backdrop-filter: blur(10px);
+}
+
+.custom-swal-popup {
+  background-color: rgba(44, 44, 44, 0.95);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.custom-swal-title {
+  color: var(--main-white);
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.custom-swal-text {
+  color: var(--main-white) !important;
+}
+
+.custom-swal-confirm-button {
+  background-color: var(--blue);
+}
+
+.custom-swal-cancel-button {
+  background-color: var(--gray);
+}
