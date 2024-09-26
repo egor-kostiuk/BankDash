@@ -1,4 +1,5 @@
 import { useCards } from '/src/services/cards/hooks/useCards.js';
+import Swal from 'sweetalert2';
 
 import { CardInfoBoxIcon } from '/src/assets/img/card/CardInfoBoxIcon.jsx';
 
@@ -8,7 +9,27 @@ export const CardInfoBox = ({ cardId, cardType, cardBank, cardName, cardNumber, 
   const { deleteCard } = useCards();
 
   const handleDelete = () => {
-    deleteCard(cardId);
+    Swal.fire({
+      title: 'Are you sure you want to delete the card?',
+      text: 'This action cannot be undone!',
+      showCancelButton: true,
+      backdrop: `rgba(0,0,0,0.75)`,
+      customClass: {
+        popup: 'custom-swal-popup',
+        title: 'custom-swal-title',
+        htmlContainer: 'custom-swal-text',
+        confirmButton: 'custom-swal-confirm-button',
+        cancelButton: 'custom-swal-cancel-button',
+      },
+      confirmButtonText: 'Yes, delete!',
+      cancelButtonText: 'No, cancel!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        deleteCard(cardId);
+      } else {
+        console.log('canceled');
+      }
+    });
   };
 
   return (
