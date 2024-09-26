@@ -1,6 +1,6 @@
-import "./SettingsInput.css";
+import './SettingsInput.css';
 
-export const SettingsInput = ({ style, title, type, placeholder, onChange, readOnly }) => {
+export const SettingsInput = ({ style, title, type, placeholder, onChange, readOnly, maxLength }) => {
   return (
     <input className={'settings-input'}
       style={style}
@@ -9,6 +9,7 @@ export const SettingsInput = ({ style, title, type, placeholder, onChange, readO
       placeholder={placeholder}
       onChange={onChange}
       readOnly={readOnly}
+      maxLength={maxLength}
     />
   )
 }

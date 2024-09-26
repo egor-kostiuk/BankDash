@@ -1,0 +1,24 @@
+.new-card-box {
+  width: 730px;
+}
+
+.new-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: 440px;
+  padding: 27px 30px 38px;
+}
+
+.new-card-container-title {
+  height: 84px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--muted-blue);
+}
+
+.inputs-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px 30px;
+}

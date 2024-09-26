@@ -27,6 +27,7 @@ export const SignUp = () => {
         await setDoc(doc(db, "Users", user.uid), {
           email: user.email,
           firstName: firstName,
+          currency: 'USD $',
         });
       }
       navigate('/bankdash');

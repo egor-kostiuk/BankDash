@@ -1,11 +1,11 @@
-import { SettingsLabel } from "/src/ui/components/atoms/SettingsLabel/SettingsLabel.jsx";
-import { SettingsInput } from "/src/ui/components/atoms/SettingsInput/SettingsInput.jsx";
+import { SettingsLabel } from '/src/ui/components/atoms/SettingsLabel/SettingsLabel.jsx';
+import { SettingsInput } from '/src/ui/components/atoms/SettingsInput/SettingsInput.jsx';
 
-import "./SettingsInputBox.css";
+import './SettingsInputBox.css';
 
-export const SettingsInputBox = ({ style, title, type, placeholder, onChange, readOnly }) => {
+export const SettingsInputBox = ({ style, title, type, placeholder, onChange, readOnly, maxLength }) => {
   return (
-    <div className={'settings-input-box'}>
+    <div className={'settings-input-box'} style={style}>
       <SettingsLabel title={title}/>
       <SettingsInput
         style={style}
@@ -14,6 +14,7 @@ export const SettingsInputBox = ({ style, title, type, placeholder, onChange, re
         placeholder={placeholder}
         onChange={onChange}
         readOnly={readOnly}
+        maxLength={maxLength}
       />
     </div>
   )

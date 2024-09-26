@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { SettingsContentRender } from "../SettingsContentRender.jsx";
+import { useState } from 'react';
+import { SettingsContentRender } from '/src/ui/components/helpers/SettingsContentRender.jsx';
 
-import "./Settings.css";
+import './Settings.css';
 
 export const SettingsContent = () => {
   const [activeContent, setActiveContent] = useState('profile');
@@ -32,5 +32,5 @@ export const SettingsContent = () => {
         <SettingsContentRender activeContent={activeContent}/>
       </div>
     </div>
-  );
+  )
 }
