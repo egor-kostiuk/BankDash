@@ -4,12 +4,12 @@ import { CardsInfoList } from '/src/ui/components/molecules/CardsInfoList/CardsI
 import { NewCardBox } from '/src/ui/components/molecules/NewCardBox/NewCardBox.jsx';
 import { CardSettingsBox } from '/src/ui/components/molecules/CardSettingsBox/CardSettingsBox.jsx';
 
-import {useCards} from '/src/services/cards/hooks/useCards.js';
-import {auth} from '/src/services/api/firebase.js';
+import { useCards } from '/src/services/cards/hooks/useCards.js';
+import { auth } from '/src/services/api/firebase.js';
 
 export const CardsContent = () => {
   const user = auth.currentUser;
-  const cards = useCards(user?.uid);
+  const { cards } = useCards(user?.uid);
 
   if (cards.length === 0) {
     return <NewCardBox/>

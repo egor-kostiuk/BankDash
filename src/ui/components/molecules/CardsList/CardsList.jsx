@@ -1,6 +1,5 @@
 import { auth } from '/src/services/api/firebase.js';
 import { useCards } from '/src/services/cards/hooks/useCards.js';
-import { ToastContainer } from 'react-toastify';
 
 import { ContainerTitle } from '/src/ui/components/atoms/ContainerTitle/ContainerTitle.jsx';
 import { Card } from '/src/ui/components/atoms/Card/Card.jsx';
@@ -9,7 +8,7 @@ import './CardsList.css';
 
 export const CardsListBox = () => {
   const user = auth.currentUser;
-  const cards = useCards(user?.uid);
+  const { cards } = useCards(user?.uid);
 
   return (
     <div className={'cards-list-box'}>
@@ -28,11 +27,6 @@ export const CardsListBox = () => {
           ))}
         </ul>
       </div>
-      <ToastContainer
-        position={"top-center"}
-        autoClose={2000}
-        pauseOnHover={false}
-      />
     </div>
   )
 }
