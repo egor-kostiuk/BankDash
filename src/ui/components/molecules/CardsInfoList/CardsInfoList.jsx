@@ -8,7 +8,7 @@ import './CardsInfoList.css';
 
 export const CardsInfoList = () => {
   const user = auth.currentUser;
-  const cards = useCards(user?.uid);
+  const { cards } = useCards(user?.uid);
 
   return (
     <div style={{flexGrow: 1}}>
@@ -17,6 +17,7 @@ export const CardsInfoList = () => {
         {cards.map(card => (
           <CardInfoBox
             key={card.id}
+            cardId={card.id}
             cardType={card.cardType}
             cardBank={card.cardBank}
             cardName={card.cardName}

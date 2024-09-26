@@ -1,8 +1,16 @@
+import { useCards } from '/src/services/cards/hooks/useCards.js';
+
 import { CardInfoBoxIcon } from '/src/assets/img/card/CardInfoBoxIcon.jsx';
 
 import './CardInfoBox.css';
 
-export const CardInfoBox = ({ cardType, cardBank, cardName, cardNumber, cardStatus }) => {
+export const CardInfoBox = ({ cardId, cardType, cardBank, cardName, cardNumber, cardStatus }) => {
+  const { deleteCard } = useCards();
+
+  const handleDelete = () => {
+    deleteCard(cardId);
+  };
+
   return (
     <div className={'card-info-box'}>
       <div className={`card-info-img ${cardBank}`}>
@@ -29,7 +37,7 @@ export const CardInfoBox = ({ cardType, cardBank, cardName, cardNumber, cardStat
         <span style={{color: `${cardStatus === 'Active' ? '#00c700' : 'red'}`}}>{cardStatus}</span>
       </div>
       <div className={'card-info-button-box'}>
-        <button>Delete card</button> {/* Delete card from list */}
+        <button onClick={handleDelete}>Delete card</button>
       </div>
     </div>
   )

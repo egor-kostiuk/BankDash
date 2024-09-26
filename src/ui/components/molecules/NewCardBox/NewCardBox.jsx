@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { auth } from '/src/services/api/firebase.js';
 import { createCard } from '/src/services/cards/createCard.js';
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 
 import { ContainerTitle } from '/src/ui/components/atoms/ContainerTitle/ContainerTitle.jsx';
 import { SettingsSelectInputBox } from '../SettingsSelectInputBox/SettingsSelectInputBox.jsx';
@@ -108,6 +108,12 @@ export const NewCardBox = () => {
         </div>
         <SettingsSaveButton label={'Add Card'} onClick={handleCreateCard}/> {/* TODO: rename or create new button */}
       </div>
+      <ToastContainer
+        style={{top: '50px'}}
+        position={"top-center"}
+        autoClose={2000}
+        pauseOnHover={false}
+      />
     </div>
   )
 }
