@@ -9,10 +9,10 @@ import { SettingsSelectInputBox } from "/src/ui/components/molecules/SettingsSel
 import { SettingsDateInputBox } from "/src/ui/components/molecules/SettingsDateInputBox/SettingsDateInputBox.jsx";
 
 import countryList from 'react-select-country-list';
-import currenciesList  from '/src/hooks/useCurrenciesList.js';
+import { currenciesData } from '/src/hooks/JsonDataHelper.js';
 
-import "./SettingsEditProfile.css";
-import "react-toastify/dist/ReactToastify.css";
+import './SettingsEditProfile.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const EditProfile = () => {
   const {
@@ -28,10 +28,10 @@ export const EditProfile = () => {
   } = useEditProfile();
   const formattedBirthDate = useDateFormat(userDetails?.birthDate);
   const countries = countryList().getData(); // TODO: optimize
-  const currencies = currenciesList().getData();
+  const currencies = currenciesData().getData();
 
   if (isLoading) {
-    return <div></div>;
+    return <></>;
   }
 
   return (
@@ -54,6 +54,7 @@ export const EditProfile = () => {
               type={'text'}
               placeholder={userDetails?.lastName || 'Enter your last name'}
               onChange={(e) => setLastName(e.target.value)}
+              maxLength={10}
             />
             <SettingsInputBox
               title={'Your Email'}
@@ -67,6 +68,7 @@ export const EditProfile = () => {
               type={'text'}
               placeholder={userDetails?.profession || 'Enter your profession'}
               onChange={(e) => setProfession(e.target.value)}
+              maxLength={15}
             />
             <SettingsDateInputBox
               title={'Date of Birth'}
@@ -88,9 +90,10 @@ export const EditProfile = () => {
             />
             <SettingsInputBox
               title={'Postal Code'}
-              type={'number'}
+              type={'text'}
               placeholder={userDetails?.postalCode || 'Enter your postal code'}
               onChange={(e) => setPostalCode(e.target.value)}
+              maxLength={8}
             />
           </ul>
         </div>

@@ -4,15 +4,16 @@
   gap: 20px 53px;
 }
 
-.expense-stats-banks span {
+.expense-stats-banks div {
   align-items: center;
   display: flex;
   gap: 12px;
   color: var(--muted-blue);
 }
 
-.expense-stats-banks-circle {
+.expense-stats-banks-circle span {
   width: 10px;
   height: 10px;
   border-radius: 50%;
+  background-color: currentColor;
 }

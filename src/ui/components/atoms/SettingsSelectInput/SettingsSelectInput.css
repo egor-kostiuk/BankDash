@@ -1,5 +1,4 @@
 .country-select__control {
-  width: 418px;
   height: 50px;
   border-radius: 16px;
   font-size: 14px;
@@ -20,7 +19,8 @@
 }
 
 .country-select__menu {
-  width: 418px !important;
+  display: flex;
+  justify-content: center;
   background-color: var(--white);
   border: 1px solid #aebcc7;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

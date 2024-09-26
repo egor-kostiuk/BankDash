@@ -5,7 +5,7 @@ import { LoadingBarWrapper } from "/src/utils/LoadingWrapper.jsx";
 import { auth } from "/src/services/api/firebase.js";
 
 // Pages imports
-import { LoginPage, SignUpPage, DashboardPage, TestPage, CardsPage, SettingsPage } from "./app/pages/pages.js";
+import { LoginPage, SignUpPage, DashboardPage, TransactionsPage, CardsPage, SettingsPage } from "./app/pages/pages.js";
 
 import './styles/App.css';
 
@@ -46,10 +46,10 @@ export default function App() {
           />
           <Route
             exact
-            path={'/test'}
+            path={'/transactions'}
             element={
               <ProtectedRoute user={user}>
-                <TestPage />
+                <TransactionsPage />
               </ProtectedRoute>
             }
           />

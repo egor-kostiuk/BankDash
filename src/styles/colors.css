@@ -1,20 +1,119 @@
-:root {
+/* default light theme */
+:root,
+[data-theme="light"] {
   --black: #000;
+  --main-white: #FFF;
   --white: #FFF;
+  --body-bg: #F9F9F9;
+  --nav-bg: #F5F7FAFF;
+  --nav-dropdown-border: rgba(255, 255, 255, 0.5);
   --blue: #1814f3;
   --muted-blue: #718EBF;
   --dark-blue: #343C6AFF;
-  /*--muted-blue-2var: #8BA3CBFF;*/
   --light-muted-blue: rgba(113, 142, 191, 0.57);
   --gray: #B1B1B1;
   --light-red: #FE5C73FF;
-  --green: #16DBCC;
-  --dark-green: #1EC6B8;
-  --second-blue: #4C78FF;
-  --dark-second-blue: #3464F3;
-  --yellow: #FFBB38;
-  --dark-yellow: #FFB11F;
-  --second-red: #FF82AC;
-  --dark-second-red: #FF6195;
 
+  /* Banks colors */
+  --bank-blue: #4C78FF;
+  --bank-dark-blue: #3464F3;
+  --bank-bg-blue: #E7EDFF;
+  --bank-green: #16DBCC;
+  --bank-dark-green: #1EC6B8;
+  --bank-bg-green: #DCFAF8;
+  --bank-yellow: #FFBB38;
+  --bank-dark-yellow: #FFB11F;
+  --bank-bg-yellow: #FFF5D9;
+  --bank-red: #FF82AC;
+  --bank-dark-red: #FF6195;
+  --bank-bg-red: #FFE0EB;
+
+  /* Cards gradient */
+  --classic-card-gradient: linear-gradient(100deg, #16DBCC, #1a867d);
+  --credit-card-gradient: linear-gradient(100deg, #3464F3, #16DBCC);
+  --gold-card-gradient: linear-gradient(100deg, #af7812, #ffcc6f);
+  --platinum-card-gradient: linear-gradient(100deg, #d9d9d9, #808080);
+}
+
+/* BANKS COLORS */
+.DBL {
+  color: var(--bank-blue) !important;
+  background-color: var(--bank-bg-blue);
+  fill: var(--bank-blue);
+}
+.ABM {
+  color: var(--bank-green) !important;
+  background-color: var(--bank-bg-green);
+  fill: var(--bank-green);
+}
+.MCP {
+  color: var(--bank-yellow) !important;
+  background-color: var(--bank-bg-yellow);
+  fill: var(--bank-yellow);
+}
+.BRC {
+  color: var(--bank-red) !important;
+  background-color: var(--bank-bg-red);
+  fill: var(--bank-red);
+}
+
+/* CARD SETTINGS COLORS */  /* TODO: optimize */
+.Block {
+  background-color: var(--bank-bg-red);
+}
+.Activate {
+  background-color: var(--bank-bg-green);
+}
+.Add {
+  background-color: var(--bank-bg-yellow);
+}
+.Change {
+  background-color: var(--bank-bg-blue);
+}
+.Card {
+  background-color: var(--bank-bg-green);
+}
+
+/* CARDS COLORS */
+.Classic {
+  background: var(--classic-card-gradient);
+}
+.Credit {
+  background: var(--credit-card-gradient);
+}
+.Gold {
+  background: var(--gold-card-gradient);
+}
+.Platinum {
+  background: var(--platinum-card-gradient);
+}
+
+
+/* THEMES */
+/* dark theme */
+[data-theme="dark"] {
+  --black: #B0B0B0;
+  --body-bg: #3A3A3A;
+  --nav-bg: #3A3A3A;
+  --white: #4B4B4B;
+  --blue: #3498DB;
+  --muted-blue: #AAB7B8;
+  --dark-blue: #83bbf3;
+  --light-muted-blue: rgba(70, 90, 110, 0.5);
+  --gray: #7F8C8D;
+  --light-red: #FF6F6F;
+}
+
+/* ocean theme */
+[data-theme="ocean"] {
+  --black: #D0D0D0;
+  --body-bg: #2F3C4C;
+  --nav-bg: #2F3C4C;
+  --white: #4A5F6C;
+  --blue: #1F77E1;
+  --muted-blue: #9AB0C1;
+  --dark-blue: #6c98d9;
+  --light-muted-blue: rgba(90, 110, 130, 0.55);
+  --gray: #9B9B9B;
+  --light-red: #D9534F;
 }

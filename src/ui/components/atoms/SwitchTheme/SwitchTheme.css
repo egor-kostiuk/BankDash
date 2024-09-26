@@ -1,0 +1,74 @@
+.theme-switcher {
+  display: flex;
+  padding: 10px;
+  gap: 8px;
+}
+
+.theme-button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  border: 1px solid #DFEAF2;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.bottom-box {
+  display: flex;
+  width: 100%;
+  height: 50%;
+}
+
+/* Light */
+.top-part-l { /* TODO: optimize colors */
+  background-color: blue;
+  height: 50%;
+  width: 100%;
+}
+.part-1-l {
+  background-color: #FFFFFF;
+  width: 50%;
+  height: 100%;
+}
+.part-2-l {
+  background-color: #718EBF;
+  width: 50%;
+  height: 100%;
+}
+
+/* Dark */
+.top-part-d {
+  background-color: #252525;
+  height: 50%;
+  width: 100%;
+}
+.part-1-d {
+  background-color: #AAB7B8;
+  width: 50%;
+  height: 100%;
+}
+.part-2-d {
+  background-color: #3498DB;
+  width: 50%;
+  height: 100%;
+}
+
+/* Ocean */
+.top-part-o {
+  background-color: #37464f;
+  height: 50%;
+  width: 100%;
+}
+.part-1-o {
+  background-color: #4A5F6C;
+  width: 50%;
+  height: 100%;
+}
+.part-2-o {
+  background-color: #6c98d9;
+  width: 50%;
+  height: 100%;
+}

@@ -1,0 +1,12 @@
+.cards-info-list {
+  height: 326px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.cards-info-list::-webkit-scrollbar {
+  display: none;
+}

@@ -1,15 +1,15 @@
-import { useLogin } from "/src/hooks/useLogin.js";
-import { Link } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
+import { Login } from '/src/services/auth/Login.js';
+import { Link } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 
-import { AuthInputBox } from "/src/ui/components/molecules/AuthInputBox/AuthInputBox.jsx";
-import { AuthButton } from "/src/ui/components/atoms/Buttons/AuthButton/AuthButton.jsx";
+import { AuthInputBox } from '/src/ui/components/molecules/AuthInputBox/AuthInputBox.jsx';
+import { AuthButton } from '/src/ui/components/atoms/Buttons/AuthButton/AuthButton.jsx';
 
-import "./Form.css";
+import './Form.css';
 import 'react-toastify/dist/ReactToastify.css';
 
 export const LoginForm = () => {
-  const { email, setEmail, password, setPassword, handleSubmit } = useLogin();
+  const { email, setEmail, password, setPassword, handleSubmit } = Login();
 
   return (
     <div className={'form-wrapper'}>

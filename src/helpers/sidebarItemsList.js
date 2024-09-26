@@ -1,8 +1,8 @@
-import { sidebarImgList } from "./sidebarImgList.js";
+import { sidebarImgList } from './sidebarImgList.js';
 
 export const sidebarItemsList = [
   { img: sidebarImgList.dashboard, imgActive: sidebarImgList.dashboardActive, label: 'Dashboard', path: '/bankdash' },
-  { img: sidebarImgList.transactions, imgActive: sidebarImgList.transactionsActive, label: 'Transactions', path: '/test' }, // TODO: add Transactions page path
+  { img: sidebarImgList.transactions, imgActive: sidebarImgList.transactionsActive, label: 'Transactions', path: '/transactions' }, // TODO: add Transactions page path
   { img: sidebarImgList.account, imgActive: sidebarImgList.accountActive, label: 'Account', path: '/account' }, // TODO: add Account page path
   { img: sidebarImgList.investments, imgActive: sidebarImgList.investmentsActive, label: 'Investments', path: '/investments' }, // TODO: add Investments page path
   { img: sidebarImgList.creditCards, imgActive: sidebarImgList.creditCardsActive, label: 'Credit-Cards', path: '/credit-cards' },
