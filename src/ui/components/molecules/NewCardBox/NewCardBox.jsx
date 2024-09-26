@@ -60,7 +60,7 @@ export const NewCardBox = () => {
     }
 
     try {
-      const cardId = await createCard(user.uid, cardBalance, cardType, cardNumber, cardName, cardBank);
+      const cardId = await createCard(user.uid, 'Active', '0000',cardBalance, cardType, cardNumber, cardName, cardBank);
       toast.success('Card successfully added');
       console.log(cardId);
     } catch (error) {
