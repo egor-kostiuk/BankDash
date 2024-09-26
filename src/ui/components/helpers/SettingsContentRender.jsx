@@ -1,4 +1,4 @@
-import { EditProfile } from "/src/ui/components/molecules/Settings/SettingsEditProfile/SettingsEditProfile.jsx";
+import { EditProfile } from '/src/ui/components/molecules/Settings/SettingsEditProfile/SettingsEditProfile.jsx';
 // import
 // import
 
