@@ -5,7 +5,7 @@ import './ModalCardBox.css';
 
 export const ModalCardBox = ({ cardBank, cardType, cardBalance, cardNumber }) => {
   return (
-    <div className={'modal-card-box'}>
+    <button className={'modal-card-box'}>
       <div className={'modal-card-title'}>
         <ModalCard cardBank={cardBank}/>
         <span className={'modal-card-number'}>{`** ${cardNumber.slice(-4)}`}</span>
@@ -14,6 +14,6 @@ export const ModalCardBox = ({ cardBank, cardType, cardBalance, cardNumber }) =>
       <span className={'modal-card-balance'}>
         <CurrencyText>{cardBalance}</CurrencyText>
       </span>
-    </div>
+    </button>
   )
 }
