@@ -11,7 +11,7 @@ export const Card = ({ cardType, cardBalance, cardName, cardTerm, cardNumber, ca
           <span>Balance</span>
           <CurrencyText>{cardBalance}</CurrencyText>
         </div>
-        <img src={bankImgList.cardChipWhiteImg} alt={'chip'}/>
+        <img src={bankImgList.cardChipImg} alt={'chip'}/>
       </div>
       <div className={'card-content-main'}>
         <div className={'card-content-main-data'}>
@@ -32,7 +32,7 @@ export const Card = ({ cardType, cardBalance, cardName, cardTerm, cardNumber, ca
         {cardBank === 'ABM' || cardBank === 'BRC' ? (
           <img style={{width: 44, height: 30}} src={bankImgList.visaImg} alt={'bank'}/>
         ) : (
-          <img src={bankImgList.mastercardWhiteImg} alt={'bank'}/>
+          <img src={bankImgList.mastercardImg} alt={'bank'}/>
         )}
       </div>
     </div>
