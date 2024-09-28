@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { auth } from '/src/services/api/firebase.js';
 import { createCard } from '/src/services/cards/createCard.js';
+import { useCards } from '/src/services/cards/hooks/useCards.js';
 import { toast, ToastContainer } from 'react-toastify';
 
 import { ContainerTitle } from '/src/ui/components/atoms/ContainerTitle/ContainerTitle.jsx';
@@ -12,8 +13,6 @@ import { typesData } from '/src/hooks/JsonDataHelper.js';
 import { banksData } from '/src/hooks/JsonDataHelper.js';
 
 import './NewCardBox.css';
-
-import {useCards} from "../../../../services/cards/hooks/useCards.js";
 
 export const NewCardBox = () => {
   const user = auth.currentUser;
