@@ -13,8 +13,11 @@ import { banksData } from '/src/hooks/JsonDataHelper.js';
 
 import './NewCardBox.css';
 
+import {useCards} from "../../../../services/cards/hooks/useCards.js";
+
 export const NewCardBox = () => {
   const user = auth.currentUser;
+  const { cards } = useCards(user?.uid);
   const types = typesData().getData();
   const banks = banksData().getData();
   const [cardNumber, setCardNumber] = useState('');
@@ -59,8 +62,19 @@ export const NewCardBox = () => {
       return;
     }
 
+    if (cardNumber === '0000000000000000') {
+      toast.warning(`Card number cannot be 0000`);
+      return;
+    }
+
+    const cardExists = cards.some(card => card.cardNumber === cardNumber);
+    if (cardExists) {
+      toast.warning('Card with this number already exists');
+      return;
+    }
+
     try {
-      const cardId = await createCard(user.uid, 'Active', '0000',cardBalance, cardType, cardNumber, cardName, cardBank);
+      const cardId = await createCard(user.uid, 'Active', '0000', cardBalance, cardType, cardNumber, cardName, cardBank);
       toast.success('Card successfully added');
       console.log(cardId);
     } catch (error) {
