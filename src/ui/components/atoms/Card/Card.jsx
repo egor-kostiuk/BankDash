@@ -1,9 +1,17 @@
+import { useCopyToClipboard } from '/src/hooks/useCopyToClipboard.js';
 import { CurrencyText } from '/src/utils/CurrencyText.jsx';
 import { bankImgList } from '/src/helpers/bankImgList.js';
 
 import './Card.css';
 
 export const Card = ({ cardType, cardBalance, cardName, cardTerm, cardNumber, cardBank }) => {
+  const { copyToClipboard } = useCopyToClipboard();
+
+  const handleCopy = () => {
+    const numberWithoutSpaces = cardNumber.replace(/\s+/g, '');
+    copyToClipboard(numberWithoutSpaces);
+  };
+
   return (
     <div className={`card-wrapper ${cardType}`}>
       <div className={'card-content-title'}>
@@ -28,7 +36,7 @@ export const Card = ({ cardType, cardBalance, cardName, cardTerm, cardNumber, ca
         </div>
       </div>
       <div className={'card-content-number'}>
-        <span>{cardNumber.replace(/(.{4})/g, '$1 ')}</span>
+        <span onClick={handleCopy}>{cardNumber.replace(/(.{4})/g, '$1 ')}</span>
         {cardBank === 'ABM' || cardBank === 'BRC' ? (
           <img style={{width: 44, height: 30}} src={bankImgList.visaImg} alt={'bank'}/>
         ) : (

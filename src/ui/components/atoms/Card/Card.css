@@ -51,3 +51,12 @@
   align-items: center;
   color: var(--main-white);
 }
+
+.card-content-number span {
+  cursor: pointer;
+}
+
+.card-content-number span:hover {
+  color: #d3d3d3;
+  transition: 0.2s;
+}
