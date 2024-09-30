@@ -2,6 +2,11 @@
   padding: 12px 0;
   display: flex;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.profile-settings:hover {
+  transform: scale(1.03);
 }
 
 .profile-settings-img {
