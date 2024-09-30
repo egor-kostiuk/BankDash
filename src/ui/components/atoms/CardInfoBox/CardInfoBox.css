@@ -48,6 +48,12 @@
 
 .card-info-button-box button {
   color: var(--blue);
+  transition: 0.3s;
+}
+
+.card-info-button-box button:hover {
+  transform: scale(1.03);
+  opacity: 75%;
 }
 
 /* SWAL MESSAGE */
