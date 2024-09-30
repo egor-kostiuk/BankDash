@@ -13,6 +13,8 @@ export const ModalCardsList = ({ status }) => {
         card.cardStatus === status ? (
           <ModalCardBox
           key={card.id}
+          cardId={card.id}
+          cardStatus={card.cardStatus}
           cardBank={card.cardBank}
           cardType={card.cardType}
           cardBalance={card.cardBalance}
