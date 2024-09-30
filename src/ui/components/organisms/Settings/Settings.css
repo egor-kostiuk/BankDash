@@ -30,7 +30,7 @@
 }
 
 .settings-buttons-box button:hover {
-  background-color: #E7EDFFFF;
+  background-color: var(--sidebar-bg);
 }
 
 .settings-button-active {
