@@ -2,6 +2,11 @@
   display: flex;
   gap: 20px;
   text-align: left;
+  transition: 0.3s;
+}
+
+.card-settings-info-box:hover {
+  transform: scale(1.03);
 }
 
 .card-settings-img {
