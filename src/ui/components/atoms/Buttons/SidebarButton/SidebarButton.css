@@ -12,6 +12,12 @@
   color: #B1B1B1;
 }
 
+.sidebar-button:hover,
+.sidebar-button:focus {
+  transition: 0.35s;
+  background-color: var(--sidebar-bg);
+}
+
 .sidebar-button-active {
   color: var(--blue);
 }
@@ -23,10 +29,4 @@
 
 .sidebar-button span {
   margin: 4px 0;
-}
-
-.sidebar-button:hover,
-.sidebar-button:focus {
-  transition: 0.35s;
-  background-color: #E7EDFFFF;
 }
