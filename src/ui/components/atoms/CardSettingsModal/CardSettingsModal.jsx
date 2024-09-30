@@ -16,8 +16,14 @@ export const CardSettingsModal = ({ isOpen, onClose, title, children }) => {
 
   if (!isOpen) return null;
 
+  const handleOverlayClick = (e) => {
+    if (e.target.classList.contains('modal-overlay')) {
+      onClose();
+    }
+  };
+
   return (
-    <div className={'modal-overlay'}>
+    <div className={'modal-overlay'} onClick={handleOverlayClick}>
       <div className={'modal-content'}>
         <button className={'modal-close-btn'} onClick={onClose}>✕</button>
         <p className={'modal-title'}>{title}</p>
