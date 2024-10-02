@@ -26,6 +26,11 @@ export const NewCardBox = () => {
   let cardBalance = 0;
 
   const handleCreateCard = async () => { // TODO: create separate function
+    if (cards.length >= 6) {
+      toast.warning('You have the max number of cards');
+      return;
+    }
+
     if (!cardType) {
       toast.warning('Select card type');
       return;
