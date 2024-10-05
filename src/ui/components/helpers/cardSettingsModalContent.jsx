@@ -1,7 +1,9 @@
+import { ModalCardsList } from '/src/ui/components/organisms/Modals/ModalCardsList.jsx';
+
 export const cardSettingsModalContent = {
-  'Block Card': <div>block</div>,
-  'Activate Card': <div>activate</div>,
-  'Add Pin Code': <div>add pin</div>,
-  'Change Pin Code': <div>change pin</div>,
-  'Card Theme': <div>theme</div>,
+  'Block Card': <ModalCardsList status={'Active'}/>,
+  'Activate Card': <ModalCardsList status={'Block'}/>,
+  'Add Pin Code': <div></div>,
+  'Change Pin Code': <div></div>,
+  'Card Theme': <div></div>,
 }

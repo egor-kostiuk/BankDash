@@ -7,8 +7,8 @@ export const SettingsContent = () => {
   const [activeContent, setActiveContent] = useState('profile');
 
   return (
-    <div className="settings-container">
-      <div className="settings-buttons-box">
+    <div className={'settings-container'}>
+      <div className={'settings-buttons-box'}>
         <button
           className={activeContent === 'profile' ? 'settings-button-active' : ''}
           onClick={() => setActiveContent('profile')}
@@ -28,7 +28,7 @@ export const SettingsContent = () => {
           Security
         </button>
       </div>
-      <div className="content">
+      <div className={'content'}>
         <SettingsContentRender activeContent={activeContent}/>
       </div>
     </div>

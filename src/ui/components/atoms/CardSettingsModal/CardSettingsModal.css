@@ -29,6 +29,11 @@
   color: var(--main-white);
 }
 
+.modal-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
 .modal-close-btn {
   position: absolute;
   top: 10px;

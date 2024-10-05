@@ -13,7 +13,7 @@
 }
 
 .settings-date-input:hover {
-  background-color: #f7f7f7;
+  background-color: var(--select-input-bg);
 }
 
 .settings-date-input::placeholder {
@@ -32,7 +32,7 @@
 }
 
 .react-datepicker__header {
-  background-color: #f7f7f7;
+  background-color: var(--select-input-bg);
   border-bottom: 1px solid #DFEAF2;
   border-radius: 16px 16px 0 0;
   padding: 10px;
@@ -99,7 +99,7 @@
 }
 
 .react-datepicker__year-option:hover {
-  background-color: #f7f7f7;
+  background-color: var(--select-input-bg);
 }
 
 .react-datepicker__year-option--selected {
