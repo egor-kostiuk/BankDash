@@ -5,8 +5,12 @@
   --main-white: #FFF;
   --white: #FFF;
   --body-bg: #F9F9F9;
+
+  --sidebar-bg: #E7EDFFFF;
   --nav-bg: #F5F7FAFF;
   --nav-dropdown-border: rgba(255, 255, 255, 0.5);
+  --select-input-bg: #f7f7f7;
+
   --blue: #1814f3;
   --muted-blue: #718EBF;
   --dark-blue: #343C6AFF;
@@ -95,10 +99,12 @@
   --black: #B0B0B0;
   --body-bg: #3A3A3A;
   --nav-bg: #3A3A3A;
+  --sidebar-bg: #7a7a7a;
+  --select-input-bg: #7a7a7a;
   --white: #4B4B4B;
-  --blue: #3498DB;
+  --blue: #83bbf3;
   --muted-blue: #AAB7B8;
-  --dark-blue: #83bbf3;
+  --dark-blue: #3498DB;
   --light-muted-blue: rgba(70, 90, 110, 0.5);
   --gray: #7F8C8D;
   --light-red: #FF6F6F;

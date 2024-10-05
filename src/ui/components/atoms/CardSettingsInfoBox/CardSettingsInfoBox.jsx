@@ -32,6 +32,7 @@ export const CardSettingsInfoBox = ({ img, title, subtitle }) => {
       <CardSettingsModal
         isOpen={isModalOpen}
         onClose={handleCloseModal}
+        title={title}
       >
         {modalContent}
       </CardSettingsModal>

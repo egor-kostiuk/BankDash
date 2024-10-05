@@ -30,8 +30,8 @@
 
 .section::after {
   position: absolute;
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
 }
 
 .section-1 {
@@ -51,6 +51,10 @@
   background-color: var(--bank-dark-blue);
 }
 
+.section-1.gray::after {
+  background-color: #cbcbcb;
+}
+
 .section-2 {
   bottom: 100px;
   grid-column: 2;
@@ -64,6 +68,10 @@
   bottom: 0;
   border-top-right-radius: 100%;
   background-color: var(--bank-dark-green);
+}
+
+.section-2.gray::after {
+  background-color: #cbcbcb;
 }
 
 .section-3 {
@@ -81,6 +89,10 @@
   background-color: var(--bank-dark-yellow);
 }
 
+.section-3.gray::after {
+  background-color: #cbcbcb;
+}
+
 .section-4 {
   grid-column: 2;
   grid-row: 2;
@@ -92,4 +104,8 @@
   content: '';
   border-bottom-right-radius: 100%;
   background-color: var(--bank-dark-red);
+}
+
+.section-4.gray::after {
+  background-color: #cbcbcb;
 }

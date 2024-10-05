@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { auth } from '/src/services/api/firebase.js';
 import { createCard } from '/src/services/cards/createCard.js';
+import { useCards } from '/src/services/cards/hooks/useCards.js';
 import { toast, ToastContainer } from 'react-toastify';
 
 import { ContainerTitle } from '/src/ui/components/atoms/ContainerTitle/ContainerTitle.jsx';
@@ -15,6 +16,7 @@ import './NewCardBox.css';
 
 export const NewCardBox = () => {
   const user = auth.currentUser;
+  const { cards } = useCards(user?.uid);
   const types = typesData().getData();
   const banks = banksData().getData();
   const [cardNumber, setCardNumber] = useState('');
@@ -24,6 +26,11 @@ export const NewCardBox = () => {
   let cardBalance = 0;
 
   const handleCreateCard = async () => { // TODO: create separate function
+    if (cards.length >= 6) {
+      toast.warning('You have the max number of cards');
+      return;
+    }
+
     if (!cardType) {
       toast.warning('Select card type');
       return;
@@ -59,8 +66,19 @@ export const NewCardBox = () => {
       return;
     }
 
+    if (cardNumber === '0000000000000000') {
+      toast.warning(`Card number cannot be 0000`);
+      return;
+    }
+
+    const cardExists = cards.some(card => card.cardNumber === cardNumber);
+    if (cardExists) {
+      toast.warning('Card with this number already exists');
+      return;
+    }
+
     try {
-      const cardId = await createCard(user.uid, 'Active', '0000',cardBalance, cardType, cardNumber, cardName, cardBank);
+      const cardId = await createCard(user.uid, 'Active', '0000', cardBalance, cardType, cardNumber, cardName, cardBank);
       toast.success('Card successfully added');
       console.log(cardId);
     } catch (error) {

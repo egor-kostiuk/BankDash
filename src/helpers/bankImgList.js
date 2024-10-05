@@ -1,9 +1,9 @@
-import cardChipWhite from '/src/assets/img/card/card-chip-white.svg';
-import mastercardWhite from '/src/assets/img/card/card-master-white.svg';
+import cardChip from '/src/assets/img/card/card-chip.svg';
+import mastercard from '/src/assets/img/card/card-master.svg';
 import visa from '/src/assets/img/card/card-visa.png';
 
 export const bankImgList = {
-  cardChipWhiteImg: cardChipWhite,
-  mastercardWhiteImg: mastercardWhite,
+  cardChipImg: cardChip,
+  mastercardImg: mastercard,
   visaImg : visa,
 }

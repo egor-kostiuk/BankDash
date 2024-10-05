@@ -11,7 +11,7 @@
 }
 
 .country-select__control:hover {
-  background-color: #f7f7f7;;
+  background-color: var(--select-input-bg);
 }
 
 .country-select__indicators {
@@ -51,7 +51,7 @@
 }
 
 .country-select__option:hover {
-  background-color: #f7f7f7;
+  background-color: var(--select-input-bg);
 }
 
 /*  Hide scrollbar */
