@@ -37,18 +37,10 @@ export const NewCardBox = () => {
     }
 
     switch (cardType) {
-      case 'Classic':
-        cardBalance = 10;
-        break;
-      case 'Credit':
-        cardBalance = 0;
-        break;
-      case 'Gold':
-        cardBalance = 1000;
-        break;
-      case 'Platinum':
-        cardBalance = 10000;
-        break;
+      case 'Classic': cardBalance = 10; break;
+      case 'Credit': cardBalance = 0; break;
+      case 'Gold': cardBalance = 1000; break;
+      case 'Platinum': cardBalance = 10000; break;
     }
 
     if (!cardBank) {
