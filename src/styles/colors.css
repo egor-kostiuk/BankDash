@@ -94,7 +94,7 @@
 
 
 /* THEMES */
-/* dark theme */
+/* Dark theme */
 [data-theme="dark"] {
   --black: #B0B0B0;
   --body-bg: #3A3A3A;
@@ -110,7 +110,7 @@
   --light-red: #FF6F6F;
 }
 
-/* ocean theme */
+/* Ocean theme */
 [data-theme="ocean"] {
   --black: #D0D0D0;
   --body-bg: #2F3C4C;
