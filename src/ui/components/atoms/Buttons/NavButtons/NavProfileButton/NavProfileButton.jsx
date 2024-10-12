@@ -1,9 +1,9 @@
-import { useState } from "react";
-import { useEditProfileImg } from "/src/hooks/useEditProfileImg.js";
+import { useState } from 'react';
+import { useEditProfileImg } from '/src/hooks/useEditProfileImg.js';
 
-import { NavProfileDropdown } from "../../../NavProfileDropdown/NavProfileDropdown.jsx";
+import { NavProfileDropdown } from '../../../NavProfileDropdown/NavProfileDropdown.jsx';
 
-import "./NavProfileButon.css";
+import styles from './NavProfileButton.module.css';
 
 export const NavProfileButton = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,16 +23,16 @@ export const NavProfileButton = () => {
   return (
     <div style={{position: 'relative'}}>
       <button
-        className={`nav-profile-button ${isFilling ? 'filling' : ''}`}
+        className={`${styles.btn} ${isFilling ? styles.filling : ''}`}
         onClick={toggleDropdown}
       >
-        <img src={profileImg} alt="" />
-        {isFilling && <div className="fill-overlay"></div>}
+        <img src={profileImg} alt={'profile'} />
+        {isFilling && <div className={styles.overlay}></div>}
       </button>
-      <div className={`nav-profile-dropdown ${isOpen ? 'open' : ''}`}>
+      <div className={`${styles.dropdown} ${isOpen ? styles.open : ''}`}>
         <NavProfileDropdown img={profileImg} closeDropdown={() => setIsOpen(false)} />
       </div>
-      {isOpen && <div className="dropdown-overlay" onClick={() => setIsOpen(false)} ></div>}
+      {isOpen && <div className={'dropdown-overlay'} onClick={() => setIsOpen(false)} ></div>}
     </div>
   );
 };

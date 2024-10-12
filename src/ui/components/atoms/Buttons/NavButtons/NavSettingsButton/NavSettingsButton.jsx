@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import "./NavSettingsButton.css";
+import styles from './NavSettingsButton.module.css';
 
 export const NavSettingsButton = ({ img, children }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,16 +23,16 @@ export const NavSettingsButton = ({ img, children }) => {
   return (
     <div style={{position: 'relative'}}>
       <button
-        className={`nav-settings-button ${isFilling ? 'filling' : ''}`}
+        className={`${styles.btn} ${isFilling ? styles.filling : ''}`}
         onClick={toggleDropdown}
       >
         <img src={img} alt={''}/>
-        {isFilling && <div className="fill-overlay"></div>}
+        {isFilling && <div className={styles.overlay}></div>}
       </button>
-      <div className={`nav-notifications-dropdown ${isOpen ? 'open' : ''}`}>
+      <div className={`${styles.dropdown} ${isOpen ? styles.open : ''}`}>
         {children}
       </div>
-      {isOpen && <div className="dropdown-overlay" onClick={closeDropdown}></div>}
+      {isOpen && <div className={'dropdown-overlay'} onClick={closeDropdown}></div>}
     </div>
   )
 }

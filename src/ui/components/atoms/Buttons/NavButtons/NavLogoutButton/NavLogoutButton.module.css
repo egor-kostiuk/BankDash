@@ -1,4 +1,4 @@
-.logout-button {
+.btn {
   width: 100%;
   font-size: 15px;
   line-height: 1.6;
@@ -9,7 +9,7 @@
   cursor: pointer;
 }
 
-.logout-button:hover {
+.btn:hover {
   border-color: var(--light-red);
   background-color: rgba(254, 92, 115, 0.05);
   transition: 0.2s;
