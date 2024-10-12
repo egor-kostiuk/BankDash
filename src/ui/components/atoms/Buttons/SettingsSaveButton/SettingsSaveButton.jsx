@@ -1,8 +1,8 @@
-import "./SettingsSaveButton.css";
+import styles from './SettingsSaveButton.module.css';
 
 export const SettingsSaveButton = ({ onClick, label }) => {
   return (
-    <button className={'setting-save-button'} onClick={onClick}>
+    <button className={styles.btn} onClick={onClick}>
       {label}
     </button>
   )

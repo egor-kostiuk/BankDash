@@ -1,10 +1,10 @@
-.svg-loading {
+.loading {
   width: 2.5em;
   transform-origin: center;
   animation: rotate4 2s linear infinite;
 }
 
-.svg-loading-circle {
+.circle {
   fill: none;
   stroke: var(--blue);
   stroke-width: 2;
