@@ -1,8 +1,8 @@
-import "./AuthLabel.css";
+import styles from './AuthLabel.module.css';
 
 export const AuthLabel = ({ type }) => {
   return (
-    <label className={'auth-label'}>
+    <label className={styles.label}>
       {type}
     </label>
   )
